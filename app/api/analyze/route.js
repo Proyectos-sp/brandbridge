@@ -3,7 +3,7 @@
 // Cada análisis se genera una sola vez y queda guardado; después sale gratis y al instante.
 import { NextResponse } from "next/server";
 import { getBrand, getScore, isValidCountry } from "@/lib/data";
-import { askClaude, ClaudeError } from "@/lib/claude";
+import { askAI, AIError } from "@/lib/ai";
 import { analysisPrompt, parseAnalysis } from "@/lib/prompts";
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
@@ -35,7 +35,7 @@ export async function POST(request) {
   try {
     const score = getScore(brand, country);
     const { system, messages } = analysisPrompt(brand, country, score);
-    const text = await askClaude({ system, messages, maxTokens: 900 });
+    const text = await askAI({ system, messages, maxTokens: 900, json: true });
     const analysis = parseAnalysis(text);
 
     if (!analysis) {
@@ -45,9 +45,9 @@ export async function POST(request) {
     await setValue(cacheKey, analysis, CACHE_DAYS * 86400);
     return NextResponse.json({ analysis, cached: false });
   } catch (error) {
-    const status = error instanceof ClaudeError ? error.status : 500;
-    const message = error instanceof ClaudeError ? error.message : "Error inesperado en el servidor.";
-    if (!(error instanceof ClaudeError)) console.error("[analyze]", error);
+    const status = error instanceof AIError ? error.status : 500;
+    const message = error instanceof AIError ? error.message : "Error inesperado en el servidor.";
+    if (!(error instanceof AIError)) console.error("[analyze]", error);
     return NextResponse.json({ error: message }, { status });
   }
 }

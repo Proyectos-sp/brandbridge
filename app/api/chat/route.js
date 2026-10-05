@@ -2,7 +2,7 @@
 // Chat en vivo con la IA sobre cómo traer una marca a un país.
 import { NextResponse } from "next/server";
 import { getBrand, getScore, isValidCountry } from "@/lib/data";
-import { askClaude, ClaudeError } from "@/lib/claude";
+import { askAI, AIError } from "@/lib/ai";
 import { chatSystemPrompt } from "@/lib/prompts";
 import { checkLimits } from "@/lib/limits";
 
@@ -51,16 +51,16 @@ export async function POST(request) {
 
   try {
     const score = getScore(brand, country);
-    const reply = await askClaude({
+    const reply = await askAI({
       system: chatSystemPrompt(brand, country, score),
       messages,
       maxTokens: 400,
     });
     return NextResponse.json({ reply: reply || "No tengo una respuesta para eso. ¿Puedes reformular la pregunta?" });
   } catch (error) {
-    const status = error instanceof ClaudeError ? error.status : 500;
-    const message = error instanceof ClaudeError ? error.message : "Error inesperado en el servidor.";
-    if (!(error instanceof ClaudeError)) console.error("[chat]", error);
+    const status = error instanceof AIError ? error.status : 500;
+    const message = error instanceof AIError ? error.message : "Error inesperado en el servidor.";
+    if (!(error instanceof AIError)) console.error("[chat]", error);
     return NextResponse.json({ error: message }, { status });
   }
 }
