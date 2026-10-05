@@ -20,7 +20,7 @@ export async function POST(request) {
   }
 
   const lang = process.env.APP_LANG || "es";
-  const cacheKey = `analysis:v1:${lang}:${brand.id}:${country}`;
+  const cacheKey = `analysis:v2:${lang}:${brand.id}:${country}`;
 
   const cached = await getValue(cacheKey);
   if (cached) {
