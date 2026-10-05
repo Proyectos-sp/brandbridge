@@ -20,7 +20,8 @@
     "accentColor": "#FF6B35",
     "website": "https://drinkolipop.com",
     "instagram": "@drinkolipop",
-    "instagramUrl": "https://instagram.com/drinkolipop"
+    "instagramUrl": "https://instagram.com/drinkolipop",
+    "bgGradient": "linear-gradient(135deg,#1a0a00,#2d1500)"
   },
   {
     "id": 2,
@@ -42,7 +43,8 @@
     "accentColor": "#FFD700",
     "website": "https://bombas.com",
     "instagram": "@bombas",
-    "instagramUrl": "https://instagram.com/bombas"
+    "instagramUrl": "https://instagram.com/bombas",
+    "bgGradient": "linear-gradient(135deg,#0a0a1a,#15152d)"
   },
   {
     "id": 3,
@@ -64,7 +66,8 @@
     "accentColor": "#5B5BD6",
     "website": "https://magicspoon.com",
     "instagram": "@magicspoon",
-    "instagramUrl": "https://instagram.com/magicspoon"
+    "instagramUrl": "https://instagram.com/magicspoon",
+    "bgGradient": "linear-gradient(135deg,#000d1a,#001a2d)"
   },
   {
     "id": 4,
@@ -90,7 +93,8 @@
     "accentColor": "#FF69B4",
     "website": "https://drunkelephant.com",
     "instagram": "@drunkelephant",
-    "instagramUrl": "https://instagram.com/drunkelephant"
+    "instagramUrl": "https://instagram.com/drunkelephant",
+    "bgGradient": "linear-gradient(135deg,#1a000d,#2d001a)"
   },
   {
     "id": 5,
@@ -113,7 +117,8 @@
     "accentColor": "#7CFF35",
     "website": "https://chomps.com",
     "instagram": "@chomps",
-    "instagramUrl": "https://instagram.com/chomps"
+    "instagramUrl": "https://instagram.com/chomps",
+    "bgGradient": "linear-gradient(135deg,#0d1a00,#1a2d00)"
   },
   {
     "id": 6,
@@ -135,7 +140,8 @@
     "accentColor": "#AAFF00",
     "website": "https://graza.co",
     "instagram": "@graza.co",
-    "instagramUrl": "https://instagram.com/graza.co"
+    "instagramUrl": "https://instagram.com/graza.co",
+    "bgGradient": "linear-gradient(135deg,#0d1a00,#1a2d00)"
   },
   {
     "id": 7,
@@ -158,7 +164,8 @@
     "accentColor": "#FF00FF",
     "website": "https://alaninu.com",
     "instagram": "@alaninu",
-    "instagramUrl": "https://instagram.com/alaninu"
+    "instagramUrl": "https://instagram.com/alaninu",
+    "bgGradient": "linear-gradient(135deg,#1a001a,#2d002d)"
   },
   {
     "id": 8,
@@ -180,7 +187,8 @@
     "accentColor": "#00FFFF",
     "website": "https://blueland.com",
     "instagram": "@blueland",
-    "instagramUrl": "https://instagram.com/blueland"
+    "instagramUrl": "https://instagram.com/blueland",
+    "bgGradient": "linear-gradient(135deg,#001a1a,#002d2d)"
   },
   {
     "id": 9,
@@ -204,7 +212,8 @@
     "accentColor": "#00BFFF",
     "website": "https://liquid-iv.com",
     "instagram": "@liquid_iv",
-    "instagramUrl": "https://instagram.com/liquid_iv"
+    "instagramUrl": "https://instagram.com/liquid_iv",
+    "bgGradient": "linear-gradient(135deg,#000510,#001030)"
   },
   {
     "id": 10,
@@ -226,7 +235,8 @@
     "accentColor": "#D4A96A",
     "website": "https://mudwtr.com",
     "instagram": "@mudwtr",
-    "instagramUrl": "https://instagram.com/mudwtr"
+    "instagramUrl": "https://instagram.com/mudwtr",
+    "bgGradient": "linear-gradient(135deg,#1a0a00,#2a1500)"
   },
   {
     "id": 11,
@@ -250,7 +260,8 @@
     "accentColor": "#F5C518",
     "website": "https://athleticbrewing.com",
     "instagram": "@athleticbrewing",
-    "instagramUrl": "https://instagram.com/athleticbrewing"
+    "instagramUrl": "https://instagram.com/athleticbrewing",
+    "bgGradient": "linear-gradient(135deg,#0a0a00,#1a1a00)"
   },
   {
     "id": 12,
@@ -272,7 +283,8 @@
     "accentColor": "#00CC66",
     "website": "https://forhims.com",
     "instagram": "@hims",
-    "instagramUrl": "https://instagram.com/hims"
+    "instagramUrl": "https://instagram.com/hims",
+    "bgGradient": "linear-gradient(135deg,#002200,#004400)"
   },
   {
     "id": 13,
@@ -294,7 +306,8 @@
     "accentColor": "#FCD34D",
     "website": "https://brightland.com",
     "instagram": "@brightland",
-    "instagramUrl": "https://instagram.com/brightland"
+    "instagramUrl": "https://instagram.com/brightland",
+    "bgGradient": "linear-gradient(135deg,#1a1000,#2a2000)"
   },
   {
     "id": 14,
@@ -316,7 +329,8 @@
     "accentColor": "#FFD700",
     "website": "https://cometeer.com",
     "instagram": "@cometeer",
-    "instagramUrl": "https://instagram.com/cometeer"
+    "instagramUrl": "https://instagram.com/cometeer",
+    "bgGradient": "linear-gradient(135deg,#0a0500,#1a1000)"
   },
   {
     "id": 15,
@@ -338,7 +352,8 @@
     "accentColor": "#38BDF8",
     "website": "https://oseamalibu.com",
     "instagram": "@oseamalibu",
-    "instagramUrl": "https://instagram.com/oseamalibu"
+    "instagramUrl": "https://instagram.com/oseamalibu",
+    "bgGradient": "linear-gradient(135deg,#001a2a,#002a3a)"
   },
   {
     "id": 16,
@@ -360,7 +375,8 @@
     "accentColor": "#A78BFA",
     "website": "https://touchland.com",
     "instagram": "@touchland",
-    "instagramUrl": "https://instagram.com/touchland"
+    "instagramUrl": "https://instagram.com/touchland",
+    "bgGradient": "linear-gradient(135deg,#1a0030,#2a0050)"
   },
   {
     "id": 17,
@@ -382,7 +398,8 @@
     "accentColor": "#FBBF24",
     "website": "https://drinkghia.com",
     "instagram": "@drinkghia",
-    "instagramUrl": "https://instagram.com/drinkghia"
+    "instagramUrl": "https://instagram.com/drinkghia",
+    "bgGradient": "linear-gradient(135deg,#1a1000,#2a2000)"
   },
   {
     "id": 18,
@@ -404,7 +421,8 @@
     "accentColor": "#FB923C",
     "website": "https://fetchemjinx.com",
     "instagram": "@jinx",
-    "instagramUrl": "https://instagram.com/jinx"
+    "instagramUrl": "https://instagram.com/jinx",
+    "bgGradient": "linear-gradient(135deg,#1a0a00,#2a1000)"
   },
   {
     "id": 19,
@@ -428,7 +446,8 @@
     "accentColor": "#E2E8F0",
     "website": "https://ouraring.com",
     "instagram": "@ouraring",
-    "instagramUrl": "https://instagram.com/ouraring"
+    "instagramUrl": "https://instagram.com/ouraring",
+    "bgGradient": "linear-gradient(135deg,#050505,#101010)"
   },
   {
     "id": 20,
@@ -450,7 +469,8 @@
     "accentColor": "#D97706",
     "website": "https://carawayhome.com",
     "instagram": "@carawayhome",
-    "instagramUrl": "https://instagram.com/carawayhome"
+    "instagramUrl": "https://instagram.com/carawayhome",
+    "bgGradient": "linear-gradient(135deg,#0a0500,#1a1000)"
   },
   {
     "id": 21,
@@ -472,7 +492,8 @@
     "accentColor": "#FB923C",
     "website": "https://diasporaco.com",
     "instagram": "@diaspora_co",
-    "instagramUrl": "https://instagram.com/diaspora_co"
+    "instagramUrl": "https://instagram.com/diaspora_co",
+    "bgGradient": "linear-gradient(135deg,#1a0500,#2a0f00)"
   },
   {
     "id": 22,
@@ -494,7 +515,8 @@
     "accentColor": "#F87171",
     "website": "https://studs.com",
     "instagram": "@studs",
-    "instagramUrl": "https://instagram.com/studs"
+    "instagramUrl": "https://instagram.com/studs",
+    "bgGradient": "linear-gradient(135deg,#1a0000,#2a0000)"
   },
   {
     "id": 23,
@@ -516,7 +538,8 @@
     "accentColor": "#FB7185",
     "website": "https://flybyjing.com",
     "instagram": "@flybyjing",
-    "instagramUrl": "https://instagram.com/flybyjing"
+    "instagramUrl": "https://instagram.com/flybyjing",
+    "bgGradient": "linear-gradient(135deg,#1a0008,#2a0010)"
   },
   {
     "id": 24,
@@ -538,7 +561,8 @@
     "accentColor": "#EC4899",
     "website": "https://takearecess.com",
     "instagram": "@recess",
-    "instagramUrl": "https://instagram.com/recess"
+    "instagramUrl": "https://instagram.com/recess",
+    "bgGradient": "linear-gradient(135deg,#1a0012,#2a0020)"
   },
   {
     "id": 25,
@@ -560,7 +584,8 @@
     "accentColor": "#EF4444",
     "website": "https://immieats.com",
     "instagram": "@immi",
-    "instagramUrl": "https://instagram.com/immi"
+    "instagramUrl": "https://instagram.com/immi",
+    "bgGradient": "linear-gradient(135deg,#1a0505,#2a0808)"
   },
   {
     "id": 26,
@@ -582,7 +607,8 @@
     "accentColor": "#14B8A6",
     "website": "https://jolieskinco.com",
     "instagram": "@jolieskinco",
-    "instagramUrl": "https://instagram.com/jolieskinco"
+    "instagramUrl": "https://instagram.com/jolieskinco",
+    "bgGradient": "linear-gradient(135deg,#001a14,#002a20)"
   },
   {
     "id": 27,
@@ -604,7 +630,8 @@
     "accentColor": "#A855F7",
     "website": "https://arrae.com",
     "instagram": "@arrae",
-    "instagramUrl": "https://instagram.com/arrae"
+    "instagramUrl": "https://instagram.com/arrae",
+    "bgGradient": "linear-gradient(135deg,#100020,#1a0030)"
   },
   {
     "id": 28,
@@ -629,7 +656,8 @@
     "accentColor": "#FACC15",
     "website": "https://notco.com",
     "instagram": "@notco",
-    "instagramUrl": "https://instagram.com/notco"
+    "instagramUrl": "https://instagram.com/notco",
+    "bgGradient": "linear-gradient(135deg,#0a0a00,#1a1a00)"
   },
   {
     "id": 29,
@@ -651,7 +679,8 @@
     "accentColor": "#F97316",
     "website": "https://drinkpoppi.com",
     "instagram": "@drinkpoppi",
-    "instagramUrl": "https://instagram.com/drinkpoppi"
+    "instagramUrl": "https://instagram.com/drinkpoppi",
+    "bgGradient": "linear-gradient(135deg,#1a0a00,#2a1200)"
   },
   {
     "id": 30,
@@ -673,7 +702,8 @@
     "accentColor": "#EAB308",
     "website": "https://starface.world",
     "instagram": "@starface",
-    "instagramUrl": "https://instagram.com/starface"
+    "instagramUrl": "https://instagram.com/starface",
+    "bgGradient": "linear-gradient(135deg,#1a1500,#2a2200)"
   },
   {
     "id": 31,
@@ -695,7 +725,8 @@
     "accentColor": "#CA8A04",
     "website": "https://thedrybar.com",
     "instagram": "@thedrybar",
-    "instagramUrl": "https://instagram.com/thedrybar"
+    "instagramUrl": "https://instagram.com/thedrybar",
+    "bgGradient": "linear-gradient(135deg,#1a1500,#2a2000)"
   },
   {
     "id": 32,
@@ -717,7 +748,8 @@
     "accentColor": "#A8A29E",
     "website": "https://getmaude.com",
     "instagram": "@getmaude",
-    "instagramUrl": "https://instagram.com/getmaude"
+    "instagramUrl": "https://instagram.com/getmaude",
+    "bgGradient": "linear-gradient(135deg,#0f0f0e,#1a1a18)"
   },
   {
     "id": 33,
@@ -740,7 +772,8 @@
     "accentColor": "#E11D48",
     "website": "https://liquiddeath.com",
     "instagram": "@liquiddeath",
-    "instagramUrl": "https://instagram.com/liquiddeath"
+    "instagramUrl": "https://instagram.com/liquiddeath",
+    "bgGradient": "linear-gradient(135deg,#0a0a0a,#1a1a1a)"
   },
   {
     "id": 34,
@@ -765,7 +798,8 @@
     "accentColor": "#FFA500",
     "website": "https://drinkprime.com",
     "instagram": "@prime",
-    "instagramUrl": "https://instagram.com/prime"
+    "instagramUrl": "https://instagram.com/prime",
+    "bgGradient": "linear-gradient(135deg,#001020,#002040)"
   },
   {
     "id": 35,
@@ -787,7 +821,8 @@
     "accentColor": "#0EA5E9",
     "website": "https://celsius.com",
     "instagram": "@celsiusofficial",
-    "instagramUrl": "https://instagram.com/celsiusofficial"
+    "instagramUrl": "https://instagram.com/celsiusofficial",
+    "bgGradient": "linear-gradient(135deg,#0a0a14,#15151f)"
   },
   {
     "id": 36,
@@ -809,7 +844,8 @@
     "accentColor": "#9CA3AF",
     "website": "https://rhodeskin.com",
     "instagram": "@rhode",
-    "instagramUrl": "https://instagram.com/rhode"
+    "instagramUrl": "https://instagram.com/rhode",
+    "bgGradient": "linear-gradient(135deg,#1a1814,#2a2620)"
   },
   {
     "id": 37,
@@ -833,7 +869,8 @@
     "accentColor": "#E75480",
     "website": "https://glossier.com",
     "instagram": "@glossier",
-    "instagramUrl": "https://instagram.com/glossier"
+    "instagramUrl": "https://instagram.com/glossier",
+    "bgGradient": "linear-gradient(135deg,#1a1012,#2a181c)"
   },
   {
     "id": 38,
@@ -856,7 +893,8 @@
     "accentColor": "#A0522D",
     "website": "https://rarebeauty.com",
     "instagram": "@rarebeauty",
-    "instagramUrl": "https://instagram.com/rarebeauty"
+    "instagramUrl": "https://instagram.com/rarebeauty",
+    "bgGradient": "linear-gradient(135deg,#1a1410,#2a2018)"
   },
   {
     "id": 39,
@@ -880,7 +918,8 @@
     "accentColor": "#D4AF37",
     "website": "https://fentybeauty.com",
     "instagram": "@fentybeauty",
-    "instagramUrl": "https://instagram.com/fentybeauty"
+    "instagramUrl": "https://instagram.com/fentybeauty",
+    "bgGradient": "linear-gradient(135deg,#0a0a0a,#1a1a1a)"
   },
   {
     "id": 40,
@@ -902,7 +941,8 @@
     "accentColor": "#C04000",
     "website": "https://hauslabs.com",
     "instagram": "@hauslabs",
-    "instagramUrl": "https://instagram.com/hauslabs"
+    "instagramUrl": "https://instagram.com/hauslabs",
+    "bgGradient": "linear-gradient(135deg,#1a0f0a,#2a1810)"
   },
   {
     "id": 41,
@@ -924,7 +964,8 @@
     "accentColor": "#556B2F",
     "website": "https://jonesroadbeauty.com",
     "instagram": "@jonesroadbeauty",
-    "instagramUrl": "https://instagram.com/jonesroadbeauty"
+    "instagramUrl": "https://instagram.com/jonesroadbeauty",
+    "bgGradient": "linear-gradient(135deg,#14180f,#1f2418)"
   },
   {
     "id": 42,
@@ -946,7 +987,8 @@
     "accentColor": "#B8860B",
     "website": "https://ritual.com",
     "instagram": "@ritual",
-    "instagramUrl": "https://instagram.com/ritual"
+    "instagramUrl": "https://instagram.com/ritual",
+    "bgGradient": "linear-gradient(135deg,#1a1610,#2a2218)"
   },
   {
     "id": 43,
@@ -968,7 +1010,8 @@
     "accentColor": "#556B2F",
     "website": "https://seed.com",
     "instagram": "@seed",
-    "instagramUrl": "https://instagram.com/seed"
+    "instagramUrl": "https://instagram.com/seed",
+    "bgGradient": "linear-gradient(135deg,#10140c,#181f12)"
   },
   {
     "id": 44,
@@ -990,7 +1033,8 @@
     "accentColor": "#0891B2",
     "website": "https://nativecos.com",
     "instagram": "@native",
-    "instagramUrl": "https://instagram.com/native"
+    "instagramUrl": "https://instagram.com/native",
+    "bgGradient": "linear-gradient(135deg,#0c1418,#121f24)"
   },
   {
     "id": 45,
@@ -1012,7 +1056,8 @@
     "accentColor": "#71717A",
     "website": "https://cutsclothing.com",
     "instagram": "@cuts",
-    "instagramUrl": "https://instagram.com/cuts"
+    "instagramUrl": "https://instagram.com/cuts",
+    "bgGradient": "linear-gradient(135deg,#0a0a0a,#1a1a1a)"
   },
   {
     "id": 46,
@@ -1035,7 +1080,8 @@
     "accentColor": "#704214",
     "website": "https://vuoriclothing.com",
     "instagram": "@vuoriclothing",
-    "instagramUrl": "https://instagram.com/vuoriclothing"
+    "instagramUrl": "https://instagram.com/vuoriclothing",
+    "bgGradient": "linear-gradient(135deg,#1a1610,#2a2418)"
   },
   {
     "id": 47,
@@ -1059,7 +1105,8 @@
     "accentColor": "#52525B",
     "website": "https://gymshark.com",
     "instagram": "@gymshark",
-    "instagramUrl": "https://instagram.com/gymshark"
+    "instagramUrl": "https://instagram.com/gymshark",
+    "bgGradient": "linear-gradient(135deg,#0a0a0a,#1a1a1a)"
   },
   {
     "id": 48,
@@ -1082,7 +1129,8 @@
     "accentColor": "#8B6F47",
     "website": "https://allbirds.com",
     "instagram": "@allbirds",
-    "instagramUrl": "https://instagram.com/allbirds"
+    "instagramUrl": "https://instagram.com/allbirds",
+    "bgGradient": "linear-gradient(135deg,#16140f,#211f18)"
   },
   {
     "id": 49,
@@ -1106,7 +1154,8 @@
     "accentColor": "#1A1A2E",
     "website": "https://on-running.com",
     "instagram": "@on_running",
-    "instagramUrl": "https://instagram.com/on_running"
+    "instagramUrl": "https://instagram.com/on_running",
+    "bgGradient": "linear-gradient(135deg,#0a0a0c,#16161a)"
   },
   {
     "id": 50,
@@ -1130,7 +1179,8 @@
     "accentColor": "#FF6B35",
     "website": "https://hoka.com",
     "instagram": "@hoka",
-    "instagramUrl": "https://instagram.com/hoka"
+    "instagramUrl": "https://instagram.com/hoka",
+    "bgGradient": "linear-gradient(135deg,#001020,#002038)"
   },
   {
     "id": 51,
@@ -1154,7 +1204,8 @@
     "accentColor": "#1E5C8A",
     "website": "https://yeti.com",
     "instagram": "@yeti",
-    "instagramUrl": "https://instagram.com/yeti"
+    "instagramUrl": "https://instagram.com/yeti",
+    "bgGradient": "linear-gradient(135deg,#001022,#002244)"
   },
   {
     "id": 52,
@@ -1176,7 +1227,8 @@
     "accentColor": "#0E9F6E",
     "website": "https://stanley1913.com",
     "instagram": "@stanley_brand",
-    "instagramUrl": "https://instagram.com/stanley_brand"
+    "instagramUrl": "https://instagram.com/stanley_brand",
+    "bgGradient": "linear-gradient(135deg,#04241a,#063a2a)"
   },
   {
     "id": 53,
@@ -1198,7 +1250,8 @@
     "accentColor": "#0D9488",
     "website": "https://owala.com",
     "instagram": "@owala",
-    "instagramUrl": "https://instagram.com/owala"
+    "instagramUrl": "https://instagram.com/owala",
+    "bgGradient": "linear-gradient(135deg,#0a1418,#122024)"
   },
   {
     "id": 54,
@@ -1220,7 +1273,8 @@
     "accentColor": "#E67E22",
     "website": "https://eatcaulipower.com",
     "instagram": "@caulipower",
-    "instagramUrl": "https://instagram.com/caulipower"
+    "instagramUrl": "https://instagram.com/caulipower",
+    "bgGradient": "linear-gradient(135deg,#1a1408,#2a2010)"
   },
   {
     "id": 55,
@@ -1242,6 +1296,7 @@
     "accentColor": "#D35400",
     "website": "https://partakefoods.com",
     "instagram": "@partakefoods",
-    "instagramUrl": "https://instagram.com/partakefoods"
+    "instagramUrl": "https://instagram.com/partakefoods",
+    "bgGradient": "linear-gradient(135deg,#1a0f08,#2a1810)"
   }
 ]

@@ -5,6 +5,7 @@ import { getBrand, getScore, isValidCountry } from "@/lib/data";
 import { askAI, AIError } from "@/lib/ai";
 import { chatSystemPrompt } from "@/lib/prompts";
 import { checkLimits } from "@/lib/limits";
+import { serverText as T } from "@/lib/i18n";
 
 const MAX_MESSAGE_LENGTH = 600; // caracteres por mensaje
 const MAX_HISTORY = 12; // mensajes que se envían a la IA (los más recientes)
@@ -41,7 +42,7 @@ export async function POST(request) {
   const messages = cleanMessages(body.messages);
 
   if (!brand || !isValidCountry(country) || !messages) {
-    return NextResponse.json({ error: "Solicitud no válida." }, { status: 400 });
+    return NextResponse.json({ error: T.invalid }, { status: 400 });
   }
 
   const limitMessage = await checkLimits(request, "chat");
@@ -56,10 +57,10 @@ export async function POST(request) {
       messages,
       maxTokens: 400,
     });
-    return NextResponse.json({ reply: reply || "No tengo una respuesta para eso. ¿Puedes reformular la pregunta?" });
+    return NextResponse.json({ reply: reply || T.noAnswer });
   } catch (error) {
     const status = error instanceof AIError ? error.status : 500;
-    const message = error instanceof AIError ? error.message : "Error inesperado en el servidor.";
+    const message = error instanceof AIError ? error.message : T.unexpected;
     if (!(error instanceof AIError)) console.error("[chat]", error);
     return NextResponse.json({ error: message }, { status });
   }

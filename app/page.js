@@ -1,12 +1,8 @@
 import { BRANDS, COUNTRIES } from "@/lib/data";
-import Explorer from "@/components/Explorer";
+import { SERVER_LANG } from "@/lib/i18n";
+import BrandBridge from "@/components/BrandBridge";
 
+// El idioma (APP_LANG) se lee al publicar la app: si se cambia en Vercel, hay que hacer Redeploy.
 export default function Home() {
-  return (
-    <main>
-      <h1>BrandBridge</h1>
-      <p className="muted">Descubre marcas para llevar a tu país, con análisis de IA y chat en vivo.</p>
-      <Explorer brands={BRANDS} countries={COUNTRIES} />
-    </main>
-  );
+  return <BrandBridge brands={BRANDS} countries={COUNTRIES} lang={SERVER_LANG} />;
 }

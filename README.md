@@ -28,7 +28,9 @@ Navegador ──► /api/analyze ──┐
 | `lib/limits.js` | Límites de uso |
 | `app/api/analyze` | Ruta que genera o devuelve el análisis |
 | `app/api/chat` | Ruta del chat |
-| `components/` | Interfaz |
+| `components/BrandBridge.js` | Interfaz (mismo diseño del artefacto original) |
+| `lib/i18n.js` | Textos en inglés y español |
+| `data/logos.json` | Logos de las marcas |
 
 ## Publicar en Vercel
 
@@ -38,6 +40,8 @@ Navegador ──► /api/analyze ──┐
 4. **Deploy.**
 
 Las demás variables opcionales están explicadas en `.env.example`.
+
+**Idioma:** la app está en inglés por defecto, igual que el diseño original. Para tenerla toda en español (interfaz y respuestas de la IA), agrega `APP_LANG=es` en Vercel y haz Redeploy.
 
 ## Probar en tu computador
 
