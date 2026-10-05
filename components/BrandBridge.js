@@ -48,7 +48,7 @@ function useModalBehavior(onClose) {
 
 /* ------------------------------------------------------------ piezas pequeñas */
 
-// Color de fondo de cada logo (sale del propio SVG), para mostrarlo completo sin recortes.
+// Color de fondo de cada logo (sale del propio SVG), para que el borde del cuadro combine con el logo.
 const LOGO_BG = Object.fromEntries(
   Object.entries(LOGOS).map(([key, svg]) => {
     const match = svg.match(/<rect[^>]*fill='([^']+)'/);
@@ -58,9 +58,9 @@ const LOGO_BG = Object.fromEntries(
 
 function BrandLogo({ brand, size = 46 }) {
   return (
-    <div style={{ width: size, height: size, borderRadius: size * 0.2, overflow: "hidden", flexShrink: 0, border: `1.5px solid ${brand.accentColor}55`, background: LOGO_BG[brand.slug] || "white", display: "flex", alignItems: "center", justifyContent: "center", padding: 2 }}>
+    <div style={{ width: size, height: size, borderRadius: size * 0.2, overflow: "hidden", flexShrink: 0, border: `1.5px solid ${brand.accentColor}55`, background: LOGO_BG[brand.slug] || "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={LOGOS[brand.slug]} alt={brand.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+      <img src={LOGOS[brand.slug]} alt={brand.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
     </div>
   );
 }
