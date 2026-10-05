@@ -1,0 +1,66 @@
+// POST /api/chat  { brandId, country, messages: [{ role: "user" | "assistant", content }] }
+// Chat en vivo con la IA sobre cómo traer una marca a un país.
+import { NextResponse } from "next/server";
+import { getBrand, getScore, isValidCountry } from "@/lib/data";
+import { askClaude, ClaudeError } from "@/lib/claude";
+import { chatSystemPrompt } from "@/lib/prompts";
+import { checkLimits } from "@/lib/limits";
+
+const MAX_MESSAGE_LENGTH = 600; // caracteres por mensaje
+const MAX_HISTORY = 12; // mensajes que se envían a la IA (los más recientes)
+
+function cleanMessages(raw) {
+  if (!Array.isArray(raw) || raw.length === 0) return null;
+
+  const messages = raw
+    .slice(-MAX_HISTORY)
+    .map((m) => ({
+      role: m?.role === "assistant" ? "assistant" : "user",
+      content: String(m?.content ?? "").trim().slice(0, MAX_MESSAGE_LENGTH),
+    }))
+    .filter((m) => m.content.length > 0);
+
+  // La conversación debe empezar con el usuario y terminar con el usuario.
+  while (messages.length && messages[0].role !== "user") messages.shift();
+  if (!messages.length || messages[messages.length - 1].role !== "user") return null;
+
+  // Une mensajes seguidos del mismo rol (la API exige que se alternen).
+  const merged = [];
+  for (const m of messages) {
+    const last = merged[merged.length - 1];
+    if (last && last.role === m.role) last.content += "\n" + m.content;
+    else merged.push({ ...m });
+  }
+  return merged;
+}
+
+export async function POST(request) {
+  const body = await request.json().catch(() => ({}));
+  const brand = getBrand(body.brandId);
+  const country = body.country;
+  const messages = cleanMessages(body.messages);
+
+  if (!brand || !isValidCountry(country) || !messages) {
+    return NextResponse.json({ error: "Solicitud no válida." }, { status: 400 });
+  }
+
+  const limitMessage = await checkLimits(request, "chat");
+  if (limitMessage) {
+    return NextResponse.json({ error: limitMessage }, { status: 429 });
+  }
+
+  try {
+    const score = getScore(brand, country);
+    const reply = await askClaude({
+      system: chatSystemPrompt(brand, country, score),
+      messages,
+      maxTokens: 400,
+    });
+    return NextResponse.json({ reply: reply || "No tengo una respuesta para eso. ¿Puedes reformular la pregunta?" });
+  } catch (error) {
+    const status = error instanceof ClaudeError ? error.status : 500;
+    const message = error instanceof ClaudeError ? error.message : "Error inesperado en el servidor.";
+    if (!(error instanceof ClaudeError)) console.error("[chat]", error);
+    return NextResponse.json({ error: message }, { status });
+  }
+}

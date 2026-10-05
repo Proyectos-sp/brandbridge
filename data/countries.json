@@ -1,0 +1,112 @@
+{
+  "Panama": {
+    "Beverage": 8,
+    "Food": 5,
+    "Snacks": 7,
+    "Apparel": -3,
+    "Beauty": 4,
+    "Home": -5,
+    "Tech": 6,
+    "Wellness": 3,
+    "Pets": 2
+  },
+  "Mexico": {
+    "Beverage": 5,
+    "Food": 10,
+    "Snacks": 8,
+    "Apparel": 2,
+    "Beauty": 6,
+    "Home": 3,
+    "Tech": 4,
+    "Wellness": 2,
+    "Pets": 3
+  },
+  "Colombia": {
+    "Beverage": 6,
+    "Food": 7,
+    "Snacks": 5,
+    "Apparel": 8,
+    "Beauty": 9,
+    "Home": 2,
+    "Tech": 3,
+    "Wellness": 5,
+    "Pets": 1
+  },
+  "Brazil": {
+    "Beverage": 9,
+    "Food": 6,
+    "Snacks": 6,
+    "Apparel": 10,
+    "Beauty": 12,
+    "Home": 4,
+    "Tech": 7,
+    "Wellness": 8,
+    "Pets": 5
+  },
+  "Argentina": {
+    "Beverage": 4,
+    "Food": 8,
+    "Snacks": 4,
+    "Apparel": 5,
+    "Beauty": 5,
+    "Home": 6,
+    "Tech": 5,
+    "Wellness": 4,
+    "Pets": 3
+  },
+  "Chile": {
+    "Beverage": 7,
+    "Food": 6,
+    "Snacks": 5,
+    "Apparel": 4,
+    "Beauty": 6,
+    "Home": 7,
+    "Tech": 8,
+    "Wellness": 6,
+    "Pets": 4
+  },
+  "Peru": {
+    "Beverage": 3,
+    "Food": 9,
+    "Snacks": 6,
+    "Apparel": 3,
+    "Beauty": 4,
+    "Home": 2,
+    "Tech": 2,
+    "Wellness": 3,
+    "Pets": 1
+  },
+  "Costa Rica": {
+    "Beverage": 10,
+    "Food": 8,
+    "Snacks": 9,
+    "Apparel": 2,
+    "Beauty": 5,
+    "Home": 6,
+    "Tech": 7,
+    "Wellness": 10,
+    "Pets": 6
+  },
+  "Dominican Republic": {
+    "Beverage": 11,
+    "Food": 7,
+    "Snacks": 8,
+    "Apparel": 3,
+    "Beauty": 7,
+    "Home": 1,
+    "Tech": 3,
+    "Wellness": 4,
+    "Pets": 2
+  },
+  "Guatemala": {
+    "Beverage": 5,
+    "Food": 8,
+    "Snacks": 7,
+    "Apparel": 2,
+    "Beauty": 3,
+    "Home": 1,
+    "Tech": 1,
+    "Wellness": 2,
+    "Pets": 1
+  }
+}

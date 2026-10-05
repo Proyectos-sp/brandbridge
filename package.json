@@ -1,0 +1,17 @@
+{
+  "name": "brandbridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Descubre marcas internacionales para llevar a Latinoamérica, con análisis de IA.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.39.0",
+    "next": "^16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}
