@@ -9,7 +9,7 @@ import { getText } from "@/lib/i18n";
 import BrandSheet, { TermsSheet } from "./BrandSheet";
 import HeroBoard from "./HeroBoard";
 import { ScoreBadge, bandFor } from "./Score";
-import { CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, UserIcon } from "./icons";
+import { CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, UserIcon } from "./icons";
 import { CompareSheet, CompareTray, EMPTY_PROFILE, PageHead, ProfileView, WatchEmpty, profileQuestion } from "./Extras";
 import useFlip from "./useFlip";
 import useStored from "./useStored";
@@ -233,7 +233,12 @@ export default function BrandBridge({ brands, countries, lang }) {
             <NavItems view={view} onChange={goTo} savedCount={saved.length} t={t} className="bb-nav-link" />
           </nav>
           <div className="bb-header-actions">
-            <button type="button" className="bb-ghost bb-hide-md" onClick={() => setShowTerms(true)}>{t.legal}</button>
+            {/* Aviso legal siempre visible: el análisis es de IA y no es asesoría financiera */}
+            <button type="button" className="bb-legal-badge" onClick={() => setShowTerms(true)} aria-label={`${t.legalBadge} · ${t.termsTitle}`}>
+              <ShieldIcon size={16} strokeWidth={2} />
+              <span className="bb-legal-long">{t.legalBadge}</span>
+              <span className="bb-legal-short" aria-hidden="true">{t.legalShort}</span>
+            </button>
             <label className="bb-select-wrap">
               <span className="bb-sr">{t.destination}</span>
               <GlobeIcon size={16} className="bb-select-globe" />

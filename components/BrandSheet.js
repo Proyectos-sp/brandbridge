@@ -8,7 +8,7 @@ import { scoreFor } from "@/lib/score";
 import Sheet from "./Sheet";
 import { bandFor } from "./Score";
 import {
-  AlertIcon, ArrowUpRightIcon, ChartIcon, HeartIcon, ChatIcon, CloseIcon, GlobeIcon, InfoIcon, InstagramIcon, LockIcon, MailIcon, RetryIcon, SendIcon,
+  AlertIcon, ArrowUpRightIcon, ChartIcon, HeartIcon, ChatIcon, CloseIcon, GlobeIcon, InfoIcon, InstagramIcon, LockIcon, MailIcon, RetryIcon, SendIcon, ShieldIcon,
 } from "./icons";
 
 export async function postJSON(url, body, signal) {
@@ -377,6 +377,10 @@ export function TermsSheet({ onClose, t }) {
           </header>
           <div className="bb-sheet-scroll">
             <div className="bb-panel">
+              <div className="bb-terms-claim">
+                <ShieldIcon size={22} strokeWidth={2} />
+                <div><strong>{t.legalBadge}</strong><p>{t.termsLead}</p></div>
+              </div>
               <div className="bb-terms">
                 {t.terms.map(([title, text]) => (
                   <div key={title}><h3>{title}</h3><p>{text}</p></div>
