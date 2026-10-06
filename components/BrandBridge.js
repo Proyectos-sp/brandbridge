@@ -9,7 +9,7 @@ import { getText } from "@/lib/i18n";
 import BrandSheet, { TermsSheet } from "./BrandSheet";
 import HeroBoard from "./HeroBoard";
 import { ScoreBadge, bandFor } from "./Score";
-import { CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, TeamIcon, UserIcon } from "./icons";
+import { ArrowUpRightIcon, CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, TeamIcon, UserIcon } from "./icons";
 import TeamView from "./Team";
 import { CompareSheet, CompareTray, EMPTY_PROFILE, PageHead, ProfileView, WatchEmpty, profileQuestion } from "./Extras";
 import useFlip from "./useFlip";
@@ -251,6 +251,16 @@ export default function BrandBridge({ brands, countries, lang }) {
           </div>
         </div>
       </header>
+
+      {/* Franja para conocer al equipo, visible al entrar a la app */}
+      {view !== "team" && (
+        <a className="bb-teamstrip" href="#team" onClick={(e) => { e.preventDefault(); goTo("team"); }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/team/yonatan-danon-avatar.webp" alt="" width={34} height={34} />
+          <span className="bb-teamstrip-text">{t.teamStrip}</span>
+          <span className="bb-teamstrip-link">{t.teamStripLink}<ArrowUpRightIcon size={15} strokeWidth={2.2} /></span>
+        </a>
+      )}
 
       <div key={view} className="bb-view">
         {view === "discover" && (

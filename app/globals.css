@@ -197,6 +197,21 @@ mark { color: inherit; background: none; }
 @media (max-width: 1180px) { .bb-legal-long { display: none; } .bb-legal-short { display: inline; } }
 @media (max-width: 960px) { .bb-nav { margin-left: 6px; } }
 
+/* franja "conoce al equipo" bajo la cabecera */
+.bb-teamstrip {
+  display: flex; align-items: center; justify-content: center; gap: 12px; padding: 9px var(--gutter);
+  background: var(--ground-2); border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink-2); font-size: 14.5px;
+  transition: background-color 200ms ease;
+}
+.bb-teamstrip img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--white); box-shadow: 0 0 0 1.5px var(--gold); }
+.bb-teamstrip-link { display: inline-flex; align-items: center; gap: 5px; font-weight: 650; color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.bb-teamstrip-link svg { color: var(--gold-deep); transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .bb-teamstrip:hover { background: #EDE4CF; }
+  .bb-teamstrip:hover .bb-teamstrip-link svg { transform: translate(2px, -2px); }
+}
+@media (max-width: 400px) { .bb-teamstrip-text { display: none; } }
+
 .bb-view { animation: bb-fade 240ms ease backwards; }
 
 /* ------------------------------------------------------------ portada */
