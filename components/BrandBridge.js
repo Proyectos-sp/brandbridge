@@ -11,6 +11,7 @@ import HeroBoard from "./HeroBoard";
 import { ScoreBadge, bandFor } from "./Score";
 import { ArrowUpRightIcon, CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, TeamIcon, UserIcon } from "./icons";
 import TeamView from "./Team";
+import IntroView from "./Intro";
 import { CompareSheet, CompareTray, EMPTY_PROFILE, PageHead, ProfileView, WatchEmpty, profileQuestion } from "./Extras";
 import useFlip from "./useFlip";
 import useStored from "./useStored";
@@ -80,14 +81,16 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
 
 /* ------------------------------------------------------------ navegación */
 
-const VIEWS = ["discover", "watchlist", "profile", "team"];
+// Vistas: la introducción es la portada (sin #); el resto vive en su #hash.
+const VIEWS = ["intro", "discover", "watchlist", "profile", "team"];
+const NAV_VIEWS = ["discover", "watchlist", "profile"];
 const VIEW_ICONS = { discover: CompassIcon, watchlist: HeartIcon, profile: UserIcon, team: TeamIcon };
 
 function NavItems({ view, onChange, savedCount, t, className }) {
-  return VIEWS.map((v) => {
+  return NAV_VIEWS.map((v) => {
     const Icon = VIEW_ICONS[v];
     return (
-      <a key={v} href={v === "discover" ? "#" : `#${v}`} className={className} aria-current={view === v ? "page" : undefined}
+      <a key={v} href={`#${v}`} className={className} aria-current={view === v ? "page" : undefined}
         onClick={(e) => { e.preventDefault(); onChange(v); }}>
         <Icon size={18} />
         <i className="bb-marker" data-view={v} aria-hidden="true" />
@@ -102,7 +105,7 @@ function NavItems({ view, onChange, savedCount, t, className }) {
 
 export default function BrandBridge({ brands, countries, lang }) {
   const t = useMemo(() => getText(lang), [lang]);
-  const [view, setView] = useState("discover");
+  const [view, setView] = useState("intro");
   const [selected, setSelected] = useState(null); // { brand, tab }
   const [showTerms, setShowTerms] = useState(false);
   const [showCompare, setShowCompare] = useState(false);
@@ -126,7 +129,7 @@ export default function BrandBridge({ brands, countries, lang }) {
   useEffect(() => {
     const read = () => {
       const h = window.location.hash.replace("#", "");
-      setView(VIEWS.includes(h) ? h : "discover");
+      setView(VIEWS.includes(h) ? h : "intro");
     };
     read();
     window.addEventListener("hashchange", read);
@@ -146,7 +149,7 @@ export default function BrandBridge({ brands, countries, lang }) {
 
   const goTo = (v) => {
     if (v === view) return;
-    window.history.pushState(null, "", v === "discover" ? window.location.pathname + window.location.search : `#${v}`);
+    window.history.pushState(null, "", v === "intro" ? window.location.pathname + window.location.search : `#${v}`);
     setView(v);
     window.scrollTo(0, 0);
   };
@@ -226,7 +229,7 @@ export default function BrandBridge({ brands, countries, lang }) {
 
       <header className="bb-header">
         <div className="bb-header-inner">
-          <a className="bb-brand" href="#" onClick={(e) => { e.preventDefault(); goTo("discover"); }}>
+          <a className="bb-brand" href="#" onClick={(e) => { e.preventDefault(); goTo("intro"); }}>
             <LogoMark size={30} />
             <span className="bb-wordmark">BrandBridge</span>
           </a>
@@ -359,6 +362,11 @@ export default function BrandBridge({ brands, countries, lang }) {
           </>
         )}
 
+        {view === "intro" && (
+          <IntroView brands={brands} countries={countries} t={t} onTeam={() => goTo("team")}
+            onStart={(c) => { if (c && c !== country) setCountry(c); goTo("discover"); }} />
+        )}
+
         {view === "team" && <TeamView onDiscover={() => goTo("discover")} t={t} />}
 
         {view === "profile" && (
@@ -374,7 +382,7 @@ export default function BrandBridge({ brands, countries, lang }) {
 
       <footer className="bb-footer">
         <div className="bb-footer-inner">
-          <a className="bb-brand bb-brand-foot" href="#" onClick={(e) => { e.preventDefault(); goTo("discover"); }}>
+          <a className="bb-brand bb-brand-foot" href="#" onClick={(e) => { e.preventDefault(); goTo("intro"); }}>
             <LogoMark size={26} /><span className="bb-wordmark">BrandBridge</span>
           </a>
           <p>{t.footer1}<br />{t.footer2}</p>
