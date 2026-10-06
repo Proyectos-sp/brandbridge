@@ -361,6 +361,37 @@ mark { color: inherit; background: none; }
   .bb-search-clear:hover { background: var(--line); }
 }
 
+/* investigar con IA una empresa que no está en el catálogo */
+.bb-research {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px 18px;
+  margin-top: 14px; padding: 16px 18px; border-radius: var(--radius-lg);
+  background: var(--paper); border: 1px solid var(--gold-line); box-shadow: 0 1px 0 rgba(28, 28, 28, 0.02);
+  animation: bb-rise 320ms var(--ease-out) backwards;
+}
+.bb-research-icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--mango-tint); color: var(--black); }
+.bb-research-text strong { display: block; font-size: 16.5px; font-weight: 680; letter-spacing: -0.02em; line-height: 1.3; }
+.bb-research-text p { margin-top: 3px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); max-width: 70ch; }
+.bb-research-picks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.bb-research-picks .bb-chip { height: auto; min-height: 38px; padding: 7px 14px; flex-direction: column; align-items: flex-start; gap: 0; white-space: normal; text-align: left; border-radius: 12px; }
+.bb-research-picks .bb-chip b { font-weight: 650; color: var(--ink); }
+.bb-research-picks .bb-chip span { font-family: var(--mono); font-stretch: 87.5%; font-size: 11px; color: var(--ink-3); }
+.bb-research[data-status="loading"] { border-style: dashed; }
+.bb-balls-sm { height: 22px; gap: 4px; margin: 0; align-items: flex-end; }
+.bb-balls-sm i { width: 8px; height: 8px; border-radius: 2px; }
+.bb-ai-tag { display: inline-flex; align-items: center; padding: 1px 7px; border-radius: 4px; background: var(--gold-metal); color: var(--black); font-family: var(--mono); font-stretch: 87.5%; font-size: 10.5px; font-weight: 600; }
+.bb-remove { color: var(--ink-3); }
+@media (hover: hover) and (pointer: fine) { .bb-remove:hover { color: var(--risky-ink); } }
+.bb-research-note { margin-bottom: 10px; background: var(--mango-tint); border-color: var(--gold-line); }
+.bb-research-note p + p { margin-top: 8px; }
+.bb-research-note strong { color: var(--ink); font-weight: 650; }
+.bb-sources { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.bb-sources a {
+  display: inline-flex; align-items: center; gap: 4px; max-width: 260px; padding: 4px 10px; border-radius: 999px;
+  background: var(--paper); border: 1px solid var(--gold-line); color: var(--ink); text-decoration: none;
+  font-family: var(--mono); font-stretch: 87.5%; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bb-sources a:hover { border-color: var(--gold-deep); }
+
 .bb-resultbar {
   display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap;
   margin: 28px 0 16px; font-family: var(--mono); font-stretch: 87.5%; font-size: 11.5px; color: var(--ink-3);
@@ -915,6 +946,9 @@ mark { color: inherit; background: none; }
   .bb-sep { display: none; }
 
   .bb-card-desc { display: none; }
+  .bb-research { grid-template-columns: auto minmax(0, 1fr); padding: 14px; }
+  .bb-research > .bb-btn { grid-column: 1 / -1; width: 100%; }
+  .bb-research-icon { width: 40px; height: 40px; }
   .bb-mini { width: 30px; padding: 0; justify-content: center; }
   .bb-mini-label { display: none; }
 

@@ -2,7 +2,7 @@
 
 // Vistas y piezas extra: comparación, marcas guardadas y perfil de distribuidor.
 import { useEffect, useRef, useState } from "react";
-import LOGOS from "@/data/logos.json";
+import { logoSrc } from "./logo";
 import Sheet from "./Sheet";
 import { ScoreBadge, bandFor } from "./Score";
 import { CheckIcon, CloseIcon, CompareIcon, HeartIcon, LockIcon, PlayIcon } from "./icons";
@@ -16,7 +16,7 @@ export const EMPTY_PROFILE = { sectors: [], budget: "", networks: [], experience
 const Logo = ({ brand, className }) => (
   <span className={className}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img src={LOGOS[brand.slug]} alt="" />
+    <img src={logoSrc(brand)} alt="" />
   </span>
 );
 
@@ -69,13 +69,13 @@ export function CompareSheet({ items, country, presenceFor, onOpen, onRemove, on
     }],
     [t.categoryLabel, ({ brand }) => t.category(brand.category)],
     [t.rows.origin, ({ brand }) => t.country(brand.origin)],
-    [t.rows.founded, ({ brand }) => brand.founded],
+    [t.rows.founded, ({ brand }) => (Number.isInteger(brand.founded) ? brand.founded : "—")],
     [t.revenue, ({ brand }) => <b className="bb-num">{brand.revenue}</b>],
-    [t.growth, ({ brand }) => <b className={`bb-num ${brand.growth.trim().startsWith("-") ? "bb-down" : ""}`}>{brand.growth}</b>],
+    [t.growth, ({ brand }) => <b className={`bb-num ${String(brand.growth).trim().startsWith("-") ? "bb-down" : ""}`}>{brand.growth}</b>],
     [t.stage, ({ brand }) => brand.stage],
-    [t.rows.employees, ({ brand }) => <span className="bb-num">{brand.employees}</span>],
+    [t.rows.employees, ({ brand }) => <span className="bb-num">{brand.employees === "Unknown" ? "—" : brand.employees}</span>],
     [t.rows.momentum, ({ brand }) => t.tag(brand.tag)],
-    [t.rows.markets, ({ brand }) => brand.markets.map((m) => t.country(m)).join(", ")],
+    [t.rows.markets, ({ brand }) => brand.markets.map((m) => t.country(m)).join(", ") || "—"],
     [t.rows.presence, ({ brand }) => presenceFor(brand)?.label || "—"],
   ];
   const best = Math.max(...items.map((i) => i.score));

@@ -1,7 +1,8 @@
 // POST /api/chat  { brandId, country, messages: [{ role: "user" | "assistant", content }] }
 // Chat en vivo con la IA sobre cómo traer una marca a un país.
 import { NextResponse } from "next/server";
-import { getBrand, getScore, isValidCountry } from "@/lib/data";
+import { getScore, isValidCountry } from "@/lib/data";
+import { findBrand } from "@/lib/research";
 import { askAI, AIError } from "@/lib/ai";
 import { chatSystemPrompt } from "@/lib/prompts";
 import { checkLimits } from "@/lib/limits";
@@ -37,7 +38,7 @@ function cleanMessages(raw) {
 
 export async function POST(request) {
   const body = await request.json().catch(() => ({}));
-  const brand = getBrand(body.brandId);
+  const brand = await findBrand(body.brandId);
   const country = body.country;
   const messages = cleanMessages(body.messages);
 

@@ -1,8 +1,9 @@
-// POST /api/analyze  { brandId, country }
+// POST /api/analyze  { brandId, country }   (brandId: número del catálogo o "r-..." de una empresa investigada)
 // Devuelve el análisis de IA de una marca para un país.
 // Cada análisis se genera una sola vez y queda guardado; después sale gratis y al instante.
 import { NextResponse } from "next/server";
-import { getBrand, getScore, isValidCountry } from "@/lib/data";
+import { getScore, isValidCountry } from "@/lib/data";
+import { findBrand } from "@/lib/research";
 import { askAI, AIError } from "@/lib/ai";
 import { analysisPrompt, parseAnalysis } from "@/lib/prompts";
 import { getValue, setValue } from "@/lib/store";
@@ -13,7 +14,7 @@ const CACHE_DAYS = 30;
 
 export async function POST(request) {
   const body = await request.json().catch(() => ({}));
-  const brand = getBrand(body.brandId);
+  const brand = await findBrand(body.brandId);
   const country = body.country;
 
   if (!brand || !isValidCountry(country)) {

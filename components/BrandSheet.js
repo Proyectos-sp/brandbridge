@@ -3,7 +3,7 @@
 // Ventana de una marca: puntaje para el país elegido y tres pestañas (análisis, contacto, chat).
 // La IA se pide al servidor: POST /api/analyze y POST /api/chat.
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import LOGOS from "@/data/logos.json";
+import { logoSrc } from "./logo";
 import { scoreFor } from "@/lib/score";
 import Sheet from "./Sheet";
 import { bandFor } from "./Score";
@@ -119,19 +119,39 @@ function ErrorState({ message, onRetry, t }) {
 
 /* ------------------------------------------------------------ contacto */
 
+// Ficha de una empresa investigada con IA: de dónde salió, por qué ese puntaje y sus fuentes.
+function ResearchNote({ brand, t }) {
+  if (!brand.researched) return null;
+  return (
+    <section className="bb-block bb-research-note">
+      <h3>{t.researchedTag}</h3>
+      <p>{t.researchedNote(brand.researchedAt, brand.live)}</p>
+      {brand.scoreReason && <p><strong>{t.scoreReasonLabel}:</strong> {brand.scoreReason}</p>}
+      {brand.sources?.length > 0 && (
+        <ul className="bb-sources" aria-label={t.sources}>
+          {brand.sources.map((s) => (
+            <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title || s.url}<ArrowUpRightIcon size={13} /></a></li>
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
 function ContactPanel({ brand, t }) {
   return (
     <div className="bb-contact">
-      <a className="bb-contact-link" href={brand.website} target="_blank" rel="noopener noreferrer">
+      {!brand.website && !brand.instagram && <p className="bb-tip">{t.noContact}</p>}
+      {brand.website && <a className="bb-contact-link" href={brand.website} target="_blank" rel="noopener noreferrer">
         <span className="bb-contact-icon"><GlobeIcon size={20} /></span>
         <span style={{ minWidth: 0 }}><small>{t.website}</small><b>{brand.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}</b></span>
         <ArrowUpRightIcon size={18} />
-      </a>
-      <a className="bb-contact-link" href={brand.instagramUrl} target="_blank" rel="noopener noreferrer">
+      </a>}
+      {brand.instagram && <a className="bb-contact-link" href={brand.instagramUrl} target="_blank" rel="noopener noreferrer">
         <span className="bb-contact-icon"><InstagramIcon size={20} /></span>
         <span style={{ minWidth: 0 }}><small>{t.instagram}</small><b>{brand.instagram}</b></span>
         <ArrowUpRightIcon size={18} />
-      </a>
+      </a>}
       <p className="bb-note">{t.wholesaleHint}</p>
       <p className="bb-tip"><strong>{t.tip}</strong> {t.tipText}</p>
     </div>
@@ -309,11 +329,11 @@ export default function BrandSheet({ brand, country, onClose, t, saved, onToggle
             <div className="bb-sheet-top">
               <div className="bb-sheet-logo">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={LOGOS[brand.slug]} alt="" />
+                <img src={logoSrc(brand)} alt="" />
               </div>
               <div className="bb-sheet-titles">
                 <h2>{brand.name}</h2>
-                <p className="bb-sheet-meta"><span className="bb-catlabel" data-cat={brand.category}><i />{t.category(brand.category)}</span><span>{t.country(brand.origin)}</span><span>{t.est} {brand.founded}</span></p>
+                <p className="bb-sheet-meta"><span className="bb-catlabel" data-cat={brand.category}><i />{t.category(brand.category)}</span>{brand.origin !== "Unknown" && <span>{t.country(brand.origin)}</span>}{Number.isInteger(brand.founded) && <span>{t.est} {brand.founded}</span>}{brand.researched && <span className="bb-ai-tag">{t.researchedTag}</span>}</p>
                 <p className="bb-sheet-desc">{brand.description}</p>
               </div>
               <div className="bb-sheet-actions">
@@ -345,6 +365,7 @@ export default function BrandSheet({ brand, country, onClose, t, saved, onToggle
 
           <div className="bb-sheet-scroll">
             <div className="bb-panel" role="tabpanel" id={`${idBase}-panel-analysis`} aria-labelledby={`${idBase}-tab-analysis`} hidden={tab !== "analysis"}>
+              <ResearchNote brand={brand} t={t} />
               {state.loading ? <AnalysisLoading t={t} />
                 : state.error ? <ErrorState message={state.error} onRetry={() => setAttempt((a) => a + 1)} t={t} />
                 : state.analysis ? <AnalysisView analysis={state.analysis} brand={brand} country={country} t={t} />

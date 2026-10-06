@@ -3,7 +3,7 @@
 // Interfaz de BrandBridge, inspirada en teak.io: papel cuadriculado, tarjetas de interfaz reales
 // flotando, el destino resaltado y un color por categoría. La IA se pide al servidor (/api/analyze y /api/chat).
 import { useEffect, useMemo, useRef, useState } from "react";
-import LOGOS from "@/data/logos.json";
+import { logoSrc } from "./logo";
 import { scoreFor } from "@/lib/score";
 import { getText } from "@/lib/i18n";
 import BrandSheet, { TermsSheet } from "./BrandSheet";
@@ -12,6 +12,7 @@ import { ScoreBadge, bandFor } from "./Score";
 import { ArrowUpRightIcon, CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, TeamIcon, UserIcon } from "./icons";
 import TeamView from "./Team";
 import IntroView from "./Intro";
+import ResearchBox from "./Research";
 import { CompareSheet, CompareTray, EMPTY_PROFILE, PageHead, ProfileView, WatchEmpty, profileQuestion } from "./Extras";
 import useFlip from "./useFlip";
 import useStored from "./useStored";
@@ -21,14 +22,17 @@ const CATEGORIES = ["Beverage", "Food", "Snacks", "Apparel", "Beauty", "Home", "
 
 /* ------------------------------------------------------------ tarjeta de marca */
 
-function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSave, comparing, compareFull, onToggleCompare, presence, mine }) {
+// Datos que la IA no pudo confirmar se muestran como "—".
+const fact = (v) => (!v || v === "Unknown" ? "—" : v);
+
+function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSave, comparing, compareFull, onToggleCompare, presence, mine, onRemove }) {
   const band = bandFor(score);
-  const growthDown = brand.growth.trim().startsWith("-");
+  const growthDown = String(brand.growth).trim().startsWith("-");
   return (
-    <article className="bb-card" data-saved={saved} data-cat={brand.category}>
+    <article className="bb-card" data-saved={saved} data-cat={brand.category} data-researched={brand.researched || undefined}>
       <div className="bb-card-media">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={LOGOS[brand.slug]} alt="" loading={index < 8 ? "eager" : "lazy"} />
+        <img src={logoSrc(brand)} alt="" loading={index < 8 ? "eager" : "lazy"} />
       </div>
       <div className="bb-card-body">
         <div className="bb-card-head">
@@ -38,6 +42,7 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
               <span className="bb-catlabel" data-cat={brand.category}><i />{t.category(brand.category)}</span>
               <span>{t.country(brand.origin)}</span>
               {mine && <span className="bb-mine">{t.yourSector}</span>}
+              {brand.researched && <span className="bb-ai-tag">{t.researchedTag}</span>}
             </span>
           </div>
           <span key={country} className="bb-pop-in"><ScoreBadge score={score} band={band} label={t.bands[band]} /></span>
@@ -49,9 +54,9 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
         )}
         <p className="bb-card-desc">{brand.description}</p>
         <div className="bb-facts">
-          <span><small>{t.revenue}</small><b>{brand.revenue}</b></span>
-          <span><small>{t.growth}</small><b className={growthDown ? "bb-down" : undefined}>{brand.growth}</b></span>
-          <span><small>{t.stage}</small><b>{brand.stage}</b></span>
+          <span><small>{t.revenue}</small><b>{fact(brand.revenue)}</b></span>
+          <span><small>{t.growth}</small><b className={growthDown ? "bb-down" : undefined}>{fact(brand.growth)}</b></span>
+          <span><small>{t.stage}</small><b>{fact(brand.stage)}</b></span>
         </div>
         <div className="bb-card-foot">
           <span className="bb-tag">{t.tag(brand.tag)}</span>
@@ -74,6 +79,11 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
           aria-label={saved ? t.unsaveLabel(brand.name) : t.saveLabel(brand.name)}>
           <HeartIcon size={18} filled={saved} />
         </button>
+        {onRemove && (
+          <button type="button" className="bb-heart bb-remove" onClick={() => onRemove(brand.id)} aria-label={t.removeResearched(brand.name)} title={t.remove}>
+            <CloseIcon size={16} strokeWidth={2.2} />
+          </button>
+        )}
       </div>
     </article>
   );
@@ -117,12 +127,15 @@ export default function BrandBridge({ brands, countries, lang }) {
   const [compare, setCompare] = useStored("bb-compare", []);
   const [profile, setProfile] = useStored("bb-profile", EMPTY_PROFILE);
   const [presenceAi, setPresenceAi] = useStored("bb-presence", {});
+  // Empresas investigadas con IA: solo las ve quien las buscó (se guardan en este navegador).
+  const [researched, setResearched] = useStored("bb-researched", []);
   const gridRef = useRef(null);
   const boardRef = useRef(null);
   const searchRef = useRef(null);
   const openBrand = (brand, tab = "analysis") => setSelected({ brand, tab });
 
-  const byId = useMemo(() => Object.fromEntries(brands.map((b) => [b.id, b])), [brands]);
+  const allBrands = useMemo(() => [...researched, ...brands], [researched, brands]);
+  const byId = useMemo(() => Object.fromEntries(allBrands.map((b) => [b.id, b])), [allBrands]);
   const place = t.country(country);
 
   /* ---- vista según el #hash, para que el botón Atrás funcione ---- */
@@ -159,13 +172,18 @@ export default function BrandBridge({ brands, countries, lang }) {
     () => brands.map((b) => ({ brand: b, score: scoreFor(b, country) })).sort((a, b) => b.score - a.score || a.brand.name.localeCompare(b.brand.name)),
     [brands, country]
   );
+  // Catálogo + investigadas (la portada, el top 5 y las cifras usan solo el catálogo).
+  const scoredAll = useMemo(
+    () => [...researched.map((b) => ({ brand: b, score: scoreFor(b, country) })), ...scored].sort((a, b) => b.score - a.score || a.brand.name.localeCompare(b.brand.name)),
+    [researched, scored, country]
+  );
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return scored
+    return scoredAll
       .filter(({ brand: b }) => (category === "All" || b.category === category) && (tag === "All" || b.tag === tag))
       .filter(({ brand: b }) => !q || b.name.toLowerCase().includes(q) || b.category.toLowerCase().includes(q) || t.category(b.category).toLowerCase().includes(q) || b.description.toLowerCase().includes(q));
-  }, [scored, category, tag, search, t]);
-  const savedList = useMemo(() => scored.filter(({ brand }) => saved.includes(brand.id)), [scored, saved]);
+  }, [scoredAll, category, tag, search, t]);
+  const savedList = useMemo(() => scoredAll.filter(({ brand }) => saved.includes(brand.id)), [scoredAll, saved]);
   const shown = view === "watchlist" ? savedList : filtered;
   const strongAll = scored.filter((s) => s.score >= 80).length;
   const avgScore = Math.round(scored.reduce((sum, s) => sum + s.score, 0) / Math.max(scored.length, 1));
@@ -195,6 +213,24 @@ export default function BrandBridge({ brands, countries, lang }) {
   const rememberPresence = (brand, forCountry) => (status) =>
     setPresenceAi((m) => (m[`${brand.id}|${forCountry}`] === status ? m : { ...m, [`${brand.id}|${forCountry}`]: status }));
 
+  const squash = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const query = search.trim();
+  const canResearch = view === "discover" && query.length >= 2 && !allBrands.some((b) => squash(b.name) === squash(query));
+  const onResearched = (brand, fromCatalog) => {
+    if (!fromCatalog) setResearched((list) => [brand, ...list.filter((b) => b.id !== brand.id)].slice(0, 30));
+    captureFlip();
+    setCategory("All");
+    setTag("All");
+    setSearch(brand.name);
+    openBrand(fromCatalog ? byId[brand.id] || brand : brand);
+  };
+  const removeResearched = (id) => {
+    captureFlip();
+    setResearched((list) => list.filter((b) => b.id !== id));
+    setSaved((list) => list.filter((x) => x !== id));
+    setCompare((list) => list.filter((x) => x !== id));
+  };
+
   const saveProfile = (next) => {
     setProfile(next);
     if (next.target && next.target !== country) withFlip(setCountry)(next.target);
@@ -214,7 +250,8 @@ export default function BrandBridge({ brands, countries, lang }) {
           <BrandCard brand={brand} score={score} country={country} onOpen={openBrand} index={i} t={t}
             saved={saved.includes(brand.id)} onToggleSave={toggleSave}
             comparing={compare.includes(brand.id)} compareFull={compare.length >= 3} onToggleCompare={toggleCompare}
-            presence={presenceFor(brand)} mine={profile.sectors.includes(brand.category)} />
+            presence={presenceFor(brand)} mine={profile.sectors.includes(brand.category)}
+            onRemove={brand.researched ? removeResearched : undefined} />
         </div>
       ))}
     </div>
@@ -328,6 +365,8 @@ export default function BrandBridge({ brands, countries, lang }) {
                 </div>
               </section>
 
+              {canResearch && <ResearchBox key={squash(query)} query={query} onFound={onResearched} t={t} />}
+
               <div className="bb-resultbar">
                 <span aria-live="polite"><strong className="bb-num">{t.count(filtered.length)}</strong><span className="bb-estimates"><span className="bb-sep"> · </span>{t.estimatesNote}</span></span>
                 <span className="bb-legend" aria-label={t.scoreTitle}>
@@ -337,7 +376,7 @@ export default function BrandBridge({ brands, countries, lang }) {
                 </span>
               </div>
 
-              {filtered.length === 0 ? (
+              {filtered.length === 0 ? (canResearch ? null : (
                 <div className="bb-empty">
                   <div className="bb-empty-icon" aria-hidden="true"><SearchIcon size={30} /></div>
                   <h2>{t.noBrands}</h2>
@@ -348,7 +387,7 @@ export default function BrandBridge({ brands, countries, lang }) {
                     </button>
                   )}
                 </div>
-              ) : grid(filtered)}
+              )) : grid(filtered)}
             </main>
           </>
         )}
