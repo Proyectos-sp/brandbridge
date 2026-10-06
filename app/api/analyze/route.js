@@ -10,7 +10,7 @@ import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
 import { SERVER_LANG, serverText as T } from "@/lib/i18n";
 
-const CACHE_DAYS = 30;
+const CACHE_DAYS = 180; // largo para ahorrar cupo gratuito de la IA
 
 export async function POST(request) {
   const body = await request.json().catch(() => ({}));

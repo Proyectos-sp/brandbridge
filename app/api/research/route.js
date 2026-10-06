@@ -1,17 +1,48 @@
 // POST /api/research  { query }
-// Investiga en internet (Gemini + Google Search) una empresa que no está en el catálogo y
-// devuelve su ficha con el mismo formato que las 55 marcas, con un puntaje calibrado con ellas.
+// Investiga una empresa que no está en el catálogo y devuelve su ficha con el mismo formato
+// que las 55 marcas, con un puntaje calibrado con ellas.
 // Respuestas: { brand, cached } | { candidates: [{ name, note }] } | { notFound: true } | { error }
+//
+// Gratis por defecto: la IA reconoce la empresa y su sitio oficial, el servidor busca su artículo
+// en Wikipedia (API pública) y la IA lee esas páginas para armar la ficha (URL context de Gemini).
+// Con GEMINI_SEARCH=true (plan pagado) usa Google Search en vez de eso.
 import { NextResponse } from "next/server";
 import { BRANDS, CATEGORIES } from "@/lib/data";
-import { askAI, askAIWithSearch, AIError } from "@/lib/ai";
-import { researchPrompt } from "@/lib/prompts";
-import { TAGS, RESEARCH_DAYS, catalogMatch, parseResearch, researchKey, saveResearchedBrand } from "@/lib/research";
+import { askAI, askAIWithWeb, AIError } from "@/lib/ai";
+import { identifyPrompt, researchPrompt } from "@/lib/prompts";
+import { TAGS, RESEARCH_DAYS, catalogMatch, findWikipedia, parseIdentify, parseResearch, researchKey, saveResearchedBrand } from "@/lib/research";
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
 import { SERVER_LANG, serverText as T } from "@/lib/i18n";
 
-export const maxDuration = 60; // la búsqueda en internet puede tardar
+export const maxDuration = 60; // leer páginas puede tardar
+
+const PAID_SEARCH = process.env.GEMINI_SEARCH === "true";
+
+// Arma la ficha leyendo páginas reales (gratis). Devuelve { text, sources, live } o { candidates }.
+async function researchFromPages(query) {
+  const id = parseIdentify(await askAI({ ...identifyPrompt(query), maxTokens: 300, json: true }));
+  if (id && !id.found) return { candidates: id.candidates };
+
+  const name = id?.name || query;
+  const wiki = await findWikipedia(id?.wikipedia || name);
+  const urls = [id?.website, wiki].filter(Boolean);
+
+  if (urls.length) {
+    const prompt = researchPrompt(name, BRANDS, CATEGORIES, TAGS, "pages", urls);
+    const { text, sources } = await askAIWithWeb({ ...prompt, maxTokens: 1200, web: "urls" });
+    if (sources.length) return { text, sources, live: true };
+  }
+  // Sin páginas legibles: con lo que la IA sabe, marcado como "sin internet".
+  const prompt = researchPrompt(name, BRANDS, CATEGORIES, TAGS, "memory");
+  return { text: await askAI({ ...prompt, maxTokens: 1200, json: true }), sources: [], live: false };
+}
+
+async function researchWithSearch(query) {
+  const prompt = researchPrompt(query, BRANDS, CATEGORIES, TAGS, "search");
+  const { text, sources } = await askAIWithWeb({ ...prompt, maxTokens: 1200, web: "search" });
+  return { text, sources, live: true };
+}
 
 export async function POST(request) {
   const body = await request.json().catch(() => ({}));
@@ -32,35 +63,39 @@ export async function POST(request) {
   if (limitMessage) return NextResponse.json({ error: limitMessage }, { status: 429 });
 
   try {
-    // Primero con búsqueda en Google. Si la clave no tiene cupo para búsquedas (o no es Gemini),
-    // se arma la ficha con el conocimiento de la IA y queda marcada como "sin búsqueda en vivo".
-    let text, sources = [], live = true;
-    try {
-      const prompt = researchPrompt(query, BRANDS, CATEGORIES, TAGS, true);
-      ({ text, sources } = await askAIWithSearch({ ...prompt, maxTokens: 1200 }));
-    } catch (error) {
-      if (!(error instanceof AIError) || ![501, 503].includes(error.status)) throw error;
-      live = false;
-      const prompt = researchPrompt(query, BRANDS, CATEGORIES, TAGS, false);
-      text = await askAI({ ...prompt, maxTokens: 1200, json: true });
-    }
-    const result = parseResearch(text, sources);
-    if (result?.brand) result.brand.live = live;
-
-    if (!result) {
-      console.error("[research] formato inesperado:", text.slice(0, 300));
-      return NextResponse.json({ error: T.researchFailed }, { status: 502 });
+    let found;
+    if (PAID_SEARCH) {
+      try {
+        found = await researchWithSearch(query);
+      } catch (error) {
+        if (!(error instanceof AIError) || ![501, 503].includes(error.status)) throw error;
+        found = await researchFromPages(query);
+      }
+    } else {
+      found = await researchFromPages(query);
     }
 
     let payload;
-    if (result.brand) {
-      await saveResearchedBrand(result.brand);
-      payload = { brand: result.brand };
+    let live = false;
+    if (found.candidates) {
+      payload = found.candidates.length ? { candidates: found.candidates } : { notFound: true };
     } else {
-      payload = result.candidates.length ? { candidates: result.candidates } : { notFound: true };
+      live = found.live;
+      const result = parseResearch(found.text, found.sources);
+      if (!result) {
+        console.error("[research] formato inesperado:", String(found.text).slice(0, 300));
+        return NextResponse.json({ error: T.researchFailed }, { status: 502 });
+      }
+      if (result.brand) {
+        result.brand.live = live;
+        await saveResearchedBrand(result.brand);
+        payload = { brand: result.brand };
+      } else {
+        payload = result.candidates.length ? { candidates: result.candidates } : { notFound: true };
+      }
     }
-    // Resultados vacíos duran menos, por si la empresa aparece después.
-    // Las fichas sin búsqueda en vivo se guardan poco tiempo, para rehacerlas con internet cuando haya cupo.
+
+    // Las fichas sin internet se guardan poco tiempo, para rehacerlas cuando se pueda leer la web.
     await setValue(cacheKey, payload, (payload.brand ? (live ? RESEARCH_DAYS : 7) : 2) * 86400);
     return NextResponse.json({ ...payload, cached: false });
   } catch (error) {
