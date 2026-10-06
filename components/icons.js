@@ -30,6 +30,7 @@ export const PlusIcon = (p) => <Icon {...p}><path d="M12 5v14M5 12h14" /></Icon>
 export const CompassIcon = (p) => <Icon {...p}><circle cx="12" cy="12" r="9" /><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z" /></Icon>;
 export const UserIcon = (p) => <Icon {...p}><circle cx="12" cy="8" r="4" /><path d="M4 20c1.5-3.5 4.4-5 8-5s6.5 1.5 8 5" /></Icon>;
 export const ShieldIcon = (p) => <Icon {...p}><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6l-7-3Z" /><path d="m9 12 2 2 4-4" /></Icon>;
+export const TeamIcon = (p) => <Icon {...p}><circle cx="9" cy="8" r="3.5" /><path d="M2.5 19.5c1.2-3.2 3.6-4.7 6.5-4.7s5.3 1.5 6.5 4.7" /><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M18 14.6c1.7.8 2.9 2.4 3.5 4.9" /></Icon>;
 export const InfoIcon = (p) => <Icon {...p}><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></Icon>;
 
 // Triángulo sólido que acompaña a los botones píldora.
@@ -41,14 +42,19 @@ export function PlayIcon({ size = 10, ...rest }) {
   );
 }
 
-// Marca de BrandBridge: tres barras que suben, como un puntaje que crece de un país a otro.
+// Marca de BrandBridge: tres barras doradas que suben, como un puntaje que crece de un país a otro.
 export function LogoMark({ size = 30 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <rect width="32" height="32" rx="8" fill="#12223A" />
-      <rect x="6" y="17" width="6" height="9" rx="1.5" fill="#18B2C2" />
-      <rect x="13" y="12" width="6" height="14" rx="1.5" fill="#FF5C9D" />
-      <rect x="20" y="7" width="6" height="19" rx="1.5" fill="#FFC83A" />
+      <defs>
+        <linearGradient id="bb-logo-gold" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#FBE8A6" /><stop offset="0.55" stopColor="#D9BC7C" /><stop offset="1" stopColor="#B8954A" />
+        </linearGradient>
+      </defs>
+      <rect width="32" height="32" rx="8" fill="#1C1C1C" />
+      <rect x="6" y="17" width="6" height="9" rx="1.5" fill="url(#bb-logo-gold)" />
+      <rect x="13" y="12" width="6" height="14" rx="1.5" fill="url(#bb-logo-gold)" />
+      <rect x="20" y="7" width="6" height="19" rx="1.5" fill="url(#bb-logo-gold)" />
     </svg>
   );
 }

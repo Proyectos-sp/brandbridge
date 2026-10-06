@@ -9,7 +9,8 @@ import { getText } from "@/lib/i18n";
 import BrandSheet, { TermsSheet } from "./BrandSheet";
 import HeroBoard from "./HeroBoard";
 import { ScoreBadge, bandFor } from "./Score";
-import { CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, UserIcon } from "./icons";
+import { CheckIcon, ChevronDownIcon, CloseIcon, CompassIcon, GlobeIcon, HeartIcon, LogoMark, PlayIcon, PlusIcon, SearchIcon, ShieldIcon, TeamIcon, UserIcon } from "./icons";
+import TeamView from "./Team";
 import { CompareSheet, CompareTray, EMPTY_PROFILE, PageHead, ProfileView, WatchEmpty, profileQuestion } from "./Extras";
 import useFlip from "./useFlip";
 import useStored from "./useStored";
@@ -79,8 +80,8 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
 
 /* ------------------------------------------------------------ navegación */
 
-const VIEWS = ["discover", "watchlist", "profile"];
-const VIEW_ICONS = { discover: CompassIcon, watchlist: HeartIcon, profile: UserIcon };
+const VIEWS = ["discover", "watchlist", "profile", "team"];
+const VIEW_ICONS = { discover: CompassIcon, watchlist: HeartIcon, profile: UserIcon, team: TeamIcon };
 
 function NavItems({ view, onChange, savedCount, t, className }) {
   return VIEWS.map((v) => {
@@ -347,6 +348,8 @@ export default function BrandBridge({ brands, countries, lang }) {
             </main>
           </>
         )}
+
+        {view === "team" && <TeamView onDiscover={() => goTo("discover")} t={t} />}
 
         {view === "profile" && (
           <>
