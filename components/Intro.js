@@ -7,6 +7,7 @@ import LOGOS from "@/data/logos.json";
 import { scoreFor } from "@/lib/score";
 import { ArrowUpRightIcon, PlayIcon } from "./icons";
 import { bandFor } from "./Score";
+import HeroMap from "./HeroMap";
 
 function Marquee({ brands, reverse }) {
   // Se duplica la lista para que el desplazamiento sea continuo.
@@ -50,6 +51,7 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
     <>
       <section className="bb-intro-hero" aria-labelledby="bb-intro-title">
         <div className="bb-intro-hero-inner">
+          <div className="bb-intro-copy">
           <h1 id="bb-intro-title">{intro.title} <mark className="bb-hl">{intro.titleHl}</mark></h1>
           <p className="bb-intro-sub">{intro.sub}</p>
           <div className="bb-intro-ctas">
@@ -60,6 +62,8 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
             }}>{intro.how}</a>
           </div>
           <p className="bb-intro-facts">{intro.facts(brands.length, industries, countries.length)}</p>
+          </div>
+          <HeroMap brands={brands} onStart={onStart} t={t} />
         </div>
       </section>
 

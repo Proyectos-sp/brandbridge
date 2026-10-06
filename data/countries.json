@@ -108,5 +108,93 @@
     "Tech": 1,
     "Wellness": 2,
     "Pets": 1
+  },
+  "Ecuador": {
+    "Beverage": 6,
+    "Food": 6,
+    "Snacks": 6,
+    "Apparel": 3,
+    "Beauty": 5,
+    "Home": 2,
+    "Tech": 3,
+    "Wellness": 4,
+    "Pets": 2
+  },
+  "Uruguay": {
+    "Beverage": 5,
+    "Food": 6,
+    "Snacks": 5,
+    "Apparel": 4,
+    "Beauty": 6,
+    "Home": 6,
+    "Tech": 6,
+    "Wellness": 7,
+    "Pets": 5
+  },
+  "Paraguay": {
+    "Beverage": 4,
+    "Food": 5,
+    "Snacks": 5,
+    "Apparel": 2,
+    "Beauty": 4,
+    "Home": 2,
+    "Tech": 2,
+    "Wellness": 3,
+    "Pets": 2
+  },
+  "Bolivia": {
+    "Beverage": 3,
+    "Food": 5,
+    "Snacks": 4,
+    "Apparel": 1,
+    "Beauty": 3,
+    "Home": 1,
+    "Tech": 1,
+    "Wellness": 2,
+    "Pets": 1
+  },
+  "Venezuela": {
+    "Beverage": 2,
+    "Food": 3,
+    "Snacks": 3,
+    "Apparel": 0,
+    "Beauty": 4,
+    "Home": -2,
+    "Tech": 0,
+    "Wellness": 1,
+    "Pets": 0
+  },
+  "Honduras": {
+    "Beverage": 5,
+    "Food": 6,
+    "Snacks": 6,
+    "Apparel": 1,
+    "Beauty": 3,
+    "Home": 0,
+    "Tech": 1,
+    "Wellness": 2,
+    "Pets": 1
+  },
+  "El Salvador": {
+    "Beverage": 6,
+    "Food": 6,
+    "Snacks": 7,
+    "Apparel": 2,
+    "Beauty": 4,
+    "Home": 1,
+    "Tech": 3,
+    "Wellness": 3,
+    "Pets": 2
+  },
+  "Nicaragua": {
+    "Beverage": 3,
+    "Food": 5,
+    "Snacks": 5,
+    "Apparel": 0,
+    "Beauty": 2,
+    "Home": 0,
+    "Tech": 0,
+    "Wellness": 1,
+    "Pets": 0
   }
 }
