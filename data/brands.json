@@ -65,8 +65,8 @@
     "description": "High-protein, low-carb cereal reimagining childhood favorites for health-conscious adults.",
     "accentColor": "#5B5BD6",
     "website": "https://magicspoon.com",
-    "instagram": "@magicspoon",
-    "instagramUrl": "https://instagram.com/magicspoon",
+    "instagram": "@magicspooncereal",
+    "instagramUrl": "https://instagram.com/magicspooncereal",
     "bgGradient": "linear-gradient(135deg,#000d1a,#001a2d)"
   },
   {
@@ -139,8 +139,8 @@
     "description": "DTC olive oil in squeeze bottles making premium EVOO accessible and fun.",
     "accentColor": "#AAFF00",
     "website": "https://graza.co",
-    "instagram": "@graza.co",
-    "instagramUrl": "https://instagram.com/graza.co",
+    "instagram": "@getgraza",
+    "instagramUrl": "https://instagram.com/getgraza",
     "bgGradient": "linear-gradient(135deg,#0d1a00,#1a2d00)"
   },
   {
@@ -163,8 +163,8 @@
     "description": "Women-focused energy drinks blending bold aesthetics with performance nutrition.",
     "accentColor": "#FF00FF",
     "website": "https://alaninu.com",
-    "instagram": "@alaninu",
-    "instagramUrl": "https://instagram.com/alaninu",
+    "instagram": "@alaninutrition",
+    "instagramUrl": "https://instagram.com/alaninutrition",
     "bgGradient": "linear-gradient(135deg,#1a001a,#2d002d)"
   },
   {
@@ -211,8 +211,8 @@
     "description": "Hydration multiplier sachets delivering 2-3x more hydration than water alone, now owned by Unilever.",
     "accentColor": "#00BFFF",
     "website": "https://liquid-iv.com",
-    "instagram": "@liquid_iv",
-    "instagramUrl": "https://instagram.com/liquid_iv",
+    "instagram": "@liquidiv",
+    "instagramUrl": "https://instagram.com/liquidiv",
     "bgGradient": "linear-gradient(135deg,#000510,#001030)"
   },
   {
@@ -234,8 +234,8 @@
     "description": "Coffee alternative made with mushrooms and adaptogens — riding the wellness and anti-caffeine wave.",
     "accentColor": "#D4A96A",
     "website": "https://mudwtr.com",
-    "instagram": "@mudwtr",
-    "instagramUrl": "https://instagram.com/mudwtr",
+    "instagram": "@drinkmudwtr",
+    "instagramUrl": "https://instagram.com/drinkmudwtr",
     "bgGradient": "linear-gradient(135deg,#1a0a00,#2a1500)"
   },
   {
@@ -304,9 +304,9 @@
     "baseScore": 58,
     "description": "Premium artisan olive oils and vinegars in stunning packaging — beloved by chefs and design-forward consumers.",
     "accentColor": "#FCD34D",
-    "website": "https://brightland.com",
-    "instagram": "@brightland",
-    "instagramUrl": "https://instagram.com/brightland",
+    "website": "https://brightland.co",
+    "instagram": "@wearebrightland",
+    "instagramUrl": "https://instagram.com/wearebrightland",
     "bgGradient": "linear-gradient(135deg,#1a1000,#2a2000)"
   },
   {
@@ -419,9 +419,9 @@
     "baseScore": 69,
     "description": "Modern, clean-label dog food brand targeting millennial pet owners who treat pets like family.",
     "accentColor": "#FB923C",
-    "website": "https://fetchemjinx.com",
-    "instagram": "@jinx",
-    "instagramUrl": "https://instagram.com/jinx",
+    "website": "https://www.thinkjinx.com",
+    "instagram": "@thinkjinx",
+    "instagramUrl": "https://instagram.com/thinkjinx",
     "bgGradient": "linear-gradient(135deg,#1a0a00,#2a1000)"
   },
   {
@@ -468,8 +468,8 @@
     "description": "Non-toxic, ceramic-coated cookware in beautiful colorways — the DTC kitchen brand taking on legacy cookware giants.",
     "accentColor": "#D97706",
     "website": "https://carawayhome.com",
-    "instagram": "@carawayhome",
-    "instagramUrl": "https://instagram.com/carawayhome",
+    "instagram": "@caraway_home",
+    "instagramUrl": "https://instagram.com/caraway_home",
     "bgGradient": "linear-gradient(135deg,#0a0500,#1a1000)"
   },
   {
@@ -491,8 +491,8 @@
     "description": "Single-origin, ethically-sourced spices from South Asia — a spice revolution with a social conscience.",
     "accentColor": "#FB923C",
     "website": "https://diasporaco.com",
-    "instagram": "@diaspora_co",
-    "instagramUrl": "https://instagram.com/diaspora_co",
+    "instagram": "@diasporaco",
+    "instagramUrl": "https://instagram.com/diasporaco",
     "bgGradient": "linear-gradient(135deg,#1a0500,#2a0f00)"
   },
   {
@@ -560,8 +560,8 @@
     "description": "CBD and adaptogen-infused sparkling water positioned around calm and mental clarity.",
     "accentColor": "#EC4899",
     "website": "https://takearecess.com",
-    "instagram": "@recess",
-    "instagramUrl": "https://instagram.com/recess",
+    "instagram": "@takearecess",
+    "instagramUrl": "https://instagram.com/takearecess",
     "bgGradient": "linear-gradient(135deg,#1a0012,#2a0020)"
   },
   {
@@ -583,8 +583,8 @@
     "description": "Low-carb, high-protein instant ramen reinventing a beloved category for health-conscious millennials.",
     "accentColor": "#EF4444",
     "website": "https://immieats.com",
-    "instagram": "@immi",
-    "instagramUrl": "https://instagram.com/immi",
+    "instagram": "@immieats",
+    "instagramUrl": "https://instagram.com/immieats",
     "bgGradient": "linear-gradient(135deg,#1a0505,#2a0808)"
   },
   {
@@ -655,8 +655,8 @@
     "description": "AI-powered plant-based food company (NotMilk, NotMayo) born in Chile — already a LatAm success story.",
     "accentColor": "#FACC15",
     "website": "https://notco.com",
-    "instagram": "@notco",
-    "instagramUrl": "https://instagram.com/notco",
+    "instagram": "@thenotco",
+    "instagramUrl": "https://instagram.com/thenotco",
     "bgGradient": "linear-gradient(135deg,#0a0a00,#1a1a00)"
   },
   {
@@ -797,8 +797,8 @@
     "description": "Hydration and energy drink from influencers Logan Paul and KSI — explosive global youth demand.",
     "accentColor": "#FFA500",
     "website": "https://drinkprime.com",
-    "instagram": "@prime",
-    "instagramUrl": "https://instagram.com/prime",
+    "instagram": "@drinkprime",
+    "instagramUrl": "https://instagram.com/drinkprime",
     "bgGradient": "linear-gradient(135deg,#001020,#002040)"
   },
   {
@@ -1153,8 +1153,8 @@
     "description": "Swiss performance running shoes with cloud-tech soles — backed by Roger Federer, growing fast globally.",
     "accentColor": "#1A1A2E",
     "website": "https://on-running.com",
-    "instagram": "@on_running",
-    "instagramUrl": "https://instagram.com/on_running",
+    "instagram": "@on",
+    "instagramUrl": "https://instagram.com/on",
     "bgGradient": "linear-gradient(135deg,#0a0a0c,#16161a)"
   },
   {
@@ -1226,8 +1226,8 @@
     "description": "The 100-year-old tumbler brand that went viral with the Quencher — a TikTok-fueled resurgence.",
     "accentColor": "#0E9F6E",
     "website": "https://stanley1913.com",
-    "instagram": "@stanley_brand",
-    "instagramUrl": "https://instagram.com/stanley_brand",
+    "instagram": "@stanley1913_brand",
+    "instagramUrl": "https://instagram.com/stanley1913_brand",
     "bgGradient": "linear-gradient(135deg,#04241a,#063a2a)"
   },
   {
@@ -1248,7 +1248,7 @@
     "baseScore": 53,
     "description": "Innovative water bottles with viral FreeSip lids — a fast-rising challenger to Stanley.",
     "accentColor": "#0D9488",
-    "website": "https://owala.com",
+    "website": "https://owalalife.com",
     "instagram": "@owala",
     "instagramUrl": "https://instagram.com/owala",
     "bgGradient": "linear-gradient(135deg,#0a1418,#122024)"

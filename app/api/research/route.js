@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
 import { BRANDS, CATEGORIES } from "@/lib/data";
 import { askAI, askAIWithWeb, AIError } from "@/lib/ai";
 import { identifyPrompt, researchPrompt } from "@/lib/prompts";
-import { TAGS, RESEARCH_DAYS, catalogMatch, findWikipedia, parseIdentify, parseResearch, researchKey, saveResearchedBrand } from "@/lib/research";
+import { TAGS, RESEARCH_DAYS, catalogMatch, findWikipedia, parseIdentify, parseResearch, researchKey, saveResearchedBrand, verifyInstagram } from "@/lib/research";
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
 import { SERVER_LANG, serverText as T } from "@/lib/i18n";
@@ -57,7 +57,15 @@ export async function POST(request) {
 
   const cacheKey = researchKey(SERVER_LANG, query);
   const cached = await getValue(cacheKey);
-  if (cached) return NextResponse.json({ ...cached, cached: true });
+  if (cached) {
+    // Fichas guardadas antes de revisar Instagram: se revisan una vez y se vuelven a guardar.
+    if (cached.brand && !cached.brand.instagramChecked) {
+      await verifyInstagram(cached.brand);
+      await saveResearchedBrand(cached.brand);
+      await setValue(cacheKey, cached, (cached.brand.live ? RESEARCH_DAYS : 7) * 86400);
+    }
+    return NextResponse.json({ ...cached, cached: true });
+  }
 
   const limitMessage = await checkLimits(request, "research");
   if (limitMessage) return NextResponse.json({ error: limitMessage }, { status: 429 });
@@ -88,6 +96,7 @@ export async function POST(request) {
       }
       if (result.brand) {
         result.brand.live = live;
+        await verifyInstagram(result.brand);
         await saveResearchedBrand(result.brand);
         payload = { brand: result.brand };
       } else {

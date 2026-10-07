@@ -143,17 +143,20 @@ function ResearchNote({ brand, t }) {
 }
 
 function ContactPanel({ brand, t }) {
+  // En empresas investigadas con IA, Instagram solo se muestra si el servidor lo confirmó
+  // en el sitio oficial o en Wikidata (las fichas guardadas antes no traen esa marca).
+  const instagram = brand.researched && !brand.instagramChecked ? "" : brand.instagram;
   return (
     <div className="bb-contact">
-      {!brand.website && !brand.instagram && <p className="bb-tip">{t.noContact}</p>}
+      {!brand.website && !instagram && <p className="bb-tip">{t.noContact}</p>}
       {brand.website && <a className="bb-contact-link" href={brand.website} target="_blank" rel="noopener noreferrer">
         <span className="bb-contact-icon"><GlobeIcon size={20} /></span>
         <span style={{ minWidth: 0 }}><small>{t.website}</small><b>{brand.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}</b></span>
         <ArrowUpRightIcon size={18} />
       </a>}
-      {brand.instagram && <a className="bb-contact-link" href={brand.instagramUrl} target="_blank" rel="noopener noreferrer">
+      {instagram && <a className="bb-contact-link" href={brand.instagramUrl} target="_blank" rel="noopener noreferrer">
         <span className="bb-contact-icon"><InstagramIcon size={20} /></span>
-        <span style={{ minWidth: 0 }}><small>{t.instagram}</small><b>{brand.instagram}</b></span>
+        <span style={{ minWidth: 0 }}><small>{t.instagram}</small><b>{instagram}</b></span>
         <ArrowUpRightIcon size={18} />
       </a>}
       <p className="bb-note">{t.wholesaleHint}</p>
