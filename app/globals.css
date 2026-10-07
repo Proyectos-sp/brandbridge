@@ -586,13 +586,12 @@ mark { color: inherit; background: none; }
 .bb-intro-head p { max-width: 46ch; font-size: 17px; line-height: 1.55; color: var(--ink-2); }
 /* banderas que flotan y ondean; cada una lleva a la app con ese país */
 .bb-flags { list-style: none; margin: 44px auto 0; padding: 0 0 30px; max-width: 1080px; display: flex; flex-wrap: wrap; justify-content: center; gap: 22px clamp(18px, 3vw, 34px); }
-.bb-flags > li { margin-top: var(--y); animation: bb-float var(--d) ease-in-out var(--delay) infinite; }
-.bb-flag { display: grid; justify-items: center; gap: 10px; padding: 6px; background: none; border: 0; border-radius: 12px; font: inherit; cursor: pointer; color: var(--ink); rotate: var(--r); transition: transform 240ms var(--ease-out); }
+.bb-flags > li { animation: bb-float var(--d) ease-in-out var(--delay) infinite; }
+.bb-flag { display: grid; justify-items: center; gap: 10px; padding: 6px; background: none; border: 0; border-radius: 12px; font: inherit; cursor: pointer; color: var(--ink); transition: transform 240ms var(--ease-out); }
 .bb-flag:active { transform: scale(0.96); }
 .bb-flag-cloth {
   position: relative; display: block; width: clamp(92px, 10vw, 128px); aspect-ratio: 3 / 2; border-radius: 9px; overflow: hidden;
-  box-shadow: 0 1px 2px rgba(28, 28, 28, 0.08), 0 16px 28px -14px rgba(28, 28, 28, 0.38); transform-origin: left center;
-  animation: bb-flutter calc(var(--d) * 0.6) ease-in-out var(--delay) infinite;
+  box-shadow: 0 1px 2px rgba(28, 28, 28, 0.08), 0 16px 28px -14px rgba(28, 28, 28, 0.38);
 }
 .bb-flag-cloth img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* pliegues de tela: luz y sombra que recorren la bandera */
@@ -934,7 +933,6 @@ mark { color: inherit; background: none; }
 @keyframes bb-card-swap { from { opacity: 0; transform: translateY(6px); } }
 @keyframes bb-marquee { to { transform: translateX(calc(-50% - 6px)); } }
 @keyframes bb-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
-@keyframes bb-flutter { 0%, 100% { transform: perspective(500px) rotateY(0deg) skewY(0deg); } 50% { transform: perspective(500px) rotateY(-14deg) skewY(-1.5deg); } }
 @keyframes bb-folds { to { background-position: 80px 0; } }
 @keyframes bb-rise { from { opacity: 0; transform: translateY(12px); } }
 @keyframes bb-pop { 0% { transform: scale(0.7); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); } }
@@ -988,7 +986,6 @@ mark { color: inherit; background: none; }
   .bb-map-card { width: min(230px, 72%); padding: 10px 12px; }
   .bb-map-origin-label { top: 38px; }
   .bb-flags { gap: 14px 10px; margin-top: 32px; }
-  .bb-flags > li { margin-top: calc(var(--y) * 0.5); }
   .bb-flag-name { font-size: 10.5px; }
   .bb-intro-steps { grid-template-columns: 1fr; gap: 28px; }
   .bb-intro-founder { grid-template-columns: 1fr; }
@@ -1087,7 +1084,7 @@ mark { color: inherit; background: none; }
   .bb-cell, .bb-analysis > *, .bb-msg, .bb-pop-in, .bb-count, .bb-board, .bb-bubble, .bb-row { animation-name: bb-fade; }
   .bb-hl { animation: none; }
   .bb-marquee-track { animation: none; }
-  .bb-flags > li, .bb-flag-cloth, .bb-flag-cloth::after { animation: none; }
+  .bb-flags > li, .bb-flag-cloth::after { animation: none; }
   .bb-map-arc, .bb-map-dot .bb-map-ring, .bb-map-origin .bb-map-ring, .bb-map-card { animation: none; }
   .bb-token { animation: bb-fade 300ms ease backwards; }
   .bb-balls i, .bb-skel { animation: none; }

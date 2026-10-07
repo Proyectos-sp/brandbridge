@@ -12,12 +12,8 @@ const FLAGS = {
   "Costa Rica": "cr", "Dominican Republic": "do", Guatemala: "gt", Ecuador: "ec", Uruguay: "uy",
   Paraguay: "py", Bolivia: "bo", Venezuela: "ve", Honduras: "hn", "El Salvador": "sv", Nicaragua: "ni",
 };
-// Cada bandera flota a su propio ritmo, con una inclinación y altura distintas.
-const TILT = [-4, 3, -2, 5, -3, 2, -5, 4];
-const LIFT = [0, 22, 8, 30, 4, 18, 26, 10];
+// Cada bandera flota a su propio ritmo; todas quedan rectas y alineadas.
 const floatStyle = (i) => ({
-  "--r": `${TILT[i % TILT.length]}deg`,
-  "--y": `${LIFT[(i * 3) % LIFT.length]}px`,
   "--d": `${5.2 + ((i * 7) % 5) * 0.55}s`,
   "--delay": `${-((i * 1.3) % 6)}s`,
 });
