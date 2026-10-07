@@ -2,12 +2,25 @@
 
 // Página de introducción: lo primero que se ve al entrar. Explica la app para toda
 // Latinoamérica y lleva a la app con el botón "Bring a company to your country now".
-import { useMemo } from "react";
 import LOGOS from "@/data/logos.json";
-import { scoreFor } from "@/lib/score";
 import { ArrowUpRightIcon, PlayIcon } from "./icons";
-import { bandFor } from "./Score";
 import HeroMap from "./HeroMap";
+
+// Código ISO de cada país para su bandera (SVG en /public/flags, de country-flag-icons, MIT).
+const FLAGS = {
+  Panama: "pa", Mexico: "mx", Colombia: "co", Brazil: "br", Argentina: "ar", Chile: "cl", Peru: "pe",
+  "Costa Rica": "cr", "Dominican Republic": "do", Guatemala: "gt", Ecuador: "ec", Uruguay: "uy",
+  Paraguay: "py", Bolivia: "bo", Venezuela: "ve", Honduras: "hn", "El Salvador": "sv", Nicaragua: "ni",
+};
+// Cada bandera flota a su propio ritmo, con una inclinación y altura distintas.
+const TILT = [-4, 3, -2, 5, -3, 2, -5, 4];
+const LIFT = [0, 22, 8, 30, 4, 18, 26, 10];
+const floatStyle = (i) => ({
+  "--r": `${TILT[i % TILT.length]}deg`,
+  "--y": `${LIFT[(i * 3) % LIFT.length]}px`,
+  "--d": `${5.2 + ((i * 7) % 5) * 0.55}s`,
+  "--delay": `${-((i * 1.3) % 6)}s`,
+});
 
 function Marquee({ brands, reverse }) {
   // Se duplica la lista para que el desplazamiento sea continuo.
@@ -30,16 +43,6 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
   const intro = t.intro;
   const industries = new Set(brands.map((b) => b.category)).size;
   const half = Math.ceil(brands.length / 2);
-
-  // La marca con mejor puntaje en cada país (dato real del cálculo).
-  const tops = useMemo(() => countries.map((c) => {
-    let best = null;
-    for (const b of brands) {
-      const s = scoreFor(b, c);
-      if (!best || s > best.score) best = { brand: b, score: s };
-    }
-    return { country: c, ...best };
-  }), [brands, countries]);
 
   const startCta = (
     <button type="button" className="bb-btn bb-btn-primary bb-btn-xl" onClick={() => onStart()}>
@@ -78,16 +81,15 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
             <h2 id="bb-latam-title">{intro.latamTitle}</h2>
             <p>{intro.latamText}</p>
           </div>
-          <ul className="bb-intro-countries">
-            {tops.map(({ country, brand, score }) => (
-              <li key={country}>
-                <button type="button" className="bb-country-card" onClick={() => onStart(country)}>
-                  <span className="bb-country-name">{t.country(country)}</span>
-                  <span className="bb-country-top">
-                    <span><small>{intro.topIn}</small>{brand.name}</span>
-                    <b className={`bb-num bb-band-${bandFor(score)}`}>{score}</b>
+          <ul className="bb-flags">
+            {countries.map((country, i) => (
+              <li key={country} style={floatStyle(i)}>
+                <button type="button" className="bb-flag" onClick={() => onStart(country)}>
+                  <span className="bb-flag-cloth">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={`/flags/${FLAGS[country]}.svg`} alt="" width={120} height={80} loading="lazy" />
                   </span>
-                  <ArrowUpRightIcon size={18} strokeWidth={2} />
+                  <span className="bb-flag-name">{t.country(country)}</span>
                 </button>
               </li>
             ))}

@@ -53,6 +53,10 @@ function AnalysisView({ analysis, brand, country, t }) {
   const verdict = splitVerdict(analysis.verdict);
   const rev = analysis.revenue || {};
   const figures = [[t.year1, rev.year1], [t.year3, rev.year3], [t.upfront, rev.upfront]].filter(([, v]) => v);
+  // Si la IA contesta con una frase en vez de una cifra, se repite igual en las tres casillas:
+  // se muestra una sola vez y como texto, para que no se corten las palabras.
+  const wordy = figures.some(([, v]) => String(v).length > 20 || String(v).trim().split(/\s+/).length > 3);
+  const sameText = wordy && figures.length > 1 && figures.every(([, v]) => v === figures[0][1]);
   const presence = analysis.presence || {};
   const blocks = [];
 
@@ -80,8 +84,8 @@ function AnalysisView({ analysis, brand, country, t }) {
   if (figures.length || rev.note) blocks.push(
     <section key="revenue" className="bb-block">
       <h3>{t.sections.revenue}</h3>
-      {figures.length > 0 && (
-        <div className="bb-figures">{figures.map(([label, value]) => <div key={label}><small>{label}</small><b>{value}</b></div>)}</div>
+      {sameText ? <p className="bb-lead">{figures[0][1]}</p> : figures.length > 0 && (
+        <div className="bb-figures" data-wordy={wordy || undefined}>{figures.map(([label, value]) => <div key={label}><small>{label}</small><b>{value}</b></div>)}</div>
       )}
       {rev.note && <p>{rev.note}</p>}
     </section>
