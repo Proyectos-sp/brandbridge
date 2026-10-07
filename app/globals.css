@@ -538,7 +538,7 @@ mark { color: inherit; background: none; }
   font-family: var(--mono); font-stretch: 87.5%; font-size: 11px; white-space: nowrap; pointer-events: none;
 }
 .bb-map-card {
-  position: absolute; left: 0; top: 54%; width: min(260px, 64%); display: grid; gap: 8px; padding: 12px 14px; text-align: left; color: var(--ink);
+  position: absolute; left: 0; top: 76%; width: min(260px, 64%); display: grid; gap: 8px; padding: 12px 14px; text-align: left; color: var(--ink);
   background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-2);
   animation: bb-card-swap 420ms var(--ease-out); transition: transform 200ms var(--ease-out);
 }
@@ -549,6 +549,19 @@ mark { color: inherit; background: none; }
 .bb-map-card-logo img { width: 100%; height: 100%; object-fit: cover; }
 .bb-map-card-row b { font-size: 15.5px; font-weight: 650; letter-spacing: -0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bb-map-card-score { font-family: var(--mono); font-size: 13px; font-weight: 650; padding: 2px 7px; border-radius: 6px; }
+.bb-map-hit { fill: transparent; cursor: pointer; outline: none; }
+.bb-map-hit:focus-visible { stroke: var(--black); stroke-width: 2; }
+/* recuadro ampliado de Centroamérica */
+.bb-map-inset {
+  position: absolute; left: 0; top: 33%; width: 44%; padding: 8px 8px 6px; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92); border: 1px solid var(--line); box-shadow: var(--shadow-1);
+}
+.bb-map-inset-title { display: block; margin: 0 2px 4px; font-family: var(--mono); font-stretch: 87.5%; font-size: 10.5px; color: var(--ink-3); }
+.bb-map-inset svg { display: block; width: 100%; height: auto; overflow: hidden; border-radius: 8px; background: var(--ground); }
+.bb-map-inset .bb-map-market { stroke-width: 0.6; }
+.bb-map-label { font-family: var(--mono); font-size: 4.4px; font-weight: 600; fill: var(--ink-2); cursor: pointer; paint-order: stroke; stroke: var(--ground); stroke-width: 1.2px; stroke-linejoin: round; }
+.bb-map-label[data-active] { fill: var(--black); font-weight: 700; }
+@media (hover: hover) and (pointer: fine) { .bb-map-label:hover { fill: var(--black); text-decoration: underline; } }
 .bb-map-hint { margin-top: 6px; text-align: center; font-family: var(--mono); font-stretch: 87.5%; font-size: 11px; color: var(--ink-3); }
 @media (hover: hover) and (pointer: fine) {
   .bb-map-market:not([data-active]):hover { fill: var(--gold-deep); }

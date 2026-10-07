@@ -60,9 +60,20 @@ const countries = shapes.map((f) => {
 const missing = markets.filter((m) => !countries.some((c) => c.name === m && c.market));
 if (missing.length) throw new Error("Mercados sin forma en el mapa: " + missing.join(", "));
 
+// Recuadro ampliado de Centroamérica (países pequeños, difíciles de tocar en el mapa).
+const INSET_NAMES = ["Guatemala", "Belize", "El Salvador", "Honduras", "Nicaragua", "Costa Rica", "Panama"];
+let [x0, y0, x1, y1] = [Infinity, Infinity, -Infinity, -Infinity];
+for (const f of shapes.filter((f) => INSET_NAMES.includes(f.properties.name))) {
+  const [[a, b], [c, d]] = path.bounds(f);
+  x0 = Math.min(x0, a); y0 = Math.min(y0, b); x1 = Math.max(x1, c); y1 = Math.max(y1, d);
+}
+const pad = 9;
+const inset = [x0 - pad, y0 - pad, x1 - x0 + pad * 2, y1 - y0 + pad * 2].map((n) => Math.round(n));
+
 const out = `// Archivo generado por scripts/build-latam-map.mjs (Natural Earth 1:110m). No editar a mano.
 export const MAP_W = ${W};
 export const MAP_H = ${H};
+export const INSET = ${JSON.stringify(inset)}; // x, y, ancho, alto del recuadro de Centroamérica
 export const LATAM = ${JSON.stringify(countries)};
 `;
 writeFileSync(new URL("../components/latamMap.js", import.meta.url), out);
