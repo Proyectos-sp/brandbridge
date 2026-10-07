@@ -240,7 +240,7 @@ mark { color: inherit; background: none; }
 .bb-hero-stats dd small { font-size: 0.55em; color: var(--ink-3); letter-spacing: -0.02em; margin-left: 2px; }
 
 /* tablero: ranking en vivo */
-.bb-board-wrap { position: relative; padding: 0 0 56px; }
+.bb-board-wrap { position: relative; padding: 0 0 24px; }
 .bb-token {
   position: absolute; z-index: 0; left: var(--x); top: var(--y); width: var(--s); height: var(--s);
   border-radius: 4px; background: var(--cat); rotate: var(--r);
@@ -278,12 +278,12 @@ mark { color: inherit; background: none; }
 .bb-board-sub { margin-top: 3px; font-family: var(--mono); font-stretch: 87.5%; font-size: 11px; color: var(--ink-3); }
 .bb-board-list { padding-bottom: 4px; }
 
-/* burbuja de chat que cuelga del tablero */
+/* burbuja de chat, recta y debajo del tablero */
 .bb-bubble {
-  position: absolute; z-index: 2; left: -28px; bottom: 0; width: min(330px, 82%);
+  position: relative; z-index: 2; width: 100%; margin-top: 14px;
   display: grid; gap: 6px; padding: 12px 56px 14px 14px; text-align: left; color: var(--ink);
-  background: var(--paper); border: 1px solid var(--line); border-radius: 16px 16px 16px 4px;
-  box-shadow: var(--shadow-2); rotate: -1.5deg;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: var(--shadow-2);
   animation: bb-rise 520ms var(--ease-out) 260ms backwards;
   transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
 }
@@ -1002,7 +1002,6 @@ mark { color: inherit; background: none; }
   .bb-board-wrap { padding-bottom: 0; }
   .bb-row { grid-template-columns: 20px 64px minmax(0, 1fr) 70px; gap: 10px; padding: 9px 8px; }
   .bb-row-text b { font-size: 15px; }
-  .bb-bubble { position: relative; left: auto; bottom: auto; margin: 12px 0 0; width: 100%; display: grid; rotate: none; border-radius: 16px; }
   .bb-token { display: none; }
   .bb-token[data-cat="Beverage"], .bb-token[data-cat="Beauty"], .bb-token[data-cat="Food"] { display: block; }
 
