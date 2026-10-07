@@ -5,13 +5,8 @@
 import LOGOS from "@/data/logos.json";
 import { ArrowUpRightIcon, PlayIcon } from "./icons";
 import HeroMap from "./HeroMap";
+import { flagSrc } from "./flags";
 
-// Código ISO de cada país para su bandera (SVG en /public/flags, de country-flag-icons, MIT).
-const FLAGS = {
-  Panama: "pa", Mexico: "mx", Colombia: "co", Brazil: "br", Argentina: "ar", Chile: "cl", Peru: "pe",
-  "Costa Rica": "cr", "Dominican Republic": "do", Guatemala: "gt", Ecuador: "ec", Uruguay: "uy",
-  Paraguay: "py", Bolivia: "bo", Venezuela: "ve", Honduras: "hn", "El Salvador": "sv", Nicaragua: "ni",
-};
 // Cada bandera flota a su propio ritmo; todas quedan rectas y alineadas.
 const floatStyle = (i) => ({
   "--d": `${5.2 + ((i * 7) % 5) * 0.55}s`,
@@ -62,7 +57,7 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
           </div>
           <p className="bb-intro-facts">{intro.facts(brands.length, industries, countries.length)}</p>
           </div>
-          <HeroMap brands={brands} onStart={onStart} t={t} />
+          <HeroMap onStart={onStart} t={t} />
         </div>
       </section>
 
@@ -83,7 +78,7 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
                 <button type="button" className="bb-flag" onClick={() => onStart(country)}>
                   <span className="bb-flag-cloth">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={`/flags/${FLAGS[country]}.svg`} alt="" width={120} height={80} loading="lazy" />
+                    <img src={flagSrc(country)} alt="" width={120} height={80} loading="lazy" />
                   </span>
                   <span className="bb-flag-name">{t.country(country)}</span>
                 </button>

@@ -1,12 +1,11 @@
 "use client";
 
 // Mapa de Latinoamérica de la portada: los mercados de la app en dorado, arcos de las marcas
-// que llegan desde el resto del mundo y una tarjeta que va mostrando la mejor marca de cada país.
+// que llegan desde el resto del mundo y una tarjeta que va mostrando cada país con su bandera.
 import { useEffect, useMemo, useState } from "react";
-import { scoreFor } from "@/lib/score";
 import { INSET, LATAM, MAP_H, MAP_W } from "./latamMap";
-import { logoSrc } from "./logo";
-import { bandFor } from "./Score";
+import { flagSrc } from "./flags";
+import { ArrowUpRightIcon } from "./icons";
 
 const ORIGIN = { x: MAP_W - 18, y: 26 }; // de dónde "llegan" las marcas (arriba a la derecha)
 
@@ -32,16 +31,8 @@ function arc(x, y) {
   return `M${ORIGIN.x} ${ORIGIN.y} Q${mx.toFixed(0)} ${my.toFixed(0)} ${x} ${y}`;
 }
 
-export default function HeroMap({ brands, onStart, t }) {
+export default function HeroMap({ onStart, t }) {
   const markets = useMemo(() => LATAM.filter((c) => c.market), []);
-  const tops = useMemo(() => Object.fromEntries(markets.map(({ name }) => {
-    let best = null;
-    for (const b of brands) {
-      const s = scoreFor(b, name);
-      if (!best || s > best.score) best = { brand: b, score: s };
-    }
-    return [name, best];
-  })), [brands, markets]);
 
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -55,7 +46,7 @@ export default function HeroMap({ brands, onStart, t }) {
   const pick = (c, i) => ({
     role: "button",
     tabIndex: 0,
-    "aria-label": `${t.country(c.name)} · ${t.intro.mapTop(t.country(c.name))}: ${tops[c.name].brand.name} ${tops[c.name].score}/100`,
+    "aria-label": t.country(c.name),
     onMouseEnter: () => setActive(i),
     onFocus: () => { setActive(i); setPaused(true); },
     onBlur: () => setPaused(false),
@@ -64,8 +55,6 @@ export default function HeroMap({ brands, onStart, t }) {
   });
 
   const current = markets[active];
-  const top = tops[current.name];
-  const band = bandFor(top.score);
 
   return (
     <div className="bb-map" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
@@ -123,17 +112,13 @@ export default function HeroMap({ brands, onStart, t }) {
         </svg>
       </div>
 
-      <button type="button" key={current.name} className="bb-map-card" onClick={() => onStart(current.name)}
-        aria-label={`${t.intro.mapTop(t.country(current.name))}: ${top.brand.name}, ${top.score}/100`}>
-        <span className="bb-map-card-head">{t.intro.mapTop(t.country(current.name))}</span>
-        <span className="bb-map-card-row">
-          <span className="bb-map-card-logo">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={logoSrc(top.brand)} alt="" />
-          </span>
-          <b>{top.brand.name}</b>
-          <span className={`bb-map-card-score bb-num bb-band-${band}`}>{top.score}</span>
+      <button type="button" key={current.name} className="bb-map-card" onClick={() => onStart(current.name)}>
+        <span className="bb-map-card-flag">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={flagSrc(current.name)} alt="" width={48} height={32} />
         </span>
+        <b>{t.country(current.name)}</b>
+        <ArrowUpRightIcon size={18} strokeWidth={2} />
       </button>
       <p className="bb-map-hint">{t.intro.mapHint}</p>
     </div>
