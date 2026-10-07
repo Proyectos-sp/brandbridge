@@ -113,7 +113,7 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
         <section className="bb-intro-founder" aria-labelledby="bb-founder-title">
           <figure className="bb-intro-founder-photo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team/yonatan-danon.webp" alt={t.team.photoAlt} width={1086} height={1448} loading="lazy" />
+            <img src="/team/yonatan-danon-2026.webp" alt={t.team.photoAlt} width={1086} height={1448} loading="lazy" />
           </figure>
           <div>
             <h2 id="bb-founder-title">{intro.founderTitle}</h2>

@@ -9,7 +9,7 @@ export default function TeamView({ onDiscover, t }) {
         <div className="bb-team-hero-inner">
           <figure className="bb-team-photo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team/yonatan-danon.webp" alt={team.photoAlt} width={1086} height={1448} />
+            <img src="/team/yonatan-danon-2026.webp" alt={team.photoAlt} width={1086} height={1448} />
           </figure>
           <div className="bb-team-intro">
             <h1 id="bb-team-name">

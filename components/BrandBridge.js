@@ -296,7 +296,7 @@ export default function BrandBridge({ brands, countries, lang }) {
       {view !== "team" && (
         <a className="bb-teamstrip" href="#team" onClick={(e) => { e.preventDefault(); goTo("team"); }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/team/yonatan-danon-avatar.webp" alt="" width={34} height={34} />
+          <img src="/team/yonatan-danon-2026-avatar.webp" alt="" width={34} height={34} />
           <span className="bb-teamstrip-text">{t.teamStrip}</span>
           <span className="bb-teamstrip-link">{t.teamStripLink}<ArrowUpRightIcon size={15} strokeWidth={2.2} /></span>
         </a>
