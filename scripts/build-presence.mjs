@@ -1,5 +1,7 @@
 // Arma data/presence.json a partir de scripts/presence-findings.jsonl (una línea por hallazgo:
-// marca, país, "retail" o "marketplace" y los enlaces que lo prueban).
+// marca, país, "retail" o "marketplace" y los enlaces que lo prueban) y de
+// scripts/presence-coverage.json (países cuyas tiendas se revisaron a fondo, con la fecha).
+// Solo en esos países "no se encontró" se muestra como "aún no se vende"; en los demás, "no se puede confirmar".
 // Uso: node scripts/build-presence.mjs 2026-10-08   (fecha de la revisión)
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -11,6 +13,12 @@ const countries = Object.keys(JSON.parse(readFileSync(new URL("data/countries.js
 const brandIds = JSON.parse(readFileSync(new URL("data/brands.json", root), "utf8")).map((b) => b.id);
 const findings = readFileSync(new URL("scripts/presence-findings.jsonl", root), "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
+
+const coverage = JSON.parse(readFileSync(new URL("scripts/presence-coverage.json", root), "utf8"));
+for (const [country, day] of Object.entries(coverage)) {
+  if (!countries.includes(country)) throw new Error(`País desconocido en la cobertura: ${country}`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) throw new Error(`Fecha no válida para ${country}: ${day}`);
+}
 
 const brands = {};
 for (const f of findings) {
@@ -29,9 +37,10 @@ for (const f of findings) {
 
 const out = {
   checkedAt,
-  method: "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca.",
+  coverage,
+  method: "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca; eso solo cuenta como 'no se vende' en los países de coverage (revisados a fondo).",
   brands,
 };
 writeFileSync(new URL("data/presence.json", root), JSON.stringify(out, null, 2) + "\n");
 const total = Object.values(brands).reduce((n, c) => n + Object.keys(c).length, 0);
-console.log(`data/presence.json: ${Object.keys(brands).length} marcas, ${total} países con hallazgos`);
+console.log(`data/presence.json: ${Object.keys(brands).length} marcas, ${total} hallazgos, ${Object.keys(coverage).length} países revisados a fondo`);

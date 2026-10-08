@@ -1,6 +1,9 @@
 {
   "checkedAt": "2026-10-08",
-  "method": "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca.",
+  "coverage": {
+    "Mexico": "2026-10-08"
+  },
+  "method": "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca; eso solo cuenta como 'no se vende' en los países de coverage (revisados a fondo).",
   "brands": {
     "1": {
       "Mexico": {
