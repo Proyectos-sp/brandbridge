@@ -10,7 +10,7 @@ import { askAI, AIError } from "@/lib/ai";
 import { analysisPrompt, parseAnalysis } from "@/lib/prompts";
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
-import { getPresence } from "@/lib/presence";
+import { getPresence, presenceFromData } from "@/lib/presence";
 import { SERVER_LANG, serverText as T } from "@/lib/i18n";
 
 const CACHE_DAYS = 180; // largo para ahorrar cupo gratuito de la IA
@@ -24,7 +24,10 @@ export async function POST(request) {
     return NextResponse.json({ error: T.invalidBrand }, { status: 400 });
   }
 
-  const cacheKey = `analysis:v2:${SERVER_LANG}:${brand.id}:${country}`;
+  // El texto del análisis se escribe sabiendo si la marca ya se vende en el país; si ese dato
+  // cambia (por ejemplo, se encontró una tienda), se genera un análisis nuevo.
+  const presenceTag = presenceFromData(brand, country).status;
+  const cacheKey = `analysis:v3:${SERVER_LANG}:${brand.id}:${country}:${presenceTag}`;
 
   // Los análisis guardados antes de este cambio traen una "presence" adivinada: se reemplaza.
   const withPresence = async (analysis, limitChecked) => ({

@@ -304,3 +304,14 @@
 {"id":37,"country":"Mexico","status":"retail","sources":[{"title":"Sephora México — Glossier","url":"https://www.sephora.com.mx/categories/marcas/glossier"}]}
 {"id":3,"country":"Mexico","status":"retail","sources":[{"title":"Costco México — Magic Spoon Cereal con Proteína","url":"https://www.costco.com.mx/Grocery/Grocery/Galletas-y-Cereales/Magic-Spoon-Cereal-con-Proteina-Sabor-a-Frutas-396-g/p/1674869"}]}
 {"id":52,"country":"Bolivia","status":"retail","sources":[{"title":"Multicenter Bolivia — Stanley (combo con termo 950 ml)","url":"https://multicenter.com.bo/herramientas/stanley"}]}
+{"id":7,"country":"Panama","status":"retail","sources":[{"title":"The Vitamin Shoppe Panamá — Alani Nu Energy Hawaiian Shaved Ice","url":"https://www.vitaminshoppepanama.com/alani-nu-energy-drink-hawaiian-shaved-ice-12-fl-oz.html"},{"title":"The Vitamin Shoppe Panamá — marca Alani Nu","url":"https://vitaminshoppepanama.com/brand/190-alani-nu"}]}
+{"id":7,"country":"Guatemala","status":"retail","sources":[{"title":"GNC Guatemala — Alani Nu Whey Protein","url":"https://gnc.com.gt/products/alani-whey-protein"}]}
+{"id":7,"country":"Costa Rica","status":"retail","sources":[{"title":"GNC Costa Rica — Alani Nu Energy Cosmic Stardust","url":"https://gnc.cr/product/alani-nu-energy-drink-cosmic-stardust-355ml/"}]}
+{"id":7,"country":"Mexico","status":"retail","sources":[{"title":"Suplementos MTY — Alani Nu Energy Drink","url":"https://suplementosmty.com/products/alani-energy-drink-12oz-355ml"}]}
+{"id":35,"country":"Panama","status":"retail","sources":[{"title":"The Vitamin Shoppe Panamá — Celsius","url":"https://vitaminshoppepanama.com/brand/12-celsius"}]}
+{"id":35,"country":"Mexico","status":"retail","sources":[{"title":"Suplementos MTY — Celsius","url":"https://suplementosmty.com/products/celsius"}]}
+{"id":34,"country":"Panama","status":"retail","sources":[{"title":"The Vitamin Shoppe Panamá — Prime Hydration","url":"https://www.vitaminshoppepanama.com/prime-hydration-w-bcaa-orange-16-9-fl-oz.html"},{"title":"GNC Panamá — Prime Hydration","url":"https://gnc.com.pa/products/prime-hydration-drink"}]}
+{"id":29,"country":"Panama","status":"retail","sources":[{"title":"The Vitamin Shoppe Panamá — Poppi Ginger Lime","url":"https://www.vitaminshoppepanama.com/poppi-probiotic-soda-ginger-lime-12-fl-oz.html"}]}
+{"id":52,"country":"Guatemala","status":"retail","sources":[{"title":"GNC Guatemala — Stanley Quencher 40 oz","url":"https://gnc.com.gt/products/stanley-quencher-tumbler-40-oz"}]}
+{"id":28,"country":"Chile","status":"retail","sources":[{"title":"Allnutrition — NotCo Not Squares","url":"https://allnutrition.cl/search?q=notco"}]}
+{"id":47,"country":"Mexico","status":"marketplace","sources":[{"title":"Suplementos MTY — Gymshark (agotado)","url":"https://suplementosmty.com/search?q=gymshark"}]}

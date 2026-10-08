@@ -284,8 +284,12 @@
     },
     "7": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Suplementos MTY — Alani Nu Energy Drink",
+            "url": "https://suplementosmty.com/products/alani-energy-drink-12oz-355ml"
+          },
           {
             "title": "Amazon México — Alani Nu Energy",
             "url": "https://www.amazon.com.mx/Alani-Nu-Energy-Drink-Variety/dp/B0DVXTLWML"
@@ -337,6 +341,37 @@
           {
             "title": "Amazon Brasil — Alani Nu",
             "url": "https://www.amazon.com.br/Alani-Nu-Suplemento-pr%C3%A9-treino-resist%C3%AAncia/dp/B07DRR68F8"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "The Vitamin Shoppe Panamá — Alani Nu Energy Hawaiian Shaved Ice",
+            "url": "https://www.vitaminshoppepanama.com/alani-nu-energy-drink-hawaiian-shaved-ice-12-fl-oz.html"
+          },
+          {
+            "title": "The Vitamin Shoppe Panamá — marca Alani Nu",
+            "url": "https://vitaminshoppepanama.com/brand/190-alani-nu"
+          }
+        ]
+      },
+      "Guatemala": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "GNC Guatemala — Alani Nu Whey Protein",
+            "url": "https://gnc.com.gt/products/alani-whey-protein"
+          }
+        ]
+      },
+      "Costa Rica": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "GNC Costa Rica — Alani Nu Energy Cosmic Stardust",
+            "url": "https://gnc.cr/product/alani-nu-energy-drink-cosmic-stardust-355ml/"
           }
         ]
       }
@@ -1022,6 +1057,15 @@
             "url": "https://www.ribasmith.com/index.php/otros-departamentos/despensa.html?cat=14877&p=17&price=3-"
           }
         ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Allnutrition — NotCo Not Squares",
+            "url": "https://allnutrition.cl/search?q=notco"
+          }
+        ]
       }
     },
     "29": {
@@ -1041,6 +1085,10 @@
       "Panama": {
         "status": "retail",
         "sources": [
+          {
+            "title": "The Vitamin Shoppe Panamá — Poppi Ginger Lime",
+            "url": "https://www.vitaminshoppepanama.com/poppi-probiotic-soda-ginger-lime-12-fl-oz.html"
+          },
           {
             "title": "Riba Smith — Sodas (Poppi)",
             "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/sodas.html"
@@ -1314,12 +1362,29 @@
             "url": "https://www.amazon.com.br/Prime-Hydration-Bebida-esportiva-Glowberry/dp/B0CGSLTVMQ"
           }
         ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "The Vitamin Shoppe Panamá — Prime Hydration",
+            "url": "https://www.vitaminshoppepanama.com/prime-hydration-w-bcaa-orange-16-9-fl-oz.html"
+          },
+          {
+            "title": "GNC Panamá — Prime Hydration",
+            "url": "https://gnc.com.pa/products/prime-hydration-drink"
+          }
+        ]
       }
     },
     "35": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Suplementos MTY — Celsius",
+            "url": "https://suplementosmty.com/products/celsius"
+          },
           {
             "title": "Amazon México — Celsius",
             "url": "https://www.amazon.com.mx/celsius/s?k=celsius"
@@ -1378,6 +1443,10 @@
       "Panama": {
         "status": "retail",
         "sources": [
+          {
+            "title": "The Vitamin Shoppe Panamá — Celsius",
+            "url": "https://vitaminshoppepanama.com/brand/12-celsius"
+          },
           {
             "title": "Riba Smith — Celsius Live Fit Sparkling Orange",
             "url": "https://www.ribasmith.com/index.php/266263-celsius%20sparkling%20orange.html"
@@ -1923,6 +1992,10 @@
           {
             "title": "Mercado Libre México — Gymshark",
             "url": "https://listado.mercadolibre.com.mx/gym-shark-leggings"
+          },
+          {
+            "title": "Suplementos MTY — Gymshark (agotado)",
+            "url": "https://suplementosmty.com/search?q=gymshark"
           }
         ]
       },
@@ -2390,6 +2463,10 @@
       "Guatemala": {
         "status": "retail",
         "sources": [
+          {
+            "title": "GNC Guatemala — Stanley Quencher 40 oz",
+            "url": "https://gnc.com.gt/products/stanley-quencher-tumbler-40-oz"
+          },
           {
             "title": "Siman Guatemala — Termo Stanley Quencher 1.2 litros",
             "url": "https://gt.siman.com/termo-cafe-40-onz-quencher-tumb-choclate-gld-sa-104893945/p"
