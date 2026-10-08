@@ -2,13 +2,15 @@
 
 // Investigar con IA una empresa que no está en el catálogo (POST /api/research).
 // Aparece bajo el buscador cuando lo escrito no coincide con ninguna marca.
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { postJSON } from "./BrandSheet";
 import { PlayIcon, RetryIcon, SearchIcon } from "./icons";
 
-export default function ResearchBox({ query, onFound, t }) {
+// autoRun: la búsqueda pidió investigar ya (Enter en el buscador o un ejemplo).
+export default function ResearchBox({ query, onFound, autoRun, t }) {
   const [state, setState] = useState({ status: "idle" }); // idle | loading | candidates | notFound | error
   const [asked, setAsked] = useState(query);
+  const autoStarted = useRef(false);
 
   const research = async (q) => {
     setAsked(q);
@@ -27,6 +29,13 @@ export default function ResearchBox({ query, onFound, t }) {
       setState({ status: "error", message: err.message || t.connectionError });
     }
   };
+
+  useEffect(() => {
+    if (!autoRun || autoStarted.current) return;
+    autoStarted.current = true; // en modo estricto el efecto corre dos veces
+    research(query);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoRun]);
 
   const { status } = state;
   return (

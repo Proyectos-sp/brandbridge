@@ -130,6 +130,7 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
   const [category, setCategory] = useState("All");
   const [tag, setTag] = useState("All");
   const [search, setSearch] = useState("");
+  const [autoRun, setAutoRun] = useState(""); // empresa que el buscador pidió investigar ya
   const [saved, setSaved] = useStored("bb-watchlist", []);
   const [compare, setCompare] = useStored("bb-compare", []);
   const [profile, setProfile] = useStored("bb-profile", EMPTY_PROFILE);
@@ -225,6 +226,13 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
   const squash = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
   const query = search.trim();
   const canResearch = view === "discover" && query.length >= 2 && !allBrands.some((b) => squash(b.name) === squash(query));
+  const runResearch = (q) => {
+    captureFlip();
+    setCategory("All");
+    setTag("All");
+    setSearch(q);
+    setAutoRun(squash(q));
+  };
   const onResearched = (brand, fromCatalog) => {
     if (!fromCatalog) setResearched((list) => [brand, ...list.filter((b) => b.id !== brand.id)].slice(0, 30));
     captureFlip();
@@ -364,9 +372,11 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
                 <div className="bb-finder-row">
                   <div className="bb-search" role="search">
                     <SearchIcon size={20} />
-                    <input ref={searchRef} type="search" value={search} onChange={(e) => withFlip(setSearch)(e.target.value)} placeholder={t.search} aria-label={t.search} autoComplete="off" enterKeyHint="search" />
+                    <input ref={searchRef} type="search" value={search} onChange={(e) => { setAutoRun(""); withFlip(setSearch)(e.target.value); }}
+                      onKeyDown={(e) => { if (e.key === "Enter" && canResearch) { e.preventDefault(); setAutoRun(squash(query)); } }}
+                      placeholder={t.search} aria-label={t.search} autoComplete="off" enterKeyHint="search" />
                     {search && (
-                      <button type="button" className="bb-search-clear" onClick={() => withFlip(setSearch)("")} aria-label={t.clearSearch}>
+                      <button type="button" className="bb-search-clear" onClick={() => { setAutoRun(""); withFlip(setSearch)(""); }} aria-label={t.clearSearch}>
                         <CloseIcon size={18} />
                       </button>
                     )}
@@ -379,9 +389,17 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
                     ))}
                   </div>
                 </div>
+                {!query && (
+                  <div className="bb-search-try">
+                    <span>{t.searchTry}</span>
+                    {t.searchExamples.map((name) => (
+                      <button key={name} type="button" className="bb-chip" onClick={() => runResearch(name)}>{name}</button>
+                    ))}
+                  </div>
+                )}
               </section>
 
-              {canResearch && <ResearchBox key={squash(query)} query={query} onFound={onResearched} t={t} />}
+              {canResearch && <ResearchBox key={squash(query)} query={query} onFound={onResearched} autoRun={autoRun === squash(query)} t={t} />}
 
               <div className="bb-resultbar">
                 <span aria-live="polite"><strong className="bb-num">{t.count(filtered.length)}</strong><span className="bb-estimates"><span className="bb-sep"> · </span>{t.estimatesNote}</span></span>

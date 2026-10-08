@@ -376,6 +376,8 @@ mark { color: inherit; background: none; }
   transition: background-color 160ms ease, transform 160ms var(--ease-out);
 }
 .bb-search-clear:active { transform: translateY(-50%) scale(0.94); }
+.bb-search-try { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.bb-search-try > span { font-family: var(--mono); font-stretch: 87.5%; font-size: 12px; color: var(--ink-3); }
 .bb-segment { display: flex; gap: 2px; padding: 4px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); flex-shrink: 0; }
 .bb-seg {
   height: 42px; padding: 0 13px; border-radius: 8px; border: 0; background: transparent; color: var(--ink-2); white-space: nowrap; flex-shrink: 0;
