@@ -100,7 +100,11 @@ export default function IntroView({ brands, countries, onStart, onTeam, t }) {
               </li>
             ))}
           </ol>
-          <p className="bb-intro-disclaimer">{intro.disclaimer}</p>
+          <p className="bb-intro-disclaimer">
+            {intro.disclaimer}
+            <br />
+            {intro.disclaimerBrands}
+          </p>
         </div>
       </section>
 

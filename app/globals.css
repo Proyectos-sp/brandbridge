@@ -643,7 +643,7 @@ mark { color: inherit; background: none; }
 .bb-step-num { display: inline-grid; place-items: center; min-width: 44px; height: 32px; padding: 0 8px; border-radius: 8px; background: var(--gold-metal); color: var(--black); font-family: var(--mono); font-size: 13px; font-weight: 650; }
 .bb-intro-steps h3 { margin-top: 18px; font-size: 22px; line-height: 1.15; letter-spacing: -0.03em; }
 .bb-intro-steps p { margin-top: 10px; font-size: 15.5px; line-height: 1.6; color: #CFC6B4; max-width: 34ch; }
-.bb-intro-disclaimer { margin-top: 44px; font-family: var(--mono); font-stretch: 87.5%; font-size: 12px; color: #A9A08E; }
+.bb-intro-disclaimer { margin-top: 44px; font-family: var(--mono); font-stretch: 87.5%; font-size: 12px; line-height: 1.7; color: #A9A08E; }
 
 .bb-intro-founder { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 32px clamp(32px, 6vw, 80px); align-items: center; padding: clamp(64px, 9vw, 120px) 0; }
 .bb-intro-founder-photo { margin: 0; padding: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; rotate: -2deg; box-shadow: var(--shadow-2); }
