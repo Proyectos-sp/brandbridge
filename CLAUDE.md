@@ -14,15 +14,17 @@ Catálogo de 55 marcas de consumo con un puntaje de oportunidad por país, un an
 
 ## No tocar sin una razón clara
 - `app/api/analyze/route.js`, `app/api/chat/route.js` y `app/api/research/route.js` — rutas del servidor que llaman a la IA.
-- `lib/ai.js`, `lib/prompts.js`, `lib/limits.js`, `lib/store.js`, `lib/research.js` — conexión con Gemini/Claude, instrucciones, límites de uso, caché y empresas investigadas.
-- `data/brands.json`, `data/countries.json`, `data/logos.json` — datos.
+- `lib/ai.js`, `lib/prompts.js`, `lib/limits.js`, `lib/store.js`, `lib/research.js`, `lib/presence.js` — conexión con Gemini/Claude, instrucciones, límites de uso, caché, empresas investigadas y presencia en cada país.
+- `data/brands.json`, `data/countries.json`, `data/logos.json`, `data/presence.json` — datos.
 - `lib/score.js`, `lib/data.js` — cálculo del puntaje.
 
 ## Reglas importantes
 1. **La IA solo se llama desde el servidor.** La interfaz debe usar `POST /api/analyze`, `POST /api/chat` y `POST /api/research`. Nunca llamar a `api.anthropic.com` ni a Gemini desde el navegador (falla por CORS y expondría la API key).
 2. **Contratos de las rutas:**
    - `POST /api/analyze` body `{ brandId, country }` → `{ analysis, cached }` o `{ error }`.
-     `analysis` = `{ summary, marketFit, presence: { status: "likely_present"|"not_found"|"unsure", note }, revenue: { year1, year3, upfront, note }, competition, steps: string[], risk, verdict }`.
+     `analysis` = `{ summary, marketFit, presence, revenue: { year1, year3, upfront, note }, competition, steps: string[], risk, verdict }`.
+     `presence` = `{ status: "likely_present"|"resellers"|"not_found"|"unsure", source: "data"|"checked"|"research"|"web", sources?: [{ title, url }], checkedAt?, note? }`. **No la escribe la IA:** la arma `lib/presence.js` en cada respuesta (también sobre análisis guardados) a partir de `markets` de la marca, de `data/presence.json` y, con `GEMINI_SEARCH=true`, de una búsqueda en Google con fuentes. La interfaz arma el texto con `t.presenceNote` según `source` y `status`.
+   - `data/presence.json`: revisión manual de tiendas y marketplaces de los 18 países para las 55 marcas. `retail` = la vende una tienda del país; `marketplace` = solo revendedores o importación (Mercado Libre, Amazon); si el país no aparece, no se encontró. Para actualizarla: editar `scripts/presence-findings.jsonl` (una línea por hallazgo, con enlaces) y correr `node scripts/build-presence.mjs AAAA-MM-DD`.
    - `POST /api/chat` body `{ brandId, country, messages: [{ role: "user"|"assistant", content }] }` → `{ reply }` o `{ error }`.
    - `POST /api/research` body `{ query }` → `{ brand, cached }` (ficha con el formato de `brands.json`, id `"r-..."`, más `researched`, `live`, `sources`, `scoreReason`), `{ brand, catalog: true }` si ya existe, `{ candidates: [{ name, note }] }` si el nombre es ambiguo, `{ notFound: true }` o `{ error }`.
    - `brandId` en analyze y chat puede ser el número de una marca del catálogo o el id `"r-..."` de una empresa investigada (su ficha vive en el servidor; el navegador nunca la manda).

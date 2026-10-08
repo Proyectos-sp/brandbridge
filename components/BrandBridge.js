@@ -5,6 +5,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { logoSrc } from "./logo";
 import { scoreFor } from "@/lib/score";
+import { checkedPresence } from "@/lib/presence-data";
 import { getText } from "@/lib/i18n";
 import BrandSheet, { TermsSheet } from "./BrandSheet";
 import HeroBoard from "./HeroBoard";
@@ -126,7 +127,7 @@ export default function BrandBridge({ brands, countries, lang }) {
   const [saved, setSaved] = useStored("bb-watchlist", []);
   const [compare, setCompare] = useStored("bb-compare", []);
   const [profile, setProfile] = useStored("bb-profile", EMPTY_PROFILE);
-  const [presenceAi, setPresenceAi] = useStored("bb-presence", {});
+  const [presenceAi, setPresenceAi] = useStored("bb-presence-v2", {}); // v2: ya no guarda lo que la IA adivinaba
   // Empresas investigadas con IA: solo las ve quien las buscó (se guardan en este navegador).
   const [researched, setResearched] = useStored("bb-researched", []);
   const gridRef = useRef(null);
@@ -206,6 +207,8 @@ export default function BrandBridge({ brands, countries, lang }) {
 
   const presenceFor = (brand) => {
     if (brand.markets.includes(country)) return { kind: "data", label: t.presenceData(place) };
+    const found = checkedPresence(brand, country);
+    if (found) return found.status === "retail" ? { kind: "data", label: t.presenceData(place) } : { kind: "resellers", label: t.presenceResellers(place) };
     const status = presenceAi[`${brand.id}|${country}`];
     if (status && t.presenceAi[status]) return { kind: status, label: t.presenceAi[status](place), ai: true };
     return null;

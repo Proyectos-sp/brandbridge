@@ -48,6 +48,22 @@ function AnalysisLoading({ t }) {
   );
 }
 
+// Texto de "¿Ya está en ...?": con búsqueda en Google es la nota de lo encontrado; si no,
+// se explica a partir de los datos de la marca y de la revisión de tiendas (nunca de lo que la IA cree recordar).
+function presenceText(presence, brand, place, t) {
+  if (presence.source === "web") return presence.note;
+  const note = t.presenceNote[presence.source]?.[presence.status];
+  if (!note) return presence.note || "";
+  const markets = (brand.markets || []).map((m) => t.country(m)).join(", ");
+  return note(place, markets, formatDay(presence.checkedAt, t.lang));
+}
+
+function formatDay(day, lang) {
+  if (!day) return "";
+  const date = new Date(`${day}T12:00:00`);
+  return Number.isNaN(date.getTime()) ? day : date.toLocaleDateString(lang === "es" ? "es" : "en", { day: "numeric", month: "long", year: "numeric" });
+}
+
 function AnalysisView({ analysis, brand, country, t }) {
   const place = t.country(country);
   const verdict = splitVerdict(analysis.verdict);
@@ -75,7 +91,15 @@ function AnalysisView({ analysis, brand, country, t }) {
         <section className="bb-block">
           <h3>{t.sections.presence(place)}</h3>
           {t.presenceStatus[presence.status] && <span className={`bb-presence bb-presence-${presence.status}`}><i />{t.presenceStatus[presence.status]}</span>}
-          {presence.note && <p>{presence.note}</p>}
+          <p>{presenceText(presence, brand, place, t)}</p>
+          {presence.sources?.length > 0 && (
+            <ul className="bb-sources" aria-label={t.sources}>
+              {presence.sources.map((s) => (
+                <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title || s.url}<ArrowUpRightIcon size={13} /></a></li>
+              ))}
+            </ul>
+          )}
+          {presence.source === "web" && presence.checkedAt && <p className="bb-presence-checked">{t.presenceChecked(formatDay(presence.checkedAt, t.lang))}</p>}
         </section>
       )}
       {analysis.marketFit && <section className="bb-block"><h3>{t.sections.fit(place)}</h3><p>{analysis.marketFit}</p></section>}
@@ -305,8 +329,9 @@ export default function BrandSheet({ brand, country, onClose, t, saved, onToggle
     postJSON("/api/analyze", { brandId: brand.id, country }, controller.signal)
       .then((data) => {
         setState({ loading: false, analysis: data.analysis, error: "" });
-        const status = data.analysis?.presence?.status;
-        if (status && presenceRef.current) presenceRef.current(status);
+        // En la tarjeta solo se marca lo que se comprobó en internet; lo demás ya sale de los datos.
+        const presence = data.analysis?.presence;
+        if (presence?.source === "web" && presenceRef.current) presenceRef.current(presence.status);
       })
       .catch((err) => {
         if (err.name === "AbortError") return;

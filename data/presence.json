@@ -1,0 +1,1598 @@
+{
+  "checkedAt": "2026-10-08",
+  "method": "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca.",
+  "brands": {
+    "1": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — OLIPOP",
+            "url": "https://www.amazon.com.mx/olipop-soda/s?k=olipop+soda"
+          },
+          {
+            "title": "Mercado Libre México — Olipop Vintage Soda",
+            "url": "https://www.mercadolibre.com.mx/refresco-olipop-vintage-soda-12-fl-oz/up/MLMU2864221116"
+          },
+          {
+            "title": "Walmart México (vendedor externo) — Olipop",
+            "url": "https://www.walmart.com.mx/ip/olipop-prebiotic-soda-pop-crisp-apple-a-new-kind-of-soda-packed-with-prebiotics-fiber-and-botanicals-gluten-free-vegan-gmo-free-12oz-12-cans-/00085002770219"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Olipop Banana Cream",
+            "url": "https://www.mercadolibre.com.co/olipop-soda-prebiotica-pop-crema-de-platano-un-tipo/p/MCO37687094"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — OLIPOP",
+            "url": "https://www.amazon.com.br/OLIPOP-Prebiotic-Prebi%C3%B3ticos-Bot%C3%A2nicos-Vegetal/dp/B0DCLF3JCV"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Riba Smith — Sodas (Olipop)",
+            "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/sodas.html"
+          }
+        ]
+      }
+    },
+    "2": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Bombas",
+            "url": "https://www.amazon.com.mx/Ropa-Zapatos-y-Accesorios-BOMBAS/s?rh=n%3A13848838011%2Cp_4%3ABOMBAS"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Bombas",
+            "url": "https://www.amazon.com.br/Moda-BOMBAS/s?rh=n%3A17365811011%2Cp_4%3ABOMBAS"
+          }
+        ]
+      }
+    },
+    "3": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Magic Spoon",
+            "url": "https://www.amazon.com.mx/magic-spoon-cereal/s?k=magic+spoon+cereal"
+          },
+          {
+            "title": "Mercado Libre México — Magic Spoon Cocoa (importado)",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-2550318618-magic-spoon-cereal-keto-sabor-cocoa-198grs-importado-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Magic Spoon",
+            "url": "https://listado.mercadolibre.com.co/magic-spoon"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Magic Spoon barra proteica",
+            "url": "https://www.mercadolibre.com.ar/magic-spoon-barra-proteica-marshmallow-4-unidades-14oz-40g/p/MLA2093145339"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Riba Smith — Cocoa Magic Spoon Cereal",
+            "url": "https://www.ribasmith.com/index.php/343978-cocoa-magic-spoon-cereal.html"
+          }
+        ]
+      }
+    },
+    "4": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora México — Drunk Elephant",
+            "url": "https://www.sephora.com.mx/categories/marcas/drunk-elephant"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora Brasil — Drunk Elephant",
+            "url": "https://www.sephora.com.br/drunk-elephant/"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Falabella Chile — Drunk Elephant",
+            "url": "https://www.falabella.com/falabella-cl/page/drunk-elephant"
+          }
+        ]
+      }
+    },
+    "5": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Chomps",
+            "url": "https://www.amazon.com.mx/Botana-de-Carne-Chomps-Snacks/s?rh=n%3A17724749011%2Cp_89%3AChomps"
+          },
+          {
+            "title": "Mercado Libre México — Chomps Original",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-3674541794-chomps-beef-sticks-original-24-unidades-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Chomps",
+            "url": "https://www.mercadolibre.com.co/chomps-palitos-de-carne-chomplings/p/MCO36680578"
+          }
+        ]
+      }
+    },
+    "6": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Chedraui — Aceite de Oliva Graza 500 ml",
+            "url": "https://www.chedraui.com.mx/aceite-de-oliva-graza-extra-virgen-500-ml-3891968/p"
+          },
+          {
+            "title": "Amazon México — Graza Sizzle",
+            "url": "https://www.amazon.com.mx/Graza-Aceite-Virgen-Sizzle-Cocina/dp/B0CV2RCTQY"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Graza (importado)",
+            "url": "https://www.mercadolibre.com.ar/graza-olive-oil--importado--aceite-de-oliva-extra-virgen/up/MLAU3021666840"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Graza Drizzle",
+            "url": "https://articulo.mercadolibre.com.co/MCO-2748106074-aceite-de-oliva-virgen-extra-graza-drizzle-500-ml-pack-de-_JM"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Graza Sizzle",
+            "url": "https://articulo.mercadolibre.cl/MLC-1563975241-aceite-de-oliva-virgen-extra-sizzle-de-graza-aceite-de-c-_JM"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Graza Sizzle & Drizzle",
+            "url": "https://www.amazon.com.br/Variedades-Drizzle-%C3%93leo-Acabamento-Polifen%C3%B3is-Squeeze-Azeitonas/dp/B0CWVRSNDF"
+          },
+          {
+            "title": "Mercado Livre — Graza Sizzle spray",
+            "url": "https://www.mercadolivre.com.br/spray-de-oleo-de-cozinha-graza-sizzle-azeite-de-oliva-extra/p/MLB2078965708"
+          }
+        ]
+      }
+    },
+    "7": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Alani Nu Energy",
+            "url": "https://www.amazon.com.mx/Alani-Nu-Energy-Drink-Variety/dp/B0DVXTLWML"
+          },
+          {
+            "title": "Mercado Libre México — Alani Nu 18 pz",
+            "url": "https://www.mercadolibre.com.mx/alani-nu-bebidas-energeticas-sabores-18-pz/p/MLM45862959"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Lider (importado) — Alani Nu Cherry 24 pack",
+            "url": "https://www.lider.cl/ip/especiales/bebida-energetica-alani-nu-cherry-355-ml-paquete-de-24/00081003051225"
+          },
+          {
+            "title": "Mercado Libre Chile — Alani Nu BCAA",
+            "url": "https://articulo.mercadolibre.cl/MLC-2294095060-alani-nu-bcaa-hielo-afeitado-hawaiano-aminoacidos-esencia-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Alani Nu pre-entreno",
+            "url": "https://articulo.mercadolibre.com.co/MCO-540363588-alani-nu-polvo-pre-entrenamiento-suplemento-de-energia-la-r-_JM"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Alani Nu Balance",
+            "url": "https://www.mercadolibre.com.ar/alani-nu-balance-capsulas-de-apoyo-para-mujeres/p/MLA23307455"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Carrefour Brasil (vendedor externo) — Alani Nu Cherry",
+            "url": "https://www.carrefour.com.br/produto/bebida-energetica-alani-nu-cherry-355-ml-pacote-com-24-337401117"
+          },
+          {
+            "title": "Amazon Brasil — Alani Nu",
+            "url": "https://www.amazon.com.br/Alani-Nu-Suplemento-pr%C3%A9-treino-resist%C3%AAncia/dp/B07DRR68F8"
+          }
+        ]
+      }
+    },
+    "8": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Blueland",
+            "url": "https://www.amazon.com.mx/BLUELAND-Pastillas-Limpiadoras-Eucalipto-Pastillas/dp/B0F2KKHQLW"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Blueland",
+            "url": "https://articulo.mercadolibre.com.ar/MLA-1977293206-recambios-de-limpieza-para-inodoros-blueland-eco-friendly-p-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Blueland",
+            "url": "https://www.mercadolibre.com.co/blueland-juego-de-iniciacion-de-detergente-para-ropa-sucia/up/MCOU2885554156"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Blueland",
+            "url": "https://www.amazon.com.br/BLUELAND-tablete-detergente-lava-lou%C3%A7as-pacote/dp/B0BDJ9M1TN"
+          }
+        ]
+      }
+    },
+    "9": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Costco México — Liquid I.V. Lima-Limón",
+            "url": "https://www.costco.com.mx/Salud-y-Belleza/Vitaminas-Proteinas-y-Suplementos/Suplementos-Alimenticios/Liquid-IV-Electrolitos-en-Polvo-sabor-Lima-Limon-30-pzas-de-16-g/p/685434"
+          },
+          {
+            "title": "El Universal — Liquid I.V. debuta en México",
+            "url": "https://www.eluniversal.com.mx/tendencias/liquid-iv-hydration-multiplier-hace-su-debut-en-mexico/"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Liquid I.V.",
+            "url": "https://www.mercadolibre.cl/drink-mix-liquid-iv-hydration-passion-fruit-48-pack/p/MLC2003695662"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Liquid I.V.",
+            "url": "https://articulo.mercadolibre.com.ar/MLA-1980321858-hydration-powder-liquid-iv-hydration-multiplier-fresa-_JM"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Liquid I.V.",
+            "url": "https://articulo.mercadolibre.com.pe/MPE-611825208-liquid-iv-hydration-multiplier-bebida-electrolito-stickpack-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Liquid I.V.",
+            "url": "https://www.mercadolibre.com.co/liquid-iv-multiplicador-de-hidratacin-fresa-lima-limn/p/MCO29506427"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Droga Raia — Liquid I.V. Hydramulti",
+            "url": "https://www.drogaraia.com.br/liquid-i-v-hydramulti-suplemento-alimentar-po-frutas-tropicais-pacote-16g-1307089.html"
+          },
+          {
+            "title": "Amazon Brasil — Liquid I.V.",
+            "url": "https://www.amazon.com.br/Liquid-I-V-eletrol%C3%ADtica-multiplicadora-hidrata%C3%A7%C3%A3o/dp/B0FCG4MLKF"
+          }
+        ]
+      }
+    },
+    "10": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — MUDWTR Original",
+            "url": "https://www.amazon.com.mx/MUDWTR-Mudwtr-Original-Porciones-Beneficiosos/dp/B09MJGMT4V"
+          },
+          {
+            "title": "Mercado Libre México — MUDWTR :rise",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-1419018916-mudwtr-30-porciones-rise-180-g-alternativa-de-cafe-a-_JM"
+          }
+        ]
+      }
+    },
+    "11": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Chedraui — Athletic (Lite, Run Wild, Upside Dawn)",
+            "url": "https://www.chedraui.com.mx/athletic"
+          },
+          {
+            "title": "Amazon México — Athletic Brewing 24 latas",
+            "url": "https://www.amazon.com.mx/Athletic-Brewing-Company-Cerveza-artesanal-alcohol/dp/B08J5N8WX8"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Athletic Brewing 12 latas",
+            "url": "https://articulo.mercadolibre.com.co/MCO-1433299355-cerveza-artesanal-sin-alcohol-athletic-brewing-pack-12-uni-_JM"
+          }
+        ]
+      }
+    },
+    "12": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Hims & Hers (cuidado del cabello)",
+            "url": "https://www.amazon.com.mx/acondicionador-hombres-Engrosamiento-hidrataci%C3%B3n-antica%C3%ADda/dp/B09R6CHBF1"
+          }
+        ]
+      }
+    },
+    "13": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Brightland The Duo",
+            "url": "https://www.amazon.com.mx/Brightland-Extra-Virgin-Olive-Oils/dp/B0BG68MBPW"
+          }
+        ]
+      }
+    },
+    "15": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — OSEA",
+            "url": "https://www.amazon.com.mx/OSEA-Undaria-Algae-Oil/dp/B004L17FKC"
+          },
+          {
+            "title": "Mercado Libre México — OSEA Undaria",
+            "url": "https://www.mercadolibre.com.mx/osea-malibu-undaria-aceite-corporal-de-algas-5-onzas-re/p/MLM28263548"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Falabella Chile — OSEA",
+            "url": "https://www.falabella.com/falabella-cl/brand/OSEA"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — OSEA",
+            "url": "https://www.amazon.com.br/Beleza-OSEA/s?rh=n%3A16194414011%2Cp_4%3AOSEA"
+          }
+        ]
+      }
+    },
+    "16": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Touchland",
+            "url": "https://www.amazon.com.mx/touchland/s?k=touchland"
+          },
+          {
+            "title": "Mercado Libre México — Touchland Power Mist",
+            "url": "https://www.mercadolibre.com.mx/touchland-power-mist-hydrating-hand-sanitizer-fragancia-rainwater/p/MLM35798732"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Touchland Power Mist",
+            "url": "https://articulo.mercadolibre.com.co/MCO-2340793220-antibacterial-touchland-power-mist-_JM"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Touchland Power Mist",
+            "url": "https://articulo.mercadolibre.com.ar/MLA-1377595333-touchland-power-mist-beach-coco-_JM"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Paris (vendedor externo) — Touchland Power Mist",
+            "url": "https://www.paris.cl/touchland-power-mist-hydrating-hand-sanitizer-aroma-coco-MKKH1DCSSN.html"
+          },
+          {
+            "title": "Mercado Libre Chile — Touchland",
+            "url": "https://www.mercadolibre.cl/touchland-power-mist-hydrating-hand-sanitizer-fragancia-mango-passion/p/MLC36117032"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Touchland",
+            "url": "https://www.amazon.com.br/Touchland-Hydrating-Sanitizer-Watermelon-500-Sprays/dp/B09YT2H35S"
+          }
+        ]
+      }
+    },
+    "17": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Ghia Le Spritz",
+            "url": "https://www.amazon.com.mx/Ghia-Spritz-alcohol-variedad-paquete/dp/B0B8XZYLRB"
+          }
+        ]
+      }
+    },
+    "19": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Liverpool — Oura Ring 4",
+            "url": "https://www.liverpool.com.mx/tienda/pdp/anillo-inteligente-oura-ring-4-unisex/1192946725"
+          },
+          {
+            "title": "Liverpool — Oura Ring 5",
+            "url": "https://www.liverpool.com.mx/tienda/pdp/Anillo-inteligente-OURA-Ring-5-unisex/1206254552"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Falabella — Oura Ring 4 llega a Chile",
+            "url": "https://falabellaretail.falabella.com/noticias/llega-oura-ring-chile-falabella-exclusivo/"
+          },
+          {
+            "title": "Falabella Chile — Oura Ring",
+            "url": "https://www.falabella.com/falabella-cl/page/oura-ring"
+          },
+          {
+            "title": "Paris — Oura Ring",
+            "url": "https://www.paris.cl/listas/oura-ring/"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Oura Ring",
+            "url": "https://listado.mercadolibre.com.uy/oura-ring"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Oura Ring",
+            "url": "https://listado.mercadolibre.com.co/oura-ring-anillo-inteligente"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Oura Ring",
+            "url": "https://listado.mercadolibre.com.ar/oura-ring-anillo-inteligente"
+          }
+        ]
+      }
+    },
+    "20": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Caraway",
+            "url": "https://www.amazon.com.mx/caraway-cookware/s?k=caraway+cookware"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Caraway",
+            "url": "https://articulo.mercadolibre.com.co/MCO-1943084144-caraway-nonstick-ceramic-cookware-set-12-piece-pots-pa-jl-_JM"
+          }
+        ]
+      }
+    },
+    "21": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Diaspora Co. Haldi Doodh Masala",
+            "url": "https://www.amazon.com.mx/Diaspora-Especias-Molidas-Horneado-Frescas/dp/B0CKLTVRNR"
+          }
+        ]
+      }
+    },
+    "23": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — FLYBYJING",
+            "url": "https://amazon.com.mx/s?rh=p_89%3AFLYBYJING&srs=38674229011"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Flybyjing Chili Crisp",
+            "url": "https://articulo.mercadolibre.com.co/MCO-2984119418-flybyjing-original-xtra-crunchy-sichuan-chili-crisp-duo--_JM"
+          }
+        ]
+      }
+    },
+    "24": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Recess Mood",
+            "url": "https://www.amazon.com.mx/Recess-Suplemento-magnesio-calmante-unidades/dp/B08QM4JBD8"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Recess Mood Powder",
+            "url": "https://www.mercadolibre.com.co/suplemento-drink-recess-mood-powder-con-l-treonato-de-magnes/p/MCO2007903966"
+          }
+        ]
+      }
+    },
+    "25": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — immi ramen",
+            "url": "https://www.amazon.com.mx/immi-Paquete-variado-ramen-carbohidratos/dp/B09KMCZWTP"
+          },
+          {
+            "title": "Mercado Libre México — immi",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-2143426083-immi-pack-ramen-con-24-de-proteina-100-a-base-de-plantas-_JM"
+          }
+        ]
+      }
+    },
+    "26": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Jolie Filtered Showerhead",
+            "url": "https://www.amazon.com.mx/Jolie-Skin-Company-SHOWERHEAD-accesorio/dp/B0CGY2MNZ9"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Jolie Filtered Showerhead",
+            "url": "https://www.amazon.com.br/FILTERED-SHOWERHEAD-clinicamente-saud%C3%A1veis-coloridos/dp/B0BM4CX6F2"
+          },
+          {
+            "title": "Mercado Livre — Jolie",
+            "url": "https://www.mercadolivre.com.br/the-jolie-filtered-showerhead-clinically-tested-high-p/p/MLB2001216513"
+          }
+        ]
+      }
+    },
+    "27": {
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Livre — Arrae Bloat",
+            "url": "https://www.mercadolivre.com.br/suplemento-arrae-bloat-digestive-enzymes-60-capsulas/p/MLB2004016621"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Arrae Bloat",
+            "url": "https://www.mercadolibre.com.co/suplemento-arrae-bloat-digestive-enzymes-60-capsulas/p/MCO2004016621"
+          }
+        ]
+      },
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Arrae Calm",
+            "url": "https://www.amazon.com.mx/Arrae-Calm-Cortisol-Manager-Suplemento/dp/B0BSLW2CWZ"
+          },
+          {
+            "title": "Mercado Libre México — Arrae Bloat",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-3504801422-arrae-suplemento-de-enzimas-digestivas-bloat-60-capsulas-d-_JM"
+          }
+        ]
+      }
+    },
+    "28": {
+      "Colombia": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Éxito — NotMilk NotCo",
+            "url": "https://www.exito.com/bebida-base-vegetales-original-x-notco-1000-ml-3141342/p"
+          },
+          {
+            "title": "Tiendas Jumbo Colombia — Not Milk chocolate",
+            "url": "https://www.tiendasjumbo.co/bebida-notco-vegetal-chocolate-x1l/p"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Disco — NotMayo NotCo",
+            "url": "https://www.disco.com.ar/aderezo-notmayo-original-notco-400-gr/p"
+          },
+          {
+            "title": "Carrefour Argentina — Not Milk",
+            "url": "https://supermercado.carrefour.com.ar/bebida-a-base-de-vegetales-not-milk-1-l/p"
+          },
+          {
+            "title": "Mercado Libre Argentina — Not Milk Notco",
+            "url": "https://articulo.mercadolibre.com.ar/MLA-1132904564-leche-not-milk-original-notco-1-lt-_JM"
+          }
+        ]
+      },
+      "Paraguay": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Superseis — NotCo",
+            "url": "https://www.superseis.com.py/manufacturer/2247-notco.aspx"
+          },
+          {
+            "title": "Supermercados Stock — Not Milk chocolate",
+            "url": "https://www.stock.com.py/products/304940-notco-not-milk-chocolate-bebida-en-base-a-vegetales-sabor-chocolate-1-litro.aspx"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Tienda Inglesa — Not Mayo NotCo",
+            "url": "https://tiendainglesa.com.uy/supermercado/aderezo-not-mayo-original-notco-200-gr.producto?1559776="
+          }
+        ]
+      }
+    },
+    "29": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Poppi (importado)",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-1999754585-soda-prebiotica-poppi-355ml-15-piezas-importado-_JM"
+          },
+          {
+            "title": "Amazon México — Poppi",
+            "url": "https://www.amazon.com.mx/Poppi-Sodas-prebi%C3%B3ticas-naranja-onzas/dp/B08T3XWV6Q"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Riba Smith — Sodas (Poppi)",
+            "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/sodas.html"
+          }
+        ]
+      }
+    },
+    "30": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Starface",
+            "url": "https://www.amazon.com.mx/Starface-World-STARFACE-Hydro-Star-Patches/dp/B0CVSH5HSF"
+          },
+          {
+            "title": "Mercado Libre México — Starface Hydro-Stars",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-2064055567-starface-hydro-star-pimple-patches-32-piezas-_JM"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Starface Hydro-Stars",
+            "url": "https://www.mercadolibre.com.ar/hydrostars-pimple-patches-refill--starface/up/MLAU319069334"
+          }
+        ]
+      }
+    },
+    "31": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Drybar",
+            "url": "https://www.amazon.com.mx/drybar/s?k=drybar"
+          },
+          {
+            "title": "Mercado Libre México — Drybar",
+            "url": "https://listado.mercadolibre.com.mx/drybar"
+          }
+        ]
+      }
+    },
+    "33": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Liquid Death Mountain Water",
+            "url": "https://www.amazon.com.mx/Liquid-Death-Monta%C3%B1a-Tallboys-paquete/dp/B07G3G3F53"
+          },
+          {
+            "title": "Mercado Libre México — Liquid Death",
+            "url": "https://listado.mercadolibre.com.mx/liquid-death-agua"
+          }
+        ]
+      }
+    },
+    "34": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Prime Hydration",
+            "url": "https://www.amazon.com.mx/Prime-Hydration-Bebidas-Hidratantes-Deportistas/dp/B0BSVRW6CX"
+          },
+          {
+            "title": "Mercado Libre México — Prime Hydration",
+            "url": "https://www.mercadolibre.com.mx/prime-hydration-bebida-hidratante-logan-paul-8pack-mora-azul/p/MLM24861386"
+          }
+        ]
+      },
+      "El Salvador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Súper Selectos — Prime Meta Moon 500 ml",
+            "url": "https://www.superselectos.com/products?category=052175&productId=119575"
+          }
+        ]
+      },
+      "Costa Rica": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Auto Mercado — Prime Frambuesa Azul",
+            "url": "https://automercado.cr/p/bebida-hidratante-frambuesa-azul-prime/id/38540b49-9488-ee11-8179-0022480ae351"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Supermaxi — Prime Strawberry 500 ml",
+            "url": "https://www.supermaxi.com/producto/bebida-hidratante-strawberry-prime-500-ml/"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Prime Hydration",
+            "url": "https://www.mercadolibre.com.ar/prime-hydration-drink-bebida-hidratante-logan-paul-12-pack/p/MLA24602018"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Prime Hydration",
+            "url": "https://listado.mercadolibre.com.co/prime-hydration"
+          }
+        ]
+      }
+    },
+    "35": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Celsius",
+            "url": "https://www.amazon.com.mx/celsius/s?k=celsius"
+          },
+          {
+            "title": "Mercado Libre México — Celsius Live Fit",
+            "url": "https://www.mercadolibre.com.mx/celsius-live-fit-bebida-energetica-sin-azucar-14-pack/p/MLM35955639"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Celsius",
+            "url": "https://listado.mercadolibre.com.ar/bebida-energetica-celsius"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Celsius",
+            "url": "https://listado.mercadolibre.cl/bebida-energetica-celsius"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Celsius",
+            "url": "https://www.mercadolibre.com.uy/celsius-fitness-bebida-energetica-12-latas-10-sabo-355ml/p/MLU21790706"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Celsius Sparkling",
+            "url": "https://www.mercadolibre.com.co/bebidas-energizante-celsius-sparkling-as-ml/p/MCO36032857"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Celsius Live Fit",
+            "url": "https://www.mercadolibre.com.pe/bebida-energetica-celsius-live-fit-sparkling-orange-caja-12p/p/MPE22245575"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Riba Smith — Bebidas energizantes (Celsius)",
+            "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/bebidas/bebidas-energizantes.html"
+          }
+        ]
+      }
+    },
+    "36": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Rhode Peptide Lip Treatment",
+            "url": "https://www.mercadolibre.com.mx/rhode-peptide-lip-treatment-color-translucido-by-hailey-bieber-balsamo/p/MLM34492065"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Rhode",
+            "url": "https://www.mercadolibre.com.ar/rhode--peptide-lip-treatment-by-hailey-bieber/up/MLAU3145377648"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Falabella Chile — Rhode Peptide Lip Treatment",
+            "url": "https://www.falabella.com/falabella-cl/product/130316290/Peptide-lip-treatment-Vanilla-10ml-Rhode-by-Hailey-Bieber/130316291"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Rhode Peptide Lip Set",
+            "url": "https://articulo.mercadolibre.com.pe/MPE-652189698-peptide-lip-set-rhode-by-hailey-bieber-_JM"
+          }
+        ]
+      }
+    },
+    "37": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Glossier You",
+            "url": "https://www.amazon.com.mx/Glossier-You-Eau-Parfum-1-69/dp/B0C3C3C376"
+          },
+          {
+            "title": "Mercado Libre México — Glossier Boy Brow",
+            "url": "https://www.mercadolibre.com.mx/eyebrow-gel-pomade-glossier-boy-brow-brown-medium-dark-brown/p/MLM2057933828"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Glossier Boy Brow",
+            "url": "https://www.amazon.com.br/Glossier-Gel-Pomada-Para-Sobrancelhas-Volumizante/dp/B0C4LHHX47"
+          }
+        ]
+      }
+    },
+    "38": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora México — Rare Beauty",
+            "url": "https://www.sephora.com.mx/marca/?prefn1=brand&prefv1=B307&srule=brandAsc&sz=80"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora Brasil — Rare Beauty",
+            "url": "https://www.sephora.com.br/rare-beauty/"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Falabella Chile — Labiales Rare Beauty",
+            "url": "https://www.falabella.com/falabella-cl/category/cat7660030/Labiales?f.product.brandName=rare+beauty"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Rare Beauty",
+            "url": "https://listado.mercadolibre.com.co/rare-beauty"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Rare Beauty",
+            "url": "https://listado.mercadolibre.com.ar/rare-beauty-maquillaje"
+          }
+        ]
+      }
+    },
+    "39": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora México — Fenty Beauty",
+            "url": "https://sephora.com.mx/brands/fenty"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sephora Brasil — Fenty Beauty",
+            "url": "https://www.sephora.com.br/fenty-beauty/"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Falabella Chile — Maquillaje Fenty Beauty",
+            "url": "https://www.falabella.com/falabella-cl/category/cat690199/Maquillaje?f.product.brandName=fenty+beauty"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Fenty Beauty",
+            "url": "https://listado.mercadolibre.com.co/fenty-beauty-rubor"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Fenty Beauty",
+            "url": "https://listado.mercadolibre.com.ec/maquillaje/fenty-beauty"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Fenty Beauty",
+            "url": "https://listado.mercadolibre.com.pe/fenty-beauty-labial"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Fenty Beauty",
+            "url": "https://listado.mercadolibre.com.uy/fenty-beauty"
+          }
+        ]
+      }
+    },
+    "40": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Haus Labs",
+            "url": "https://listado.mercadolibre.com.mx/haus-labs"
+          },
+          {
+            "title": "Amazon México — Haus Labs Triclone",
+            "url": "https://www.amazon.com.mx/Haus-maquillaje-cobertura-Triclone-fermentada/dp/B0BJ81NXKF"
+          }
+        ]
+      }
+    },
+    "41": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Jones Road Miracle Balm",
+            "url": "https://www.amazon.com.mx/Jones-Road-Miracle-Balm-Naturel/dp/B09XWG1Z47"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Jones Road",
+            "url": "https://www.amazon.com.br/Beleza-Jones-Road/s?rh=n:16194414011,p_4:Jones%2BRoad"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Jones Road Miracle Balm",
+            "url": "https://articulo.mercadolibre.cl/MLC-605148699-jones-road-beauty-miracle-balm-tono-dusty-rose-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Jones Road Miracle Balm",
+            "url": "https://www.mercadolibre.com.co/jones-road-miracle-balm-golden-hour/p/MCO36599224"
+          }
+        ]
+      }
+    },
+    "42": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Ritual Essential",
+            "url": "https://articulo.mercadolibre.com.mx/MLM-3444894238-ritual-essential-for-women-postnatal-multivitamin-60-caps-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Ritual Essential for Men",
+            "url": "https://www.mercadolibre.com.co/supplement-ritual-essential-for-men-18-w-zinc-vitamin-a/p/MCO2024994348"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Livre — Ritual Essential Prenatal",
+            "url": "https://www.mercadolivre.com.br/ritual-essential-for-women-prenatal-multivitamin/p/MLB2016109012"
+          }
+        ]
+      }
+    },
+    "43": {
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Seed DS-01",
+            "url": "https://articulo.mercadolibre.com.pe/MPE-682467622-seed-ds-01-daily-synbiotic-prebiotico-y-probiotico-x60-caps-_JM"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Seed DS-01",
+            "url": "https://www.mercadolibre.com.co/suplemento-seed-ds-01-daily-symbiotic-60-capsulas-veganas/p/MCO2019575232"
+          }
+        ]
+      },
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Synbiotic diario (Seed)",
+            "url": "https://www.mercadolibre.com.mx/synbiotic-diario-prebiotico-y-probiotico-vegano-60-capsulas/up/MLMU3704316074"
+          }
+        ]
+      }
+    },
+    "44": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Native",
+            "url": "https://www.amazon.com.mx/native-deodorant/s?k=native+deodorant"
+          }
+        ]
+      }
+    },
+    "45": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Cuts Clothing",
+            "url": "https://www.amazon.com.mx/Ropa-Zapatos-y-Accesorios-Cuts/s?rh=n%3A13848838011%2Cp_4%3ACuts"
+          }
+        ]
+      }
+    },
+    "46": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Innovasport — Vuori",
+            "url": "https://www.innovasport.com/marca/vuori/c/c5-207"
+          }
+        ]
+      }
+    },
+    "47": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre México — Gymshark",
+            "url": "https://listado.mercadolibre.com.mx/gym-shark-leggings"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Colombia — Gymshark",
+            "url": "https://listado.mercadolibre.com.co/ropa/gym-shark"
+          }
+        ]
+      }
+    },
+    "48": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Allbirds",
+            "url": "https://www.amazon.com.mx/allbirds/s?k=allbirds"
+          }
+        ]
+      }
+    },
+    "49": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — On Cloudmonster",
+            "url": "https://www.amazon.com.mx/on-running-cloud-monster/s?k=on+running+cloud+monster"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Dexter — On Running Cloud 6",
+            "url": "https://www.dexter.com.ar/zapatillas-on-running-cloud-6-hombre/ON3MF10070-299_11_1.html"
+          },
+          {
+            "title": "Moov — On Running Cloud 5",
+            "url": "https://www.moov.com.ar/zapatillas-on-running-cloud-5-hombre/ONCLFMLIV0001NGBL.html"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Ripley — On Running Cloud X 3",
+            "url": "https://simple.ripley.cl/zapatillas-hombre-on-running-negro-cloud-x-3-2000399128697"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Netshoes — On Running Cloud 5",
+            "url": "https://www.netshoes.com.br/p/tenis-on-running-cloud-5-masculino-preto-preto-KRV-0518-006"
+          },
+          {
+            "title": "Centauro — On Running Cloud 6",
+            "url": "https://www.centauro.com.br/tenis-on-running-cloud-6-masculino-992854.html"
+          }
+        ]
+      }
+    },
+    "50": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Innovasport — HOKA",
+            "url": "https://www.innovasport.com/marca/hoka/c/c5-044"
+          },
+          {
+            "title": "Martí — Tenis Hoka Clifton 10",
+            "url": "https://www.marti.mx/tenis-hoka-correr-1127980362/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Sparta — Hoka Mach 6",
+            "url": "https://sparta.cl/zapatillas-running-hombre-hoka-mach-6-azul-720001147790-dhn16.html"
+          },
+          {
+            "title": "Falabella Chile — Zapatillas Hoka",
+            "url": "https://www.falabella.com/falabella-cl/category/cat2083/Zapatillas?f.product.brandName=hoka"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Zapatillas Hoka",
+            "url": "https://listado.mercadolibre.com.ar/zapatillas-hoka"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Netshoes — Tênis Running Hoka",
+            "url": "https://www.netshoes.com.br/running/tenis/hoka"
+          },
+          {
+            "title": "Centauro — Tênis Hoka Running",
+            "url": "https://www.centauro.com.br/nav/produto/tenis/linha/running/marca/hoka"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Running Balboa — HOKA",
+            "url": "https://runningbalboa.com/collections/hoka"
+          }
+        ]
+      }
+    },
+    "51": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Liverpool — YETI",
+            "url": "https://www.liverpool.com.mx/tienda?s=yeti"
+          },
+          {
+            "title": "Amazon México — YETI",
+            "url": "https://www.amazon.com.mx/Termos-YETI/s?rh=n%3A9725294011%2Cp_89%3AYETI"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — YETI Rambler",
+            "url": "https://www.amazon.com.br/YETI-Rambler-inoxid%C3%A1vel-isolado-MagSlider/dp/B0CF6LPY68"
+          }
+        ]
+      }
+    },
+    "52": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Stanley Quencher",
+            "url": "https://www.amazon.com.mx/stanley-termo-quencher/s?k=stanley+termo+quencher"
+          },
+          {
+            "title": "Mercado Libre México — Stanley Quencher",
+            "url": "https://www.mercadolibre.com.mx/stanley-termo-quencher-h2o-flowstate-vaso-de-887-ml-30-oz-color-carbon/p/MLM30918210"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Éxito (vendedor externo) — Stanley Quencher",
+            "url": "https://www.exito.com/termo-stanley-quencher-h20-flowstate-vaso-aislado-al-vacio-de-acero-inoxidable-con-tapa-y-pitillo-40oz-103263889-mp/p"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Stanley Quencher",
+            "url": "https://listado.mercadolibre.com.ar/stanley-vacuum-quencher"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Stanley Quencher",
+            "url": "https://listado.mercadolibre.com.uy/vaso-stanley-quencher"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Novey — Vaso Stanley Quencher H2.0 40oz",
+            "url": "https://www.novey.com.pa/vaso-stanley-quencher-h2-0-flowstate-40oz-rose-quartz-glow-e033-000495"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Stanley Brasil (loja oficial) — Quencher",
+            "url": "https://www.stanley1913.com.br/collections/quencher"
+          },
+          {
+            "title": "Centauro — Copo Stanley",
+            "url": "https://www.centauro.com.br/nav/produto/copo/marca/stanley"
+          }
+        ]
+      }
+    },
+    "53": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Owala FreeSip",
+            "url": "https://www.amazon.com.mx/Owala-FreeSip-inoxidable-deportes-malvavisco/dp/B085DVNHHK"
+          },
+          {
+            "title": "Mercado Libre México — Owala FreeSip",
+            "url": "https://www.mercadolibre.com.mx/owala-freesip-botella-de-agua-aislada-de-acero-inoxidable-co/p/MLM2002536064"
+          }
+        ]
+      }
+    },
+    "54": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "H-E-B México — Caulipower pizza vegetariana",
+            "url": "https://www.heb.com.mx/caulipower-pizza-de-coliflor-vegetariana-sin-gluten-336-g-935040/p"
+          },
+          {
+            "title": "La Comer — Nuggets Caulipower",
+            "url": "https://www.lacomer.com.mx/lacomer/#!/detarticulo/196411000019/0/30/1///30/9931"
+          }
+        ]
+      },
+      "Costa Rica": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Auto Mercado — Base pizza coliflor Caulipower",
+            "url": "https://automercado.cr/p/base-pizza-coliflor-caulipower-unid/id/b95a3dab-5894-4c10-8187-fda3f6cef827"
+          }
+        ]
+      }
+    },
+    "55": {
+      "Mexico": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon México — Partake",
+            "url": "https://www.amazon.com.mx/Partake-Foods-Galletas-horneadas-chocolate/dp/B08HRPM9L6"
+          }
+        ]
+      }
+    }
+  }
+}
