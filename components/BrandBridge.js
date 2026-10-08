@@ -122,6 +122,17 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
   const [lang, setLang] = useStored("bb-lang", defaultLang);
   const t = useMemo(() => getText(lang), [lang]);
   useEffect(() => { document.documentElement.lang = t.lang; }, [t.lang]);
+  // Cuenta la visita (anónima, sin cookies) para las estadísticas privadas de /admin, una vez por pestaña.
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem("bb-seen")) return;
+      sessionStorage.setItem("bb-seen", "1");
+    } catch {}
+    const body = JSON.stringify({ ref: document.referrer });
+    if (!navigator.sendBeacon?.("/api/track", body)) {
+      fetch("/api/track", { method: "POST", body, keepalive: true }).catch(() => {});
+    }
+  }, []);
   const [view, setView] = useState("intro");
   const [selected, setSelected] = useState(null); // { brand, tab }
   const [showTerms, setShowTerms] = useState(false);

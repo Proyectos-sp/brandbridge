@@ -3,7 +3,7 @@
 // Cada análisis se genera una sola vez y queda guardado; después sale gratis y al instante.
 // "presence" (si ya se vende en el país) no la escribe la IA: se arma en cada respuesta con
 // lib/presence.js, a partir de los datos de la marca o de una búsqueda con fuentes.
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { getScore, isValidCountry } from "@/lib/data";
 import { findBrand } from "@/lib/research";
 import { askAI, AIError } from "@/lib/ai";
@@ -12,6 +12,7 @@ import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
 import { getPresence, presenceFromData } from "@/lib/presence";
 import { requestLang, serverTextFor } from "@/lib/i18n";
+import { recordEvent } from "@/lib/stats";
 
 const CACHE_DAYS = 180; // largo para ahorrar cupo gratuito de la IA
 
@@ -25,6 +26,7 @@ export async function POST(request) {
   if (!brand || !isValidCountry(country)) {
     return NextResponse.json({ error: T.invalidBrand }, { status: 400 });
   }
+  after(() => recordEvent("analyze", { brand: brand.name, market: country }));
 
   // El texto del análisis se escribe sabiendo si la marca ya se vende en el país; si ese dato
   // cambia (por ejemplo, se encontró una tienda), se genera un análisis nuevo.

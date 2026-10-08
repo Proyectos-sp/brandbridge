@@ -1,12 +1,13 @@
 // POST /api/chat  { brandId, country, lang?, messages: [{ role: "user" | "assistant", content }] }
 // Chat en vivo con la IA sobre cómo traer una marca a un país.
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { getScore, isValidCountry } from "@/lib/data";
 import { findBrand } from "@/lib/research";
 import { askAI, AIError } from "@/lib/ai";
 import { chatSystemPrompt } from "@/lib/prompts";
 import { checkLimits } from "@/lib/limits";
 import { requestLang, serverTextFor } from "@/lib/i18n";
+import { recordEvent } from "@/lib/stats";
 
 const MAX_MESSAGE_LENGTH = 600; // caracteres por mensaje
 const MAX_HISTORY = 12; // mensajes que se envían a la IA (los más recientes)
@@ -47,6 +48,7 @@ export async function POST(request) {
   if (!brand || !isValidCountry(country) || !messages) {
     return NextResponse.json({ error: T.invalid }, { status: 400 });
   }
+  after(() => recordEvent("chat"));
 
   const limitMessage = await checkLimits(request, "chat", lang);
   if (limitMessage) {

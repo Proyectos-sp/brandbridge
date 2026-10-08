@@ -6,7 +6,7 @@
 // Gratis por defecto: la IA reconoce la empresa y su sitio oficial, el servidor busca su artículo
 // en Wikipedia (API pública) y la IA lee esas páginas para armar la ficha (URL context de Gemini).
 // Con GEMINI_SEARCH=true (plan pagado) usa Google Search en vez de eso.
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { BRANDS, CATEGORIES } from "@/lib/data";
 import { askAI, askAIWithWeb, AIError } from "@/lib/ai";
 import { identifyPrompt, researchPrompt } from "@/lib/prompts";
@@ -14,6 +14,7 @@ import { TAGS, RESEARCH_DAYS, catalogMatch, findWikipedia, parseIdentify, parseR
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
 import { requestLang, serverTextFor } from "@/lib/i18n";
+import { recordEvent } from "@/lib/stats";
 
 export const maxDuration = 60; // leer páginas puede tardar
 
@@ -52,6 +53,7 @@ export async function POST(request) {
   if (query.length < 2 || query.length > 80) {
     return NextResponse.json({ error: T.invalidQuery }, { status: 400 });
   }
+  after(() => recordEvent("research", { query }));
 
   // Si ya está en el catálogo, no se gasta una investigación.
   const inCatalog = catalogMatch(query);
