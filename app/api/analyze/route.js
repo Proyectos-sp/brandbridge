@@ -27,7 +27,7 @@ export async function POST(request) {
   // El texto del análisis se escribe sabiendo si la marca ya se vende en el país; si ese dato
   // cambia (por ejemplo, se encontró una tienda), se genera un análisis nuevo.
   const presenceTag = presenceFromData(brand, country).status;
-  const cacheKey = `analysis:v3:${SERVER_LANG}:${brand.id}:${country}:${presenceTag}`;
+  const cacheKey = `analysis:v7:${SERVER_LANG}:${brand.id}:${country}:${presenceTag}`;
 
   // Los análisis guardados antes de este cambio traen una "presence" adivinada: se reemplaza.
   const withPresence = async (analysis, limitChecked) => ({
@@ -53,7 +53,7 @@ export async function POST(request) {
     // A veces un modelo devuelve el JSON incompleto: se reintenta una vez antes de mostrar error.
     let analysis = null;
     for (let attempt = 0; attempt < 2 && !analysis; attempt++) {
-      const text = await askAI({ system, messages, maxTokens: 900, json: true });
+      const text = await askAI({ system, messages, maxTokens: 1600, json: true, thinking: 1024 });
       analysis = parseAnalysis(text);
       if (!analysis) console.error("[analyze] formato inesperado:", String(text).slice(0, 300));
     }
