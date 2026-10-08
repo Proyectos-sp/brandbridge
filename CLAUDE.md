@@ -16,6 +16,7 @@ Catálogo de 55 marcas de consumo con un puntaje de oportunidad por país, un an
 - `app/api/analyze/route.js`, `app/api/chat/route.js` y `app/api/research/route.js` — rutas del servidor que llaman a la IA.
 - `lib/ai.js`, `lib/prompts.js`, `lib/limits.js`, `lib/store.js`, `lib/research.js`, `lib/presence.js` — conexión con Gemini/Claude, instrucciones, límites de uso, caché, empresas investigadas y presencia en cada país.
 - `data/brands.json`, `data/countries.json`, `data/logos.json`, `data/presence.json` — datos.
+  `data/descriptions-es.json` (descripción en español de cada marca, por id) sí se puede editar; si se agrega una marca, agregar también su traducción.
 - `lib/score.js`, `lib/data.js` — cálculo del puntaje.
 
 ## Reglas importantes

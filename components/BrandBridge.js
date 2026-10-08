@@ -53,7 +53,7 @@ function BrandCard({ brand, score, country, onOpen, index, t, saved, onToggleSav
             <i />{presence.label}{presence.ai && <small>{t.aiTag}</small>}
           </span>
         )}
-        <p className="bb-card-desc">{brand.description}</p>
+        <p className="bb-card-desc">{t.description(brand)}</p>
         <div className="bb-facts">
           <span><small>{t.revenue}</small><b>{fact(brand.revenue)}</b></span>
           <span><small>{t.growth}</small><b className={growthDown ? "bb-down" : undefined}>{fact(brand.growth)}</b></span>
@@ -188,7 +188,7 @@ export default function BrandBridge({ brands, countries, lang: defaultLang }) {
     const q = search.trim().toLowerCase();
     return scoredAll
       .filter(({ brand: b }) => (category === "All" || b.category === category) && (tag === "All" || b.tag === tag))
-      .filter(({ brand: b }) => !q || b.name.toLowerCase().includes(q) || b.category.toLowerCase().includes(q) || t.category(b.category).toLowerCase().includes(q) || b.description.toLowerCase().includes(q));
+      .filter(({ brand: b }) => !q || b.name.toLowerCase().includes(q) || b.category.toLowerCase().includes(q) || t.category(b.category).toLowerCase().includes(q) || t.description(b).toLowerCase().includes(q));
   }, [scoredAll, category, tag, search, t]);
   const savedList = useMemo(() => scoredAll.filter(({ brand }) => saved.includes(brand.id)), [scoredAll, saved]);
   const shown = view === "watchlist" ? savedList : filtered;

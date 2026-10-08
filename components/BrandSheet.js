@@ -366,7 +366,7 @@ export default function BrandSheet({ brand, country, onClose, t, saved, onToggle
               <div className="bb-sheet-titles">
                 <h2>{brand.name}</h2>
                 <p className="bb-sheet-meta"><span className="bb-catlabel" data-cat={brand.category}><i />{t.category(brand.category)}</span>{brand.origin !== "Unknown" && <span>{t.country(brand.origin)}</span>}{Number.isInteger(brand.founded) && <span>{t.est} {brand.founded}</span>}{brand.researched && <span className="bb-ai-tag">{t.researchedTag}</span>}</p>
-                <p className="bb-sheet-desc">{brand.description}</p>
+                <p className="bb-sheet-desc">{t.description(brand)}</p>
               </div>
               <div className="bb-sheet-actions">
                 {onToggleSave && (
