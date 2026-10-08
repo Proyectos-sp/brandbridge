@@ -1,7 +1,21 @@
 {
   "checkedAt": "2026-10-08",
   "coverage": {
-    "Mexico": "2026-10-08"
+    "Panama": "2026-10-08",
+    "Mexico": "2026-10-08",
+    "Colombia": "2026-10-08",
+    "Brazil": "2026-10-08",
+    "Argentina": "2026-10-08",
+    "Chile": "2026-10-08",
+    "Peru": "2026-10-08",
+    "Costa Rica": "2026-10-08",
+    "Dominican Republic": "2026-10-08",
+    "Guatemala": "2026-10-08",
+    "Ecuador": "2026-10-08",
+    "Uruguay": "2026-10-08",
+    "Paraguay": "2026-10-08",
+    "El Salvador": "2026-10-08",
+    "Nicaragua": "2026-10-08"
   },
   "method": "Búsqueda manual en tiendas y marketplaces de cada país (supermercados, tiendas por departamento, Sephora, Mercado Libre, Amazon, etc.). retail = la vende una tienda del país; marketplace = solo revendedores o importación. Si un país no aparece, no se encontró la marca; eso solo cuenta como 'no se vende' en los países de coverage (revisados a fondo).",
   "brands": {
@@ -45,6 +59,10 @@
         "status": "retail",
         "sources": [
           {
+            "title": "Riba Smith — Olipop Cream Soda",
+            "url": "https://www.ribasmith.com/index.php/348431-olipop-cream-soda-tonic.html"
+          },
+          {
             "title": "Riba Smith — Sodas (Olipop)",
             "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/sodas.html"
           }
@@ -73,8 +91,12 @@
     },
     "3": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Costco México — Magic Spoon Cereal con Proteína",
+            "url": "https://www.costco.com.mx/Grocery/Grocery/Galletas-y-Cereales/Magic-Spoon-Cereal-con-Proteina-Sabor-a-Frutas-396-g/p/1674869"
+          },
           {
             "title": "Amazon México — Magic Spoon",
             "url": "https://www.amazon.com.mx/magic-spoon-cereal/s?k=magic+spoon+cereal"
@@ -111,6 +133,15 @@
             "url": "https://www.ribasmith.com/index.php/343978-cocoa-magic-spoon-cereal.html"
           }
         ]
+      },
+      "Dominican Republic": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Supermercados Nacional — Cereal Magic Spoon Cocoa",
+            "url": "https://supermercadosnacional.com/dtnc/organico/cereal-de-cocoa-sin-azucar-magic-spoon-8-onz"
+          }
+        ]
       }
     },
     "4": {
@@ -137,7 +168,37 @@
         "sources": [
           {
             "title": "Falabella Chile — Drunk Elephant",
+            "url": "https://www.falabella.com/falabella-cl/brand/DRUNK%20ELEPHANT"
+          },
+          {
+            "title": "Falabella Chile — Drunk Elephant",
             "url": "https://www.falabella.com/falabella-cl/page/drunk-elephant"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Serum Exfoliante Drunk Elephant TLC Framboos",
+            "url": "https://www.fravega.com/serum-exfoliante-drunk-elephant-tlc-framboos-22928656/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Crema Drunk Elephant DRUNK ELEPHANT-PROTINI POLYPETIDE CREAM 48g",
+            "url": "https://www.plazavea.com.pe/crema-drunk-elephant-drunk-elephant-protini-polypetide-cream-48g-101960603/p"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — Set de Cuidado Nocturno DRUNK ELEPHANT - Dermocosmetica_123",
+            "url": "https://www.oechsle.pe/set-de-cuidado-nocturno-drunk-elephant-dermocosmetica_123-1000974391/p"
+          },
+          {
+            "title": "Promart (vendedor externo) — Hidratante Reafirmante Protini 15 m",
+            "url": "https://www.promart.pe/hidratante-reafirmante-protini-15-m-1001579552/p"
           }
         ]
       }
@@ -171,7 +232,7 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Chedraui — Aceite de Oliva Graza 500 ml",
+            "title": "Chedraui — Aceite de Oliva Graza Extra Virgen 500 ml",
             "url": "https://www.chedraui.com.mx/aceite-de-oliva-graza-extra-virgen-500-ml-3891968/p"
           },
           {
@@ -296,6 +357,10 @@
           {
             "title": "Mercado Libre Argentina — Blueland",
             "url": "https://articulo.mercadolibre.com.ar/MLA-1977293206-recambios-de-limpieza-para-inodoros-blueland-eco-friendly-p-_JM"
+          },
+          {
+            "title": "Frávega (vendedor externo) — Detergente Tabletas BLUELAND 60 unid sin plastico",
+            "url": "https://www.fravega.com/detergente-tabletas-blueland-60-unid-sin-plastico-22840158/p"
           }
         ]
       },
@@ -316,12 +381,25 @@
             "url": "https://www.amazon.com.br/BLUELAND-tablete-detergente-lava-lou%C3%A7as-pacote/dp/B0BDJ9M1TN"
           }
         ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Blueland",
+            "url": "https://www.mercadolibre.cl/laundry-detergent-tablets-blueland-starter-set-60-tablets/p/MLC2008989835"
+          }
+        ]
       }
     },
     "9": {
       "Mexico": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Chedraui — Bebida en Polvo Liquid IV Mango Piña con 8 Sobre",
+            "url": "https://www.chedraui.com.mx/bebida-en-polvo-liquid-iv-mango-pina-con-8-sobre-3912789/p"
+          },
           {
             "title": "Costco México — Liquid I.V. Lima-Limón",
             "url": "https://www.costco.com.mx/Salud-y-Belleza/Vitaminas-Proteinas-y-Suplementos/Suplementos-Alimenticios/Liquid-IV-Electrolitos-en-Polvo-sabor-Lima-Limon-30-pzas-de-16-g/p/685434"
@@ -395,12 +473,25 @@
             "url": "https://articulo.mercadolibre.com.mx/MLM-1419018916-mudwtr-30-porciones-rise-180-g-alternativa-de-cafe-a-_JM"
           }
         ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — MUDWTR Rest",
+            "url": "https://articulo.mercadolibre.cl/MLC-1497098013-mud-wtr-rest-30-porciones-te-rooibos-de-noche-de-hongos-_JM"
+          }
+        ]
       }
     },
     "11": {
       "Mexico": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Chedraui — Bebida Athletic Brewing Co Atlet 355ml",
+            "url": "https://www.chedraui.com.mx/bebida-athletic-brewing-co-atlet-355ml-3906469/p"
+          },
           {
             "title": "Chedraui — Athletic (Lite, Run Wild, Upside Dawn)",
             "url": "https://www.chedraui.com.mx/athletic"
@@ -428,6 +519,24 @@
           {
             "title": "Amazon México — Hims & Hers (cuidado del cabello)",
             "url": "https://www.amazon.com.mx/acondicionador-hombres-Engrosamiento-hidrataci%C3%B3n-antica%C3%ADda/dp/B09R6CHBF1"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — HIMS andamp; HERS Champú para cabello grueso para",
+            "url": "https://www.fravega.com/hims-andamp-hers-champu-para-cabello-grueso-para-22659222/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Hims Thick Fix",
+            "url": "https://www.mercadolibre.cl/set-de-tratamiento-anticaida-hims-thick-fix-shampoo-serum/p/MLC2015772166"
           }
         ]
       }
@@ -478,8 +587,12 @@
     },
     "16": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Sephora México — Touchland Power Mist",
+            "url": "https://www.sephora.com.mx/products-44990040.html"
+          },
           {
             "title": "Amazon México — Touchland",
             "url": "https://www.amazon.com.mx/touchland/s?k=touchland"
@@ -505,6 +618,10 @@
           {
             "title": "Mercado Libre Argentina — Touchland Power Mist",
             "url": "https://articulo.mercadolibre.com.ar/MLA-1377595333-touchland-power-mist-beach-coco-_JM"
+          },
+          {
+            "title": "Frávega (vendedor externo) — Touchette Touchland TCLAC99US Neopreno Gancho",
+            "url": "https://www.fravega.com/touchette-touchland-tclac99us-neopreno-gancho-22842946/p"
           }
         ]
       },
@@ -518,6 +635,10 @@
           {
             "title": "Mercado Libre Chile — Touchland",
             "url": "https://www.mercadolibre.cl/touchland-power-mist-hydrating-hand-sanitizer-fragancia-mango-passion/p/MLC36117032"
+          },
+          {
+            "title": "Lider (vendedor externo) — Touchland Power Mist",
+            "url": "https://www.lider.cl/ip/aerosoles-y-desinfectantes/spray-desinfectante-para-manos-touchland-power-mist-juicy-30ml-paquete-3-unidades/00085002844831"
           }
         ]
       },
@@ -527,6 +648,15 @@
           {
             "title": "Amazon Brasil — Touchland",
             "url": "https://www.amazon.com.br/Touchland-Hydrating-Sanitizer-Watermelon-500-Sprays/dp/B09YT2H35S"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Desinfectante de manos hidratante Applelicious Touchland",
+            "url": "https://www.plazavea.com.pe/desinfectante-de-manos-hidratante-applelicious-touchland-101438472/p"
           }
         ]
       }
@@ -560,12 +690,12 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Falabella — Oura Ring 4 llega a Chile",
-            "url": "https://falabellaretail.falabella.com/noticias/llega-oura-ring-chile-falabella-exclusivo/"
-          },
-          {
             "title": "Falabella Chile — Oura Ring",
             "url": "https://www.falabella.com/falabella-cl/page/oura-ring"
+          },
+          {
+            "title": "Falabella — Oura Ring 4 llega a Chile",
+            "url": "https://falabellaretail.falabella.com/noticias/llega-oura-ring-chile-falabella-exclusivo/"
           },
           {
             "title": "Paris — Oura Ring",
@@ -597,6 +727,28 @@
           {
             "title": "Mercado Libre Argentina — Oura Ring",
             "url": "https://listado.mercadolibre.com.ar/oura-ring-anillo-inteligente"
+          },
+          {
+            "title": "Frávega (vendedor externo) — Oura Ring 4 Oro Talla 13 Salud Sueño Actividad IA",
+            "url": "https://www.fravega.com/oura-ring-4-oro-talla-13-salud-sueno-actividad-ia-22962630/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Anillo Oura 4 Oura JZ90-54217-11 Actividad",
+            "url": "https://www.plazavea.com.pe/anillo-oura-4-oura-jz90-54217-11-actividad-101945251/p"
+          }
+        ]
+      },
+      "Paraguay": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Nissei — Oura Ring 4",
+            "url": "https://nissei.com/py/anillo-smart-oura-ring-4-metallic-talla-10-black"
           }
         ]
       }
@@ -612,11 +764,37 @@
         ]
       },
       "Colombia": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Carulla — Batería De Cocina Caraway 12 Piezas Aluminio Antiadherente",
+            "url": "https://www.carulla.com/bateria-de-cocina-caraway-12-piezas-aluminio-antiadherente-105207116-mp/p"
+          },
           {
             "title": "Mercado Libre Colombia — Caraway",
             "url": "https://articulo.mercadolibre.com.co/MCO-1943084144-caraway-nonstick-ceramic-cookware-set-12-piece-pots-pa-jl-_JM"
+          },
+          {
+            "title": "Éxito (vendedor externo) — Batería De Cocina Caraway 12 Piezas Aluminio Antiadherente",
+            "url": "https://www.exito.com/bateria-de-cocina-caraway-12-piezas-aluminio-antiadherente-105207116-mp/p"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Caraway Mini sartén antiadherente de cerámica",
+            "url": "https://www.fravega.com/caraway-mini-sarten-antiadherente-de-ceramica-22645500/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Caraway",
+            "url": "https://listado.mercadolibre.cl/caraway"
           }
         ]
       }
@@ -709,6 +887,15 @@
             "url": "https://www.mercadolivre.com.br/the-jolie-filtered-showerhead-clinically-tested-high-p/p/MLB2001216513"
           }
         ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Lider (vendedor externo) — cabezales con filtro (Jolie)",
+            "url": "https://www.lider.cl/catalogo/v/cabezal-de-ducha-con-filtro"
+          }
+        ]
       }
     },
     "27": {
@@ -749,12 +936,16 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Éxito — NotMilk NotCo",
+            "title": "Éxito — Bebida vegetal X NOTCO original (1000 ml)",
             "url": "https://www.exito.com/bebida-base-vegetales-original-x-notco-1000-ml-3141342/p"
           },
           {
-            "title": "Tiendas Jumbo Colombia — Not Milk chocolate",
-            "url": "https://www.tiendasjumbo.co/bebida-notco-vegetal-chocolate-x1l/p"
+            "title": "Carulla — Bebida vegetal X NOTCO chocolate (1000 ml)",
+            "url": "https://www.carulla.com/bebida-a-base-plantas-chocolat-x-notco-1000-ml-3010810/p"
+          },
+          {
+            "title": "Jumbo Colombia — Bebida Notco base vegetal original x1L",
+            "url": "https://www.tiendasjumbo.co/bebida-notco-base-vegetal-original-x1l/p"
           }
         ]
       },
@@ -762,16 +953,16 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Disco — NotMayo NotCo",
-            "url": "https://www.disco.com.ar/aderezo-notmayo-original-notco-400-gr/p"
+            "title": "Vea — Notchicken Mila Con Semillas 2 Un X 110 Grs Notco",
+            "url": "https://www.vea.com.ar/notchicken-mila-con-semillas-2-un-x-110-grs-notco/p"
           },
           {
-            "title": "Carrefour Argentina — Not Milk",
-            "url": "https://supermercado.carrefour.com.ar/bebida-a-base-de-vegetales-not-milk-1-l/p"
+            "title": "Disco — Notchicken Mila Con Semillas 2 Un X 110 Grs Notco",
+            "url": "https://www.disco.com.ar/notchicken-mila-con-semillas-2-un-x-110-grs-notco/p"
           },
           {
-            "title": "Mercado Libre Argentina — Not Milk Notco",
-            "url": "https://articulo.mercadolibre.com.ar/MLA-1132904564-leche-not-milk-original-notco-1-lt-_JM"
+            "title": "Jumbo Argentina — Notchicken Mila Con Semillas 2 Un X 110 Grs Notco",
+            "url": "https://www.jumbo.com.ar/notchicken-mila-con-semillas-2-un-x-110-grs-notco/p"
           }
         ]
       },
@@ -779,12 +970,16 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Superseis — NotCo",
-            "url": "https://www.superseis.com.py/manufacturer/2247-notco.aspx"
+            "title": "Casa Rica — NotMilk NotCo",
+            "url": "https://www.casarica.com.py/bebida-vegetal-notco-not-milk-original-1lt-p33472"
           },
           {
-            "title": "Supermercados Stock — Not Milk chocolate",
-            "url": "https://www.stock.com.py/products/304940-notco-not-milk-chocolate-bebida-en-base-a-vegetales-sabor-chocolate-1-litro.aspx"
+            "title": "Biggie — NotMilk NotCo",
+            "url": "https://biggie.com.py/item/bebida-vegetal-notco-not-milk-original-de-1000-ml-7804659650363"
+          },
+          {
+            "title": "Superseis — NotCo",
+            "url": "https://www.superseis.com.py/manufacturer/2247-notco.aspx"
           }
         ]
       },
@@ -792,8 +987,39 @@
         "status": "retail",
         "sources": [
           {
+            "title": "Tienda Inglesa — Milanesa Vegana NOTCO de Pollo 220 g",
+            "url": "https://www.tiendainglesa.com.uy/supermercado/milanesa-vegana-notco-de-pollo-220-g.producto?1562802,,42"
+          },
+          {
             "title": "Tienda Inglesa — Not Mayo NotCo",
             "url": "https://tiendainglesa.com.uy/supermercado/aderezo-not-mayo-original-notco-200-gr.producto?1559776="
+          }
+        ]
+      },
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Chedraui — Barra NotCo Waffle Upsidedown 128g",
+            "url": "https://www.chedraui.com.mx/barra-notco-waffle-upsidedown-128g-3893006/p"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Supermaxi — Not Burger Hamburguesa Vegetal NOTCO 95 G",
+            "url": "https://www.supermaxi.com/producto/not-burger-hamburguesa-vegetal-notco-95-g/"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Riba Smith — Despensa (NotCo)",
+            "url": "https://www.ribasmith.com/index.php/otros-departamentos/despensa.html?cat=14877&p=17&price=3-"
           }
         ]
       }
@@ -820,6 +1046,37 @@
             "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/sodas.html"
           }
         ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Wong — Bebida Prebiótica Gasificada Poppi Orange Lata 355ml",
+            "url": "https://www.wong.pe/bebida-prebi-tica-gasificada-poppi-orange-lata-355ml-1048518/p"
+          },
+          {
+            "title": "Metro — Bebida Prebiótica Gasificada Poppi Orange Lata 355ml",
+            "url": "https://www.metro.pe/bebida-prebi-tica-gasificada-poppi-orange-lata-355ml-1048518/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Lider (vendedor externo) — Poppi Cream Soda",
+            "url": "https://www.lider.cl/ip/bebidas/bebida-prebiotic-cream-soda-lata-poppi-355-ml/00081006371148"
+          }
+        ]
+      },
+      "Dominican Republic": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Supermercados Nacional — Poppi Cereza y Limón",
+            "url": "https://supermercadosnacional.com/bebidas/aguas-refrescos-y-jugos/aguas/soda-prebiotica-sabor-a-cereza-y-limon-poppi-12-onz"
+          }
+        ]
       }
     },
     "30": {
@@ -844,12 +1101,47 @@
             "url": "https://www.mercadolibre.com.ar/hydrostars-pimple-patches-refill--starface/up/MLAU319069334"
           }
         ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Parches para Acné Hydro-Star - Starface",
+            "url": "https://www.plazavea.com.pe/parches-para-acne-hydro-star-starface-102078701/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Starface Hydro-Stars",
+            "url": "https://www.mercadolibre.cl/starface-hydro-stars-compact-32ct-acne-patches-tipo-de-piel-piel-con-acne/p/MLC26668066"
+          },
+          {
+            "title": "Lider (vendedor externo) — Starface 96 unidades",
+            "url": "https://www.lider.cl/ip/salud-y-bienestar/hidrocoloide-transparente-pimple-patches-starface-hydro-star-96-unidades/00085003669666"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — parches Starface",
+            "url": "https://www.mercadolibre.com.ec/parches-hidrocoloides-para-el-acne-con-acido-salicilico-cub/p/MEC30938352"
+          }
+        ]
       }
     },
     "31": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Liverpool — Cepillo Drybar",
+            "url": "https://www.liverpool.com.mx/tienda/pdp/cepillo-para-cabello-drybar/1146438128"
+          },
           {
             "title": "Amazon México — Drybar",
             "url": "https://www.amazon.com.mx/drybar/s?k=drybar"
@@ -857,6 +1149,37 @@
           {
             "title": "Mercado Libre México — Drybar",
             "url": "https://listado.mercadolibre.com.mx/drybar"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Rulos Autoajustables Drybar High Tops 900-0275-1",
+            "url": "https://www.fravega.com/rulos-autoajustables-drybar-high-tops-900-0275-1-23077796/p"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Carulla — Plancha Alisadora Drybar Placas Flotantes Titanio Calor Ajustable 9 Pi",
+            "url": "https://www.carulla.com/plancha-alisadora-drybar-placas-flotantes-titanio-calor-ajustable-9-pies-104998748-mp/p"
+          },
+          {
+            "title": "Éxito (vendedor externo) — Plancha Alisadora Drybar Placas Flotantes Titanio Calor Ajustable 9 Pi",
+            "url": "https://www.exito.com/plancha-alisadora-drybar-placas-flotantes-titanio-calor-ajustable-9-pies-104998748-mp/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Drybar",
+            "url": "https://www.mercadolibre.cl/drybar-el-cepillo-secador-redondo-de-un-solo-disparo/p/MLC2002287681"
           }
         ]
       }
@@ -874,12 +1197,34 @@
             "url": "https://listado.mercadolibre.com.mx/liquid-death-agua"
           }
         ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Lider (vendedor externo) — Liquid Death",
+            "url": "https://www.lider.cl/search?q=liquid-death"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Liquid Death",
+            "url": "https://www.amazon.com.br/Liquid-Death-WaterSparkling-infinitamente-recicl%C3%A1veis/dp/B0DPXTYTJL"
+          }
+        ]
       }
     },
     "34": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Sam's Club México — Bebida Hidratante Prime 15 pzas",
+            "url": "https://www.sams.com.mx/ip/bebida-hidratante-prime-varios-sabores-15-pzas-de-500-ml-c-u/981032238"
+          },
           {
             "title": "Amazon México — Prime Hydration",
             "url": "https://www.amazon.com.mx/Prime-Hydration-Bebidas-Hidratantes-Deportistas/dp/B0BSVRW6CX"
@@ -893,6 +1238,10 @@
       "El Salvador": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Walmart El Salvador — Sournova Prime Hydration 500ml",
+            "url": "https://www.walmart.com.sv/sournova-prime-hydration-500ml-3/p"
+          },
           {
             "title": "Súper Selectos — Prime Meta Moon 500 ml",
             "url": "https://www.superselectos.com/products?category=052175&productId=119575"
@@ -932,6 +1281,37 @@
           {
             "title": "Mercado Libre Colombia — Prime Hydration",
             "url": "https://listado.mercadolibre.com.co/prime-hydration"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Prime Hydration",
+            "url": "https://listado.mercadolibre.cl/prime-hydration"
+          },
+          {
+            "title": "Lider (vendedor externo) — Prime Hydration Blueberry",
+            "url": "https://www.lider.cl/ip/f/beverage-prime-hydration-blueberry-botella-de-500-ml-paquete-de-12/00081011612546"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Prime Hydration",
+            "url": "https://www.mercadolibre.com.uy/prime-hydration-drink-bebida-hidratante-logan-paul-12-pack/p/MLU24602018"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Prime Hydration",
+            "url": "https://www.amazon.com.br/Prime-Hydration-Bebida-esportiva-Glowberry/dp/B0CGSLTVMQ"
           }
         ]
       }
@@ -999,8 +1379,21 @@
         "status": "retail",
         "sources": [
           {
+            "title": "Riba Smith — Celsius Live Fit Sparkling Orange",
+            "url": "https://www.ribasmith.com/index.php/266263-celsius%20sparkling%20orange.html"
+          },
+          {
             "title": "Riba Smith — Bebidas energizantes (Celsius)",
             "url": "https://www.ribasmith.com/index.php/otros-departamentos/bebidas-y-jugos/bebidas/bebidas-energizantes.html"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Celsius Live Fit",
+            "url": "https://articulo.mercadolibre.com.ve/MLV-715536832-pre-workout-celsius-live-fit-14-packs-bebida-energizante-_JM"
           }
         ]
       }
@@ -1021,6 +1414,10 @@
           {
             "title": "Mercado Libre Argentina — Rhode",
             "url": "https://www.mercadolibre.com.ar/rhode--peptide-lip-treatment-by-hailey-bieber/up/MLAU3145377648"
+          },
+          {
+            "title": "Frávega (vendedor externo) — Tratamiento Labial Rhode Vainilla con Péptidos 10 ml",
+            "url": "https://www.fravega.com/tratamiento-labial-rhode-vainilla-con-peptidos-10-ml-23081648/p"
           }
         ]
       },
@@ -1030,23 +1427,61 @@
           {
             "title": "Falabella Chile — Rhode Peptide Lip Treatment",
             "url": "https://www.falabella.com/falabella-cl/product/130316290/Peptide-lip-treatment-Vanilla-10ml-Rhode-by-Hailey-Bieber/130316291"
+          },
+          {
+            "title": "Ripley (vendedor externo) — Rhode Peptide Lip",
+            "url": "https://simple.ripley.cl/rhode-peptide-lip-tratamiento-labial-de-peptidos-raspberry-mpm10002838086"
           }
         ]
       },
       "Peru": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Plaza Vea — Hidratante Glazing Mist 80ml Rhode",
+            "url": "https://www.plazavea.com.pe/hidratante-glazing-mist-80ml-rhode-101935103/p"
+          },
           {
             "title": "Mercado Libre Perú — Rhode Peptide Lip Set",
             "url": "https://articulo.mercadolibre.com.pe/MPE-652189698-peptide-lip-set-rhode-by-hailey-bieber-_JM"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — Peptide Lip Tint Rhode Toast",
+            "url": "https://www.oechsle.pe/peptide-lip-tint-rhode-toast-1000746021/p"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Rhode Pocket Blush",
+            "url": "https://articulo.mercadolibre.com.ve/MLV-814815338-rubor-pocket-blush-rhode-original-_JM"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Livre — Rhode Peptide Lip",
+            "url": "https://www.mercadolivre.com.br/balsamo-labial-rhode-hailey-bieber-com-peptideos/p/MLB37239338"
+          },
+          {
+            "title": "Amazon Brasil — Rhode",
+            "url": "https://www.amazon.com.br/Rhode-Hailey-Tratamento-pept%C3%ADdeo-Caramel/dp/B0DQJ1ZJ7S"
           }
         ]
       }
     },
     "37": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Sephora México — Glossier",
+            "url": "https://www.sephora.com.mx/categories/marcas/glossier"
+          },
           {
             "title": "Amazon México — Glossier You",
             "url": "https://www.amazon.com.mx/Glossier-You-Eau-Parfum-1-69/dp/B0C3C3C376"
@@ -1063,6 +1498,59 @@
           {
             "title": "Amazon Brasil — Glossier Boy Brow",
             "url": "https://www.amazon.com.br/Glossier-Gel-Pomada-Para-Sobrancelhas-Volumizante/dp/B0C4LHHX47"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Oechsle (vendedor externo) — Bálsamo labial y bálsamo mango Balm Dotcom Glossier",
+            "url": "https://www.oechsle.pe/balsamo-labial-y-balsamo-mango-balm-dotcom-glossier-1001671596/p"
+          },
+          {
+            "title": "Plaza Vea (vendedor externo) — Bálsamo labial y bálsamo mango Balm Dotcom Glossier",
+            "url": "https://www.plazavea.com.pe/balsamo-labial-y-balsamo-mango-balm-dotcom-glossier-101960392/p"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Labial Glossier G Suit Soft Touch 6ml",
+            "url": "https://www.fravega.com/labial-glossier-g-suit-soft-touch-6ml-22835366/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Falabella Chile (compra internacional) — Glossier",
+            "url": "https://www.falabella.com/falabella-cl/brand/GLOSSIER"
+          },
+          {
+            "title": "Mercado Libre Chile — Glossier",
+            "url": "https://listado.mercadolibre.cl/glossier"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Glossier",
+            "url": "https://listado.mercadolibre.com.ec/maquillaje/glossier-gloss"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Glossier",
+            "url": "https://listado.mercadolibre.com.ve/salud-belleza/glossier-maquillaje"
           }
         ]
       }
@@ -1112,6 +1600,19 @@
             "url": "https://listado.mercadolibre.com.ar/rare-beauty-maquillaje"
           }
         ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Oechsle (vendedor externo) — Iluminador Liquido - Captivate - Rare Beauty Maquillaje",
+            "url": "https://www.oechsle.pe/iluminador-liquido-captivate-rare-beauty-maquillaje-1000957469/p"
+          },
+          {
+            "title": "Plaza Vea (vendedor externo) — Roller Aromaterapia Find Comfort 5 ml - Rare Beauty - Rare Beauty - Co",
+            "url": "https://www.plazavea.com.pe/roller-aromaterapia-find-comfort-5-ml-rare-beauty-rare-beauty-corporal_-101259340/p"
+          }
+        ]
       }
     },
     "39": {
@@ -1134,8 +1635,12 @@
         ]
       },
       "Chile": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Falabella Chile — Fenty Beauty (llegó a Falabella)",
+            "url": "https://www.falabella.com/falabella-cl/shop/productos-fenty-beauty"
+          },
           {
             "title": "Falabella Chile — Maquillaje Fenty Beauty",
             "url": "https://www.falabella.com/falabella-cl/category/cat690199/Maquillaje?f.product.brandName=fenty+beauty"
@@ -1161,11 +1666,19 @@
         ]
       },
       "Peru": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Plaza Vea — Contorno Color Suedish Fenty Beauty Maquillaje",
+            "url": "https://www.plazavea.com.pe/contorno-color-suedish-fenty-beauty-maquillaje-101986729/p"
+          },
           {
             "title": "Mercado Libre Perú — Fenty Beauty",
             "url": "https://listado.mercadolibre.com.pe/fenty-beauty-labial"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — Labial Gloss Bomb Fenty Glow - Fenty Beauty Maquillaje",
+            "url": "https://www.oechsle.pe/labial-gloss-bomb-fenty-glow-fenty-beauty-maquillaje-1000962000/p"
           }
         ]
       },
@@ -1175,6 +1688,15 @@
           {
             "title": "Mercado Libre Uruguay — Fenty Beauty",
             "url": "https://listado.mercadolibre.com.uy/fenty-beauty"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Máscara FENTY BEAUTY de Rihanna Hella Thicc Voluminizing",
+            "url": "https://www.fravega.com/mascara-fenty-beauty-de-rihanna-hella-thicc-voluminizing-23064371/p"
           }
         ]
       }
@@ -1190,6 +1712,41 @@
           {
             "title": "Amazon México — Haus Labs Triclone",
             "url": "https://www.amazon.com.mx/Haus-maquillaje-cobertura-Triclone-fermentada/dp/B0BJ81NXKF"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Base Triclone Skin Tech Haus Labs - 110 Light Neutral",
+            "url": "https://www.plazavea.com.pe/base-triclone-skin-tech-haus-labs-110-light-neutral-101486312/p"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — Aceite Labial Hibrido PHD Haus Labs by Lady Gaga - Sheer pink",
+            "url": "https://www.oechsle.pe/aceite-labial-hibrido-phd-haus-labs-by-lady-gaga-sheer-pink-1001076752/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Haus Labs",
+            "url": "https://www.mercadolibre.cl/haus-labs-blush-by-lady-gaga-tono-del-maquillaje-fire-opal/p/MLC28527037"
+          },
+          {
+            "title": "Falabella Chile — Haus Labs",
+            "url": "https://www.falabella.com/falabella-cl/brand/HAUS%20LABS"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Livre — Haus Labs",
+            "url": "https://lista.mercadolivre.com.br/haus-labs"
           }
         ]
       }
@@ -1259,6 +1816,15 @@
             "url": "https://www.mercadolivre.com.br/ritual-essential-for-women-prenatal-multivitamin/p/MLB2016109012"
           }
         ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Multivitaminico Ritual Essential for Women",
+            "url": "https://www.fravega.com/multivitaminico-ritual-essential-for-women-22879125/p"
+          }
+        ]
       }
     },
     "43": {
@@ -1297,6 +1863,33 @@
           {
             "title": "Amazon México — Native",
             "url": "https://www.amazon.com.mx/native-deodorant/s?k=native+deodorant"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Native desodorante",
+            "url": "https://www.mercadolibre.cl/native-desodorante-natural-para-mujeres-y-hombres/p/MLC20476025"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Desodorante Native",
+            "url": "https://listado.mercadolibre.com.ve/desodorante-native"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Native",
+            "url": "https://www.mercadolibre.com.ec/desodorante-natural-vegano-unisex-sin-parabenos-75gr-native-fragancia-unscented-sin-esencia/p/MEC24689631"
           }
         ]
       }
@@ -1341,6 +1934,51 @@
             "url": "https://listado.mercadolibre.com.co/ropa/gym-shark"
           }
         ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — Gymshark",
+            "url": "https://listado.mercadolibre.cl/polera-gymshark"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Gymshark",
+            "url": "https://listado.mercadolibre.com.ve/ropa/gymshark"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Perú — Gymshark",
+            "url": "https://listado.mercadolibre.com.pe/gymshark"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Gymshark",
+            "url": "https://listado.mercadolibre.com.ec/ropa/gym-shark-ropa-mujer"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Argentina — Gymshark",
+            "url": "https://listado.mercadolibre.com.ar/gym-shark-leggins"
+          }
+        ]
       }
     },
     "48": {
@@ -1356,8 +1994,16 @@
     },
     "49": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Innovasport — On Cloudmonster",
+            "url": "https://www.innovasport.com/c/tenis-on-cloudmonster/p/000000000000242816"
+          },
+          {
+            "title": "Dportenis — On",
+            "url": "https://www.dportenis.mx/marcas-dportenis/on-marcas-dportenis"
+          },
           {
             "title": "Amazon México — On Cloudmonster",
             "url": "https://www.amazon.com.mx/on-running-cloud-monster/s?k=on+running+cloud+monster"
@@ -1367,6 +2013,10 @@
       "Argentina": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Grid — ZAPATILLAS ON RUNNING CLOUDMONSTER 3 HOMBRE",
+            "url": "https://www.grid.com.ar/zapatillas-on-running-cloudmonster-3-running-hombre-0490030/p"
+          },
           {
             "title": "Dexter — On Running Cloud 6",
             "url": "https://www.dexter.com.ar/zapatillas-on-running-cloud-6-hombre/ON3MF10070-299_11_1.html"
@@ -1390,12 +2040,25 @@
         "status": "retail",
         "sources": [
           {
-            "title": "Netshoes — On Running Cloud 5",
-            "url": "https://www.netshoes.com.br/p/tenis-on-running-cloud-5-masculino-preto-preto-KRV-0518-006"
+            "title": "Artwalk — Tênis On Cloudmonster Void 1 Masculino",
+            "url": "https://www.artwalk.com.br/tenis-on-cloudmonster-void-1-masculino-3mf10-6-002/p"
           },
           {
-            "title": "Centauro — On Running Cloud 6",
-            "url": "https://www.centauro.com.br/tenis-on-running-cloud-6-masculino-992854.html"
+            "title": "Authentic Feet — Tênis On Cloudrunner Feminino",
+            "url": "https://www.authenticfeet.com.br/tenis-on-cloudrunner-feminino-o3201-9-400/p"
+          },
+          {
+            "title": "Netshoes — On Running Cloud 5",
+            "url": "https://www.netshoes.com.br/p/tenis-on-running-cloud-5-masculino-preto-preto-KRV-0518-006"
+          }
+        ]
+      },
+      "Panama": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Running Balboa — On Running",
+            "url": "https://runningbalboa.com/collections/vendors?q=on"
           }
         ]
       }
@@ -1404,6 +2067,10 @@
       "Mexico": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Martí — Tenis Hoka Correr Rincon 5 Mujer",
+            "url": "https://www.marti.mx/tenis-hoka-correr-1127998323/p"
+          },
           {
             "title": "Innovasport — HOKA",
             "url": "https://www.innovasport.com/marca/hoka/c/c5-044"
@@ -1433,6 +2100,10 @@
           {
             "title": "Mercado Libre Argentina — Zapatillas Hoka",
             "url": "https://listado.mercadolibre.com.ar/zapatillas-hoka"
+          },
+          {
+            "title": "Frávega (vendedor externo) — ZAPATILLAS HOKA Transport Sea Moss/Eucalyptus 8",
+            "url": "https://www.fravega.com/zapatillas-hoka-transport-sea-moss-eucalyptus-8-23043020/p"
           }
         ]
       },
@@ -1455,6 +2126,82 @@
           {
             "title": "Running Balboa — HOKA",
             "url": "https://runningbalboa.com/collections/hoka"
+          }
+        ]
+      },
+      "Costa Rica": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Costa Rica — Zapato Hoka Road deportivo negro para mujer",
+            "url": "https://cr.siman.com/zapato-running-hoka-road-color-negro-para-mujer-105249829/p"
+          }
+        ]
+      },
+      "Guatemala": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Guatemala — Zapato deportivo Hoka Clifton 10 para hombre",
+            "url": "https://gt.siman.com/calzado-deportivo-hoka-1162030-bwht-clifton-10-para-caballero-105081095/p"
+          }
+        ]
+      },
+      "Nicaragua": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Nicaragua — Zapato Hoka Road deportivo gris para mujer",
+            "url": "https://ni.siman.com/zapato-running-hoka-road-color-gris-para-mujer-105249827/p"
+          }
+        ]
+      },
+      "El Salvador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman El Salvador — Zapato deportivo Hoka Clifton 10 para hombre",
+            "url": "https://sv.siman.com/calzado-deportivo-hoka-1162030-bwht-clifton-10-para-caballero-105081095/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Zapatilla Hoka one - Smartwatch Moto Watch 120",
+            "url": "https://www.plazavea.com.pe/zapatilla-hoka-one---smartwatch-moto-watch-120--102360884/p"
+          },
+          {
+            "title": "Oechsle — Zapatillas Running Hoka One Rincon 4 Ultraligeras Amortiguadas",
+            "url": "https://www.oechsle.pe/zapatillas-running-hoka-one-one-rincon-4-ultraligeras-amortiguadas-1001993363/p"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Hoka",
+            "url": "https://listado.mercadolibre.com.uy/zapatillas-hoka"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Hoka",
+            "url": "https://listado.mercadolibre.com.ve/zapatos-hoka"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Hoka Trail",
+            "url": "https://listado.mercadolibre.com.ec/ropa/zapatillas-hoka-trail"
           }
         ]
       }
@@ -1481,43 +2228,124 @@
             "url": "https://www.amazon.com.br/YETI-Rambler-inoxid%C3%A1vel-isolado-MagSlider/dp/B0CF6LPY68"
           }
         ]
-      }
-    },
-    "52": {
-      "Mexico": {
-        "status": "marketplace",
-        "sources": [
-          {
-            "title": "Amazon México — Stanley Quencher",
-            "url": "https://www.amazon.com.mx/stanley-termo-quencher/s?k=stanley+termo+quencher"
-          },
-          {
-            "title": "Mercado Libre México — Stanley Quencher",
-            "url": "https://www.mercadolibre.com.mx/stanley-termo-quencher-h2o-flowstate-vaso-de-887-ml-30-oz-color-carbon/p/MLM30918210"
-          }
-        ]
-      },
-      "Colombia": {
-        "status": "marketplace",
-        "sources": [
-          {
-            "title": "Éxito (vendedor externo) — Stanley Quencher",
-            "url": "https://www.exito.com/termo-stanley-quencher-h20-flowstate-vaso-aislado-al-vacio-de-acero-inoxidable-con-tapa-y-pitillo-40oz-103263889-mp/p"
-          }
-        ]
       },
       "Argentina": {
         "status": "marketplace",
         "sources": [
           {
-            "title": "Mercado Libre Argentina — Stanley Quencher",
-            "url": "https://listado.mercadolibre.com.ar/stanley-vacuum-quencher"
+            "title": "Frávega (vendedor externo) — YETI Tundra 45 Cooler",
+            "url": "https://www.fravega.com/yeti-tundra-45-cooler-22748401/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Promart (vendedor externo) — YETI Hopper M30 Cooler Portátil Protección Magnética - Rosa Bebé",
+            "url": "https://www.promart.pe/yeti-hopper-m30-cooler-portatil-proteccion-magnetica-rosa-bebe-1001476037/p"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — COOLER CUBETA PARA BEBIDAS YETI | BLANCO",
+            "url": "https://www.oechsle.pe/yeti-cooler-cubeta-para-bebidas-blanco-1001243962/p"
+          },
+          {
+            "title": "Plaza Vea (vendedor externo) — COOLER PORTÁTIL TUNDRA 110 YETI | BLANCO",
+            "url": "https://www.plazavea.com.pe/yeti-tundra-110-cooler-portatil-blanco-101673014/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Chile — YETI Rambler",
+            "url": "https://listado.mercadolibre.cl/yeti-rambler"
+          },
+          {
+            "title": "Lider (vendedor externo) — Taza YETI Rambler",
+            "url": "https://www.lider.cl/ip/f/taza-yeti-rambler-de-acero-inoxidable-con-aislamiento-al-vacio-de-700-ml/00088883012877"
           }
         ]
       },
       "Uruguay": {
         "status": "marketplace",
         "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Vaso térmico Yeti",
+            "url": "https://listado.mercadolibre.com.uy/vaso-termico-yeti"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Termo Yeti",
+            "url": "https://listado.mercadolibre.com.ve/camping-caza-pesca/termo-yeti"
+          }
+        ]
+      }
+    },
+    "52": {
+      "Mexico": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Liverpool — Termo Stanley Quencher Protour",
+            "url": "https://www.liverpool.com.mx/tienda/pdp/termo-de-acero-inoxidable-quencher-protour-con-tapa-rosca-1-l/1187199146"
+          },
+          {
+            "title": "Sanborns — Termo Stanley Quencher",
+            "url": "https://www.sanborns.com.mx/producto/441450/termo-stanley-quencher-h2-0-acero-inoxidable-aislado-al-vacio-de-doble-pared-887ml-gris"
+          },
+          {
+            "title": "Martí — Termo Stanley Multideporte The Quencher H2.O Flowstate Tumbler Gilded ",
+            "url": "https://www.marti.mx/termo-stanley-accesorios-1127986098/p"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Éxito — Termo Stanley Pomelo STANLEY 1012486393",
+            "url": "https://www.exito.com/termo-stanley-pomelo-stanley-10-12486-393-3215197/p"
+          },
+          {
+            "title": "Carulla — Termo Stanley Pomelo STANLEY 1012486393",
+            "url": "https://www.carulla.com/termo-stanley-pomelo-stanley-10-12486-393-3215197/p"
+          },
+          {
+            "title": "Jumbo Colombia — Vaso Stanley Golden Hour Pilsner Amber Haze 15oz",
+            "url": "https://www.tiendasjumbo.co/vaso-stanley-golden-hour-pilsner-amber-haze-15oz/p"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Vea — Vaso Sin Tapa Negro Stanley",
+            "url": "https://www.vea.com.ar/vaso-sin-tapa-negro-stanley/p"
+          },
+          {
+            "title": "Disco — Vaso Sin Tapa Negro Stanley",
+            "url": "https://www.disco.com.ar/vaso-sin-tapa-negro-stanley/p"
+          },
+          {
+            "title": "Jumbo Argentina — Vaso Sin Tapa Negro Stanley",
+            "url": "https://www.jumbo.com.ar/vaso-sin-tapa-negro-stanley/p"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Tienda Inglesa — Termo STANLEY Classic Color Negro 940 ml",
+            "url": "https://www.tiendainglesa.com.uy/supermercado/termo-stanley-classic-color-negro-940-ml.producto?1097796,,42"
+          },
           {
             "title": "Mercado Libre Uruguay — Stanley Quencher",
             "url": "https://listado.mercadolibre.com.uy/vaso-stanley-quencher"
@@ -1537,6 +2365,10 @@
         "status": "retail",
         "sources": [
           {
+            "title": "Pague Menos — Stanley Copo Quencher 2.0 Iris 887ml",
+            "url": "https://www.paguemenos.com.br/copo-termico-satnley-quencher-iris-com-canudo-887ml/p"
+          },
+          {
             "title": "Stanley Brasil (loja oficial) — Quencher",
             "url": "https://www.stanley1913.com.br/collections/quencher"
           },
@@ -1545,19 +2377,222 @@
             "url": "https://www.centauro.com.br/nav/produto/copo/marca/stanley"
           }
         ]
+      },
+      "Costa Rica": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Costa Rica — Termo Stanley Quencher 1.2 litros",
+            "url": "https://cr.siman.com/termo-cafe-40-onz-quencher-tumb-choclate-gld-sa-104893945/p"
+          }
+        ]
+      },
+      "Guatemala": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Guatemala — Termo Stanley Quencher 1.2 litros",
+            "url": "https://gt.siman.com/termo-cafe-40-onz-quencher-tumb-choclate-gld-sa-104893945/p"
+          }
+        ]
+      },
+      "Nicaragua": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman Nicaragua — Termo Stanley Quencher 1.2 litros",
+            "url": "https://ni.siman.com/termo-cafe-40-onz-quencher-tumb-choclate-gld-sa-104893945/p"
+          }
+        ]
+      },
+      "El Salvador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Siman El Salvador — Termo Stanley Quencher 1.2 litros",
+            "url": "https://sv.siman.com/termo-cafe-40-onz-quencher-tumb-choclate-gld-sa-104893945/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Promart — Destapador de Botellas Acero Inoxidable Stanley",
+            "url": "https://www.promart.pe/destapador-de-botellas-acero-inoxidable-stanley-173144/p"
+          },
+          {
+            "title": "Wong — Quencher Stanley Adventure 1.18L Cream",
+            "url": "https://www.wong.pe/quencher-stanley-adventure-1-18l-cream-982346/p"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — Stanley Transit Flip Top Mug 473 ml Peat Moss Plaid",
+            "url": "https://www.oechsle.pe/stanley-transit-flip-top-mug-473-ml-peat-moss-plaid-1001992641/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Stanley Chile (tienda oficial)",
+            "url": "https://www.stanley1913.cl/collections/tienda"
+          },
+          {
+            "title": "Paris — Stanley",
+            "url": "https://www.paris.cl/listas/stanley/"
+          }
+        ]
+      },
+      "Paraguay": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Nissei — Termo Stanley Classic 940 ml",
+            "url": "https://nissei.com/py/termo-stanley-classic-940ml"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "De Prati — Stanley",
+            "url": "https://www.deprati.com.ec/stanley/c/051191045"
+          },
+          {
+            "title": "Mercado Libre Ecuador — Tienda oficial Stanley Ecuador",
+            "url": "https://www.mercadolibre.com.ec/tienda/stanley-ecuador"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Termo Stanley",
+            "url": "https://listado.mercadolibre.com.ve/accesorios-camping-recipientes-termicos-termos/stanley-termo"
+          }
+        ]
+      },
+      "Bolivia": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Multicenter Bolivia — Stanley (combo con termo 950 ml)",
+            "url": "https://multicenter.com.bo/herramientas/stanley"
+          }
+        ]
       }
     },
     "53": {
       "Mexico": {
-        "status": "marketplace",
+        "status": "retail",
         "sources": [
+          {
+            "title": "Costco México — Owala FreeSip 2 piezas",
+            "url": "https://www.costco.com.mx/Linea-Blanca-y-Cocina/Cocina-y-Utensilios/Vajillas-y-Utensilios/Owala-FreeSip-de-Acero-Inoxidable-710-mL-2-piezas-Varios-Colores/p/VA1965314"
+          },
+          {
+            "title": "H-E-B México — Termo Owala FreeSip",
+            "url": "https://www.heb.com.mx/owala-termo-owala-blanco-freesip-de-acero-inoxidable-32-1-pz-1024727/p"
+          },
           {
             "title": "Amazon México — Owala FreeSip",
             "url": "https://www.amazon.com.mx/Owala-FreeSip-inoxidable-deportes-malvavisco/dp/B085DVNHHK"
+          }
+        ]
+      },
+      "Argentina": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Frávega (vendedor externo) — Owala Tumbler Acero Inoxidable 24oz",
+            "url": "https://www.fravega.com/owala-tumbler-acero-inoxidable-24oz-22748201/p"
+          }
+        ]
+      },
+      "Peru": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Plaza Vea — Vaso Owala SmoothSip Slider Owala Tapa Corrediza",
+            "url": "https://www.plazavea.com.pe/vaso-owala-smoothsip-slider-owala-tapa-corrediza-101253217/p"
           },
           {
-            "title": "Mercado Libre México — Owala FreeSip",
-            "url": "https://www.mercadolibre.com.mx/owala-freesip-botella-de-agua-aislada-de-acero-inoxidable-co/p/MLM2002536064"
+            "title": "Promart (vendedor externo) — OWALA FREESIP BOTELLA DE AGUA MARVEL 32 OZ / 946 ML | SPIDER-MAN",
+            "url": "https://www.promart.pe/owala-freesip-botella-de-agua-marvel-32-oz-946-ml-spider-man-1001571390/p"
+          },
+          {
+            "title": "Oechsle (vendedor externo) — OWALA FREESIP BOTELLA DE AGUA MARVEL 32 OZ / 946 ML | SWING OF THINGS",
+            "url": "https://www.oechsle.pe/owala-freesip-botella-de-agua-marvel-32-oz---946-ml-|-swing-of-things-1001935567/p"
+          }
+        ]
+      },
+      "Colombia": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Éxito (vendedor externo) — Owala Freesip Termo Botella Acero Inoxidable 890ml",
+            "url": "https://www.exito.com/owala-freesip-termo-botella-acero-inoxidable-890ml-124194462/p"
+          }
+        ]
+      },
+      "Chile": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "Falabella Chile — Owala",
+            "url": "https://www.falabella.com/falabella-cl/brand/OWALA"
+          }
+        ]
+      },
+      "El Salvador": {
+        "status": "retail",
+        "sources": [
+          {
+            "title": "PriceSmart El Salvador — Owala Water Bottles",
+            "url": "https://www.pricesmart.com/en-sv/travel-products?utm_creative_format=reel&page=2"
+          }
+        ]
+      },
+      "Uruguay": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Uruguay — Owala FreeSip",
+            "url": "https://articulo.mercadolibre.com.uy/MLU-1068889562-botella-termica-owala-freesip-snoopy-edicion-limitada-24-o-_JM"
+          }
+        ]
+      },
+      "Ecuador": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Ecuador — Owala FreeSip",
+            "url": "https://www.mercadolibre.com.ec/botella-termica-owala-freesip-de-acero-inoxidable-24-oz710-ml-color-verde-agua/p/MEC30939767"
+          }
+        ]
+      },
+      "Venezuela": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Mercado Libre Venezuela — Owala",
+            "url": "https://listado.mercadolibre.com.ve/accesorios-camping-recipientes-termicos-termos/owala"
+          }
+        ]
+      },
+      "Brazil": {
+        "status": "marketplace",
+        "sources": [
+          {
+            "title": "Amazon Brasil — Owala FreeSip",
+            "url": "https://www.amazon.com.br/Owala-Garrafa-inoxid%C3%A1vel-esportes-vermelho/dp/B0BZY9F2F1"
+          },
+          {
+            "title": "Mercado Livre — Owala",
+            "url": "https://lista.mercadolivre.com.br/owala"
           }
         ]
       }
@@ -1566,6 +2601,10 @@
       "Mexico": {
         "status": "retail",
         "sources": [
+          {
+            "title": "Chedraui — Pizza de Pepperoni sin Gluten Caulipower 320g",
+            "url": "https://www.chedraui.com.mx/pizza-de-pepperoni-sin-gluten-caulipower-320g-3799287/p"
+          },
           {
             "title": "H-E-B México — Caulipower pizza vegetariana",
             "url": "https://www.heb.com.mx/caulipower-pizza-de-coliflor-vegetariana-sin-gluten-336-g-935040/p"

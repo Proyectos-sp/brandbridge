@@ -1,0 +1,76 @@
+{
+ "Mexico": [
+  "www.chedraui.com.mx",
+  "www.marti.mx"
+ ],
+ "Brazil": [
+  "www.authenticfeet.com.br",
+  "www.artwalk.com.br",
+  "www.paguemenos.com.br",
+  "www.epocacosmeticos.com.br"
+ ],
+ "Colombia": [
+  "www.olimpica.com",
+  "www.larebajavirtual.com",
+  "www.carulla.com",
+  "www.exito.com",
+  "www.tiendasjumbo.co",
+  "www.locatelcolombia.com"
+ ],
+ "Argentina": [
+  "www.carrefour.com.ar",
+  "www.disco.com.ar",
+  "www.jumbo.com.ar",
+  "www.vea.com.ar",
+  "www.farmacity.com",
+  "www.fravega.com",
+  "www.grid.com.ar"
+ ],
+ "Chile": [],
+ "Peru": [
+  "www.plazavea.com.pe",
+  "www.metro.pe",
+  "www.promart.pe",
+  "www.oechsle.pe",
+  "www.wong.pe"
+ ],
+ "Ecuador": [
+  "www.kywi.com.ec",
+  "www.pycca.com",
+  "www.medicity.com.ec"
+ ],
+ "Uruguay": [],
+ "Paraguay": [],
+ "Bolivia": [],
+ "Venezuela": [
+  "www.locatel.com.ve"
+ ],
+ "Panama": [
+  "www.superxtra.com",
+  "www.elmachetazo.com"
+ ],
+ "Costa Rica": [
+  "www.walmart.co.cr",
+  "cr.siman.com"
+ ],
+ "Dominican Republic": [
+  "www.sirena.do"
+ ],
+ "Guatemala": [
+  "www.walmart.com.gt",
+  "www.paiz.com.gt",
+  "www.cemaco.com",
+  "gt.siman.com"
+ ],
+ "Honduras": [
+  "www.walmart.com.hn"
+ ],
+ "El Salvador": [
+  "sv.siman.com",
+  "www.walmart.com.sv"
+ ],
+ "Nicaragua": [
+  "ni.siman.com",
+  "www.walmart.com.ni"
+ ]
+}

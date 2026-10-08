@@ -1,0 +1,20 @@
+{
+ "Mexico": ["www.chedraui.com.mx","www.heb.com.mx","www.marti.mx","www.innovasport.com","www.sanborns.com.mx","www.lacomer.com.mx","www.soriana.com","www.sams.com.mx","www.farmaciasanpablo.com.mx","www.dportenis.mx","www.coppel.com","www.walmart.com.mx","www.palaciodehierro.com","www.sephora.com.mx","www.costco.com.mx"],
+ "Brazil": ["mercado.carrefour.com.br","www.carrefour.com.br","www.drogaraia.com.br","www.drogasil.com.br","www.centauro.com.br","www.netshoes.com.br","www.paodeacucar.com","www.belezanaweb.com.br","www.sephora.com.br","www.artwalk.com.br","www.authenticfeet.com.br","www.decathlon.com.br","www.epocacosmeticos.com.br","www.zattini.com.br","www.paguemenos.com.br"],
+ "Colombia": ["www.exito.com","www.carulla.com","www.tiendasjumbo.co","www.olimpica.com","www.farmatodo.com.co","www.cruzverde.com.co","www.alkosto.com","www.decathlon.com.co","www.larebajavirtual.com","www.falabella.com.co","www.locatelcolombia.com","www.homecenter.com.co"],
+ "Argentina": ["www.carrefour.com.ar","www.disco.com.ar","www.jumbo.com.ar","www.vea.com.ar","www.dexter.com.ar","www.moov.com.ar","www.farmacity.com","www.fravega.com","www.grid.com.ar","www.solodeportes.com.ar","www.stockcenter.com.ar","www.digitalsport.com.ar"],
+ "Chile": ["www.jumbo.cl","www.santaisabel.cl","www.lider.cl","www.unimarc.cl","www.paris.cl","www.sparta.cl","www.preunic.cl","www.cruzverde.cl","www.salcobrand.cl","www.dbs.cl","www.falabella.com","www.tottus.cl"],
+ "Peru": ["www.plazavea.com.pe","www.wong.pe","www.metro.pe","www.tottus.com.pe","www.oechsle.pe","www.inkafarma.pe","www.mifarma.com.pe","www.platanitos.com","www.promart.pe","www.vivanda.com.pe","www.mass.pe"],
+ "Ecuador": ["www.supermaxi.com","www.tia.com.ec","www.fybeca.com","www.deprati.com.ec","www.marathon.com.ec","www.sukasa.com","www.kywi.com.ec","www.pycca.com","www.coral.com.ec","www.medicity.com.ec"],
+ "Uruguay": ["www.tiendainglesa.com.uy","www.disco.com.uy","www.devoto.com.uy","www.geant.com.uy","www.farmashop.com.uy","www.sanroque.com.uy","www.tata.com.uy"],
+ "Paraguay": ["www.superseis.com.py","www.stock.com.py","www.biggie.com.py","www.casarica.com.py","www.farmacenter.com.py","www.puntofarma.com.py","www.nissei.com"],
+ "Bolivia": ["www.fidalga.com","www.hipermaxi.com","www.ketal.com.bo","www.farmacorp.com","www.dismac.com.bo"],
+ "Venezuela": ["www.farmatodo.com.ve","www.locatel.com.ve","www.gamaenlinea.com","www.traki.com.ve"],
+ "Panama": ["www.ribasmith.com","www.elmachetazo.com","www.superxtra.com","www.novey.com.pa","www.felipemotta.com","www.arrocha.com","www.stevens.com.pa","runningbalboa.com","www.smrey.com","www.supermercadosrey.com.pa"],
+ "Costa Rica": ["www.automercado.cr","www.walmart.co.cr","www.epa.cr","cr.siman.com","www.fischel.co.cr","www.monge.cr"],
+ "Dominican Republic": ["www.sirena.do","jumbo.com.do","supermercadosnacional.com","www.plazalama.com.do","www.bravova.com","www.carol.com.do"],
+ "Guatemala": ["www.cemaco.com","www.paiz.com.gt","www.walmart.com.gt","gt.siman.com","www.supermercadoslatorre.com","www.meykos.com","www.max.com.gt","www.farmaciasgalen.com"],
+ "Honduras": ["www.walmart.com.hn","www.diunsa.hn","www.kielsa.com","www.lacolonia.hn","www.supermercadoslacolonia.com"],
+ "El Salvador": ["www.superselectos.com","www.walmart.com.sv","sv.siman.com","www.lacuracaonline.com"],
+ "Nicaragua": ["ni.siman.com","www.lacolonia.com.ni","www.walmart.com.ni"]
+}
