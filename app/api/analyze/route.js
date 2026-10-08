@@ -47,8 +47,13 @@ export async function POST(request) {
   try {
     const score = getScore(brand, country);
     const { system, messages } = analysisPrompt(brand, country, score);
-    const text = await askAI({ system, messages, maxTokens: 900, json: true });
-    const analysis = parseAnalysis(text);
+    // A veces un modelo devuelve el JSON incompleto: se reintenta una vez antes de mostrar error.
+    let analysis = null;
+    for (let attempt = 0; attempt < 2 && !analysis; attempt++) {
+      const text = await askAI({ system, messages, maxTokens: 900, json: true });
+      analysis = parseAnalysis(text);
+      if (!analysis) console.error("[analyze] formato inesperado:", String(text).slice(0, 300));
+    }
 
     if (!analysis) {
       return NextResponse.json({ error: T.badFormat }, { status: 502 });
