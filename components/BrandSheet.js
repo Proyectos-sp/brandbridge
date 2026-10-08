@@ -208,7 +208,7 @@ function ChatPanel({ brand, country, t, active, extraQuestion }) {
     setLoading(true);
     try {
       const clean = history.filter((m) => !m.error).map(({ role, content }) => ({ role, content }));
-      const data = await postJSON("/api/chat", { brandId: brand.id, country, messages: clean });
+      const data = await postJSON("/api/chat", { brandId: brand.id, country, lang: t.lang, messages: clean });
       setMessages([...history, { role: "assistant", content: data.reply }]);
     } catch (err) {
       setMessages([...history, { role: "assistant", content: err.message || t.connectionError, error: true }]);
@@ -326,7 +326,7 @@ export default function BrandSheet({ brand, country, onClose, t, saved, onToggle
   useEffect(() => {
     const controller = new AbortController();
     setState({ loading: true, analysis: null, error: "" });
-    postJSON("/api/analyze", { brandId: brand.id, country }, controller.signal)
+    postJSON("/api/analyze", { brandId: brand.id, country, lang: t.lang }, controller.signal)
       .then((data) => {
         setState({ loading: false, analysis: data.analysis, error: "" });
         // En la tarjeta solo se marca lo que se comprobó en internet; lo demás ya sale de los datos.

@@ -177,6 +177,15 @@ mark { color: inherit; background: none; }
 .bb-legal-badge svg { flex-shrink: 0; }
 .bb-legal-badge:active { transform: scale(0.96); }
 .bb-legal-short { display: none; }
+/* idioma: interruptor EN/ES, el activo en tinta */
+.bb-lang { display: inline-flex; flex-shrink: 0; height: 42px; padding: 3px; gap: 2px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); }
+.bb-lang button {
+  min-width: 36px; padding: 0 9px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-3);
+  font-family: var(--mono); font-stretch: 87.5%; font-size: 12px; font-weight: 600;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms var(--ease-out);
+}
+.bb-lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.bb-lang button:active { transform: scale(0.96); }
 .bb-select-wrap { position: relative; display: flex; align-items: center; }
 .bb-select-wrap > svg { position: absolute; pointer-events: none; color: #fff; }
 .bb-select-wrap > .bb-select-globe { left: 15px; }
@@ -192,10 +201,29 @@ mark { color: inherit; background: none; }
   .bb-nav-link:not([aria-current="page"]):hover { background: var(--ground); color: var(--ink); }
   .bb-legal-badge:hover { background: #F1E3C2; border-color: var(--gold-deep); }
   .bb-select:hover { background: var(--ink-hover); }
+  .bb-lang button[aria-pressed="false"]:hover { background: var(--ground-2); color: var(--ink); }
   .bb-announce button:hover { filter: brightness(1.06); }
 }
-@media (max-width: 1180px) { .bb-legal-long { display: none; } .bb-legal-short { display: inline; } }
-@media (max-width: 960px) { .bb-nav { margin-left: 6px; } }
+@media (max-width: 1360px) { .bb-legal-long { display: none; } .bb-legal-short { display: inline; } }
+/* La cabecera tiene nav, idioma, aviso y destino: se compacta antes de que deje de caber en una fila. */
+@media (max-width: 1100px) {
+  .bb-header .bb-wordmark { display: none; }
+  .bb-select { max-width: 170px; }
+}
+/* Por debajo de 960 px el menú pasa a la barra inferior (también en tableta). */
+@media (max-width: 960px) {
+  .bb-nav { display: none; }
+  .bb-app { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
+  .bb-tabbar {
+    display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; z-index: 70; left: 0; right: 0; bottom: 0;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, 0.98); border-top: 1px solid var(--line);
+  }
+  .bb-tabbar-link { flex-direction: column; justify-content: center; gap: 3px; height: 52px; border-radius: 10px; color: var(--ink-3); font-size: 11.5px; font-weight: 600; min-width: 0; }
+  .bb-tabbar-link .bb-marker { display: none; }
+  .bb-tabbar-link[aria-current="page"] { color: var(--ink); background: var(--ground); }
+  .bb-tabbar-link .bb-count { position: absolute; top: 4px; left: calc(50% + 6px); min-width: 18px; height: 18px; font-size: 10px; }
+  .bb-tray { bottom: calc(74px + env(safe-area-inset-bottom)); }
+}
 
 /* franja "conoce al equipo" bajo la cabecera */
 .bb-teamstrip {
@@ -968,19 +996,10 @@ mark { color: inherit; background: none; }
 @media (max-width: 640px) {
   .bb-announce { font-size: 13px; padding: 8px 16px; gap: 6px 10px; }
   .bb-header-inner { height: 60px; gap: 10px; }
-  .bb-nav { display: none; }
   .bb-select { max-width: 160px; height: 40px; font-size: 14.5px; }
   .bb-legal-badge { height: 40px; padding: 0 12px 0 10px; }
+  .bb-lang { height: 40px; }
   .bb-header-actions { gap: 6px; }
-  .bb-app { padding-bottom: calc(66px + env(safe-area-inset-bottom)); }
-  .bb-tabbar {
-    display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; z-index: 70; left: 0; right: 0; bottom: 0;
-    padding: 6px 8px calc(6px + env(safe-area-inset-bottom)); background: rgba(255, 255, 255, 0.98); border-top: 1px solid var(--line);
-  }
-  .bb-tabbar-link { flex-direction: column; justify-content: center; gap: 3px; height: 52px; border-radius: 10px; color: var(--ink-3); font-size: 11.5px; font-weight: 600; min-width: 0; }
-  .bb-tabbar-link .bb-marker { display: none; }
-  .bb-tabbar-link[aria-current="page"] { color: var(--ink); background: var(--ground); }
-  .bb-tabbar-link .bb-count { position: absolute; top: 4px; left: calc(50% + 6px); min-width: 18px; height: 18px; font-size: 10px; }
 
   .bb-btn-xl { width: 100%; height: 62px; padding: 0 20px; font-size: 16.5px; }
   .bb-intro-hero h1 { font-size: clamp(42px, 12vw, 58px); }
@@ -1066,16 +1085,28 @@ mark { color: inherit; background: none; }
 @media (max-width: 640px) {
   @starting-style { .bb-sheet { transform: translateY(100%); opacity: 1; } }
 }
+/* el aviso corto pasa a dos líneas para que quepan idioma y destino desde 360 px */
+@media (max-width: 540px) {
+  .bb-legal-short { white-space: normal; max-width: 10ch; font-size: 10px; line-height: 1.15; text-align: left; }
+}
 @media (max-width: 460px) {
   .bb-header .bb-wordmark { display: none; }
   .bb-header-inner { gap: 8px; }
   .bb-legal-badge { padding: 0 10px 0 9px; gap: 5px; font-size: 11px; }
+  .bb-lang button { min-width: 28px; padding: 0 5px; font-size: 11px; }
   .bb-select { max-width: 136px; padding: 0 28px 0 34px; }
   .bb-select-wrap > .bb-select-globe { left: 12px; }
   .bb-select-wrap > .bb-select-chev { right: 10px; }
 }
 @media (max-width: 400px) {
-  .bb-select { max-width: 130px; }
+  /* cabecera de celular angosto: logo, idioma, aviso y destino en una fila */
+  .bb-header-inner, .bb-header-actions { gap: 4px; }
+  .bb-lang { padding: 2px; }
+  .bb-lang button { min-width: 26px; padding: 0 4px; }
+  .bb-legal-badge { padding: 0 8px 0 7px; gap: 4px; }
+  .bb-select-wrap > .bb-select-globe { display: none; }
+  .bb-select { max-width: 104px; padding: 0 26px 0 14px; }
+  .bb-select-wrap > .bb-select-chev { right: 8px; }
   .bb-tab svg { display: none; }
   .bb-figures { grid-template-columns: 1fr; }
   .bb-row { grid-template-columns: 18px 56px minmax(0, 1fr) 62px; gap: 8px; }

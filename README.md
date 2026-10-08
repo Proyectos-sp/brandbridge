@@ -41,7 +41,7 @@ Navegador ──► /api/analyze ──┐
 
 Las demás variables opcionales están explicadas en `.env.example`.
 
-**Idioma:** la app está en inglés por defecto, igual que el diseño original. Para tenerla toda en español (interfaz y respuestas de la IA), agrega `APP_LANG=es` en Vercel y haz Redeploy.
+**Idioma:** el botón EN/ES de la cabecera cambia la interfaz y las respuestas de la IA entre inglés y español, y el navegador recuerda la elección. La app abre en inglés por defecto; para que abra en español, agrega `APP_LANG=es` en Vercel y haz Redeploy.
 
 ## Probar en tu computador
 

@@ -114,8 +114,14 @@ function NavItems({ view, onChange, savedCount, t, className }) {
 
 /* ------------------------------------------------------------ página */
 
-export default function BrandBridge({ brands, countries, lang }) {
+// Botón EN/ES: cada opción con su nombre en su propio idioma.
+const LANGS = [{ id: "en", name: "English" }, { id: "es", name: "Español" }];
+
+export default function BrandBridge({ brands, countries, lang: defaultLang }) {
+  // El idioma elegido se recuerda en este navegador; si no eligió, el de APP_LANG.
+  const [lang, setLang] = useStored("bb-lang", defaultLang);
   const t = useMemo(() => getText(lang), [lang]);
+  useEffect(() => { document.documentElement.lang = t.lang; }, [t.lang]);
   const [view, setView] = useState("intro");
   const [selected, setSelected] = useState(null); // { brand, tab }
   const [showTerms, setShowTerms] = useState(false);
@@ -277,6 +283,13 @@ export default function BrandBridge({ brands, countries, lang }) {
             <NavItems view={view} onChange={goTo} savedCount={saved.length} t={t} className="bb-nav-link" />
           </nav>
           <div className="bb-header-actions">
+            <div className="bb-lang" role="group" aria-label={t.language}>
+              {LANGS.map((l) => (
+                <button key={l.id} type="button" lang={l.id} aria-label={l.name} title={l.name} aria-pressed={t.lang === l.id} onClick={() => setLang(l.id)}>
+                  {l.id.toUpperCase()}
+                </button>
+              ))}
+            </div>
             {/* Aviso legal siempre visible: el análisis es de IA y no es asesoría financiera */}
             <button type="button" className="bb-legal-badge" onClick={() => setShowTerms(true)} aria-label={`${t.legalBadge} · ${t.termsTitle}`}>
               <ShieldIcon size={16} strokeWidth={2} />

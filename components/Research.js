@@ -14,7 +14,7 @@ export default function ResearchBox({ query, onFound, t }) {
     setAsked(q);
     setState({ status: "loading" });
     try {
-      const data = await postJSON("/api/research", { query: q });
+      const data = await postJSON("/api/research", { query: q, lang: t.lang });
       if (data.brand) {
         setState({ status: "idle" });
         onFound(data.brand, Boolean(data.catalog));
