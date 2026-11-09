@@ -14,6 +14,8 @@ import { getPresence } from "@/lib/presence";
 import { requestLang, serverTextFor } from "@/lib/i18n";
 import { recordEvent } from "@/lib/stats";
 
+export const maxDuration = 120; // la investigación de presencia en internet puede tardar
+
 const CACHE_DAYS = 180; // largo para ahorrar cupo gratuito de la IA
 
 export async function POST(request) {

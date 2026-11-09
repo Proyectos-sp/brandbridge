@@ -5,10 +5,10 @@
 //
 // Gratis por defecto: la IA reconoce la empresa y su sitio oficial, el servidor busca su artículo
 // en Wikipedia (API pública) y la IA lee esas páginas para armar la ficha (URL context de Gemini).
-// Con GEMINI_SEARCH=true (plan pagado) usa Google Search en vez de eso.
+// Con WEB_SEARCH=claude o gemini (de pago) busca en internet en vez de eso.
 import { NextResponse, after } from "next/server";
 import { BRANDS, CATEGORIES } from "@/lib/data";
-import { askAI, askAIWithWeb, AIError } from "@/lib/ai";
+import { askAI, askAIWithWeb, AIError, webSearchProvider } from "@/lib/ai";
 import { identifyPrompt, researchPrompt } from "@/lib/prompts";
 import { TAGS, RESEARCH_DAYS, catalogMatch, findWikipedia, parseIdentify, parseResearch, researchKey, saveResearchedBrand, verifyInstagram } from "@/lib/research";
 import { getValue, setValue } from "@/lib/store";
@@ -16,9 +16,9 @@ import { checkLimits } from "@/lib/limits";
 import { requestLang, serverTextFor } from "@/lib/i18n";
 import { recordEvent } from "@/lib/stats";
 
-export const maxDuration = 60; // leer páginas puede tardar
+export const maxDuration = 120; // leer páginas y buscar en internet puede tardar
 
-const PAID_SEARCH = process.env.GEMINI_SEARCH === "true";
+const PAID_SEARCH = Boolean(webSearchProvider()); // WEB_SEARCH=claude|gemini (o GEMINI_SEARCH=true)
 
 // Arma la ficha leyendo páginas reales (gratis). Devuelve { text, sources, live } o { candidates }.
 async function researchFromPages(query, lang) {
