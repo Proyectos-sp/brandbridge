@@ -55,7 +55,7 @@ function presenceText(presence, brand, place, t) {
   const note = t.presenceNote[presence.source]?.[presence.status];
   if (!note) return presence.note || "";
   const markets = (brand.markets || []).map((m) => t.country(m)).join(", ");
-  return note(place, markets, formatDay(presence.checkedAt, t.lang));
+  return note(place, markets, formatDay(presence.checkedAt, t.lang), brand.live);
 }
 
 function formatDay(day, lang) {
