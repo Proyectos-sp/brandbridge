@@ -10,7 +10,7 @@ import { askAI, AIError } from "@/lib/ai";
 import { analysisPrompt, parseAnalysis } from "@/lib/prompts";
 import { getValue, setValue } from "@/lib/store";
 import { checkLimits } from "@/lib/limits";
-import { getPresence, presenceFromData } from "@/lib/presence";
+import { getPresence } from "@/lib/presence";
 import { requestLang, serverTextFor } from "@/lib/i18n";
 import { recordEvent } from "@/lib/stats";
 
@@ -28,33 +28,31 @@ export async function POST(request) {
   }
   after(() => recordEvent("analyze", { brand: brand.name, market: country }));
 
-  // El texto del análisis se escribe sabiendo si la marca ya se vende en el país; si ese dato
-  // cambia (por ejemplo, se encontró una tienda), se genera un análisis nuevo.
-  const presenceTag = presenceFromData(brand, country).status;
-  const cacheKey = `analysis:v7:${lang}:${brand.id}:${country}:${presenceTag}`;
+  // El límite de uso se cuenta una sola vez por pedido, lo use la búsqueda de presencia o el análisis.
+  let limitMessage;
+  const overLimit = async () => {
+    if (limitMessage === undefined) limitMessage = await checkLimits(request, "analyze", lang);
+    return limitMessage;
+  };
 
-  // Los análisis guardados antes de este cambio traen una "presence" adivinada: se reemplaza.
-  const withPresence = async (analysis, limitChecked) => ({
-    ...analysis,
-    presence: await getPresence(brand, country, {
-      canUseWeb: async () => limitChecked || !(await checkLimits(request, "analyze", lang)),
-      lang,
-    }),
-  });
+  // Primero, si ya se vende en el país (datos o investigación en Google): el análisis se escribe
+  // sabiéndolo, y si ese dato cambia (por ejemplo, se encontró una tienda) se genera uno nuevo.
+  const presence = await getPresence(brand, country, { canUseWeb: async () => !(await overLimit()), lang });
+  const web = presence.source === "web" ? presence : null;
+  const cacheKey = `analysis:v8:${lang}:${brand.id}:${country}:${presence.status}${web ? ":web" : ""}`;
 
   const cached = await getValue(cacheKey);
   if (cached) {
-    return NextResponse.json({ analysis: await withPresence(cached, false), cached: true });
+    return NextResponse.json({ analysis: { ...cached, presence }, cached: true });
   }
 
-  const limitMessage = await checkLimits(request, "analyze", lang);
-  if (limitMessage) {
+  if (await overLimit()) {
     return NextResponse.json({ error: limitMessage }, { status: 429 });
   }
 
   try {
     const score = getScore(brand, country);
-    const { system, messages } = analysisPrompt(brand, country, score, lang);
+    const { system, messages } = analysisPrompt(brand, country, score, lang, web);
     // A veces un modelo devuelve el JSON incompleto: se reintenta una vez antes de mostrar error.
     let analysis = null;
     for (let attempt = 0; attempt < 2 && !analysis; attempt++) {
@@ -69,7 +67,7 @@ export async function POST(request) {
 
     delete analysis.presence;
     await setValue(cacheKey, analysis, CACHE_DAYS * 86400);
-    return NextResponse.json({ analysis: await withPresence(analysis, true), cached: false });
+    return NextResponse.json({ analysis: { ...analysis, presence }, cached: false });
   } catch (error) {
     const status = error instanceof AIError ? error.status : 500;
     const message = error instanceof AIError ? T[error.key] || error.message : T.unexpected;
