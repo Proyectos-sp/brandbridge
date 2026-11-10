@@ -48,7 +48,7 @@ function AnalysisLoading({ t }) {
   );
 }
 
-// Texto de "¿Ya está en ...?": con búsqueda en Google es la nota de lo encontrado; si no,
+// Texto de "¿Ya está en ...?": con búsqueda en internet es la nota de lo encontrado; si no,
 // se explica a partir de los datos de la marca y de la revisión de tiendas (nunca de lo que la IA cree recordar).
 function presenceText(presence, brand, place, t) {
   if (presence.source === "web") return presence.note;

@@ -5,6 +5,7 @@ import { getScore, isValidCountry } from "@/lib/data";
 import { findBrand } from "@/lib/research";
 import { askAI, AIError } from "@/lib/ai";
 import { chatSystemPrompt } from "@/lib/prompts";
+import { cachedWebPresence } from "@/lib/presence";
 import { checkLimits } from "@/lib/limits";
 import { requestLang, serverTextFor } from "@/lib/i18n";
 import { recordEvent } from "@/lib/stats";
@@ -58,7 +59,7 @@ export async function POST(request) {
   try {
     const score = getScore(brand, country);
     const reply = await askAI({
-      system: chatSystemPrompt(brand, country, score, lang),
+      system: chatSystemPrompt(brand, country, score, lang, await cachedWebPresence(brand, country, lang)),
       messages,
       maxTokens: 400,
     });
